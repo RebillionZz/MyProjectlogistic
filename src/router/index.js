@@ -12,8 +12,13 @@ const routes = [
   },
   {
     path: '/DashbordView',
-    name: 'DashbordView',
-    component: DashbordView
+    component: DashbordView,
+    children:[
+      {
+        path:'',
+        component:() => import('../views/Admin/list-DC/homeDC.vue')
+      }
+    ]
   },
   
   
