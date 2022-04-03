@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+//   font-family: $font-family;
+  padding: 0;
+  margin: 0;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding: 0;
+}
+.theme--light.v-input input, .theme--light.v-input textarea {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 300;
+}
+
+.v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.87);
+}

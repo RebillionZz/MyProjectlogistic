@@ -1,18 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <router-link to="/DashbordView" class="d-flex justify-center">Go DashBoard</router-link>
+  </v-app>
+  
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+// import DashbordView from '../views/Admin/DashbordView.vue'
+  export default {
+    name: 'HomeView',
+    components: {
+      // DashbordView
+    },
   }
-}
 </script>
