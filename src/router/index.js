@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
+import sidebarC from '@/components/sidebarC.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,9 +14,23 @@ const routes = [
   {
     path: '/DashbordView',
     component: DashbordView,
+    // children:[
+    //   {
+    //     path:'',
+    //     component:() => import('../views/Admin/list-DC/homeDC.vue')
+    //   },
+    //   {
+    //     path:'/sendDC',
+    //     component:() => import('../views/Admin/list-DC/sendDC.vue')
+    //   }
+    // ]
+  },
+  {
+    path: '/sidebarC',
+    component: sidebarC,
     children:[
       {
-        path:'/',
+        path:'/sidebarC',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {

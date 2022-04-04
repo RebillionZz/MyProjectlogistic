@@ -1,6 +1,10 @@
 <template>
     <v-app>
         <sidebarC></sidebarC>
+        <!-- container view -->
+        <v-container>
+            <router-view></router-view>
+        </v-container>
         <footer style="background-color: #E5E5E5;" class="px-16 d-none d-md-flex">
             <v-container class="border-set d-flex py-2 ">
                 <v-col cols="6">ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂການຂົນສົ່ງ</v-col>

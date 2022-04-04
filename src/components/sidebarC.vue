@@ -13,7 +13,7 @@
         <!-- end logo -->
         <!-- start list logo not working -->
         <v-list-item 
-                v-for="LG1 in listG1" :key="LG1.id" :to="listG1.route" link
+                v-for="LG1 in listG1" :key="LG1.id" :to="LG1.route" active-class="clickBR"
                 >
                     <v-list-item-icon><img src="" class="svg_width" alt="" srcset=""></v-list-item-icon>
                     <v-list-item-content>
@@ -66,9 +66,12 @@
         <h1>THis is tool bar</h1>
         </v-toolbar>
     </v-container>
+    <!-- container view -->
     <v-container>
         <router-view></router-view>
     </v-container>
+        
+
     </v-app>
 </template>
 
@@ -77,9 +80,8 @@ export default {
     name:'sidebarC',
     data() {
         return {
-            imgS1:'../assets/Admin/sidebar/home.svg',
             listG1:[
-                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/'},
+                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sidebarC'},
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sendDC'},
             ],
             listG2:[
@@ -97,7 +99,18 @@ export default {
         
     }
 </style>
+
+
+
+
 <style lang="scss" scoped>
+
+// class active
+
+.clickBR{
+    border-right: 2px solid red;
+}
+
 .backgroundHT{
     background: red;
     text-align: center;
