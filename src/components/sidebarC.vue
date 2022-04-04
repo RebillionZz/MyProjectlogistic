@@ -13,9 +13,9 @@
         <!-- end logo -->
         <!-- start list logo not working -->
         <v-list-item 
-                v-for="LG1 in listG1" :key="LG1.id" link router :to="listG1.route"
+                v-for="LG1 in listG1" :key="LG1.id" :to="listG1.route" link
                 >
-                    <v-list-item-icon><img src="../assets/Admin/sidebar/home.svg" class="svg_width" alt="" srcset=""></v-list-item-icon>
+                    <v-list-item-icon><img src="" class="svg_width" alt="" srcset=""></v-list-item-icon>
                     <v-list-item-content>
                         <v-list-item-title>
                             {{LG1.text}}
@@ -26,7 +26,7 @@
                 <v-list-group :value="false" no-action>
                     
                     <template v-slot:activator >
-                        <v-list-item-icon><img src="../assets/Admin/sidebar/home.svg" class="svg_width" alt="" srcset=""></v-list-item-icon>
+                        <v-list-item-icon><v-img max-width="45" max-height="65" src="../assets/Admin/sidebar/my-item0.svg"></v-img></v-list-item-icon>
                         <v-list-item-content>
                             <v-list-item-title>ພັດສະດຸຂອງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
@@ -51,7 +51,7 @@
                 <v-list-item 
                 v-for="LG2 in listG2" :key="LG2.id" link
                 >
-                    <v-list-item-icon><img src="../assets/Admin/sidebar/home.svg" class="svg_width" alt="" srcset=""></v-list-item-icon>
+                    <v-list-item-icon><v-img max-width="30" max-height="30" :src="LG2.imgG2"></v-img></v-list-item-icon>
                     <v-list-item-content>
                         <v-list-item-title>
                             {{LG2.text}}
@@ -79,13 +79,13 @@ export default {
         return {
             imgS1:'../assets/Admin/sidebar/home.svg',
             listG1:[
-                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg'},
-                {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg'},
+                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/'},
+                {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sendDC'},
             ],
             listG2:[
-                {id:1,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON'},
-                {id:2,text:'COD',icon:'ICON'},
-                {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON'},
+                {id:1,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
+                {id:2,text:'COD',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
+                {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
             ]
         }
     },
@@ -97,6 +97,22 @@ export default {
         
     }
 </style>
-<style lang="sass">
+<style lang="scss" scoped>
+.backgroundHT{
+    background: red;
+    text-align: center;
+}
 
+</style>
+<style lang="scss" scoped>
+.backgroundHT{
+    background: red;
+    text-align: center;
+}
+*{
+  font-family: 'Phetsarath', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 </style>

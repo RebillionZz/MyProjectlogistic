@@ -15,8 +15,12 @@ const routes = [
     component: DashbordView,
     children:[
       {
-        path:'',
+        path:'/',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
+      },
+      {
+        path:'/sendDC',
+        component:() => import('../views/Admin/list-DC/sendDC.vue')
       }
     ]
   },
