@@ -31,7 +31,7 @@
                             <v-list-item-title>ພັດສະດຸຂອງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
                     </template>
-                    <v-list-item :value="true"
+                    <v-list-item :value="true" active-class="clickBR"
                         no-action
                     >
                         
@@ -39,7 +39,7 @@
                             <v-list-item-title>ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item :value="true"
+                    <v-list-item :value="true" active-class="clickBR"
                         
                     >
                         <v-list-item-content>
@@ -49,7 +49,7 @@
                 </v-list-group>
                 <!-- end group  and start loop list 2-->
                 <v-list-item 
-                v-for="LG2 in listG2" :key="LG2.id" link
+                v-for="LG2 in listG2" :key="LG2.id" :to="LG2.route" active-class="clickBR"
                 >
                     <v-list-item-icon><v-img max-width="30" max-height="30" :src="LG2.imgG2"></v-img></v-list-item-icon>
                     <v-list-item-content>
@@ -85,9 +85,9 @@ export default {
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sendDC'},
             ],
             listG2:[
-                {id:1,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
-                {id:2,text:'COD',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
-                {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg'},
+                {id:1,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/priceDC'},
+                {id:2,text:'COD',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/CODDC'},
+                {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/DataDC'},
             ]
         }
     },

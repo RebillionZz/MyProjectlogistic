@@ -36,6 +36,18 @@ const routes = [
       {
         path:'/sendDC',
         component:() => import('../views/Admin/list-DC/sendDC.vue')
+      },
+      {
+        path:'/priceDC',
+        component:() => import('../views/Admin/list-DC/priceDC.vue')
+      },
+      {
+        path:'/CODDC',
+        component:() => import('../views/Admin/list-DC/CODDC.vue')
+      },
+      {
+        path:'/DataDC',
+        component:() => import('../views/Admin/list-DC/DataDC.vue')
       }
     ]
   },

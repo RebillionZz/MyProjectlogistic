@@ -91,7 +91,7 @@
                     </div>
                 </v-row>
                 <!-- table header -->
-                <v-card class="backgroundHT rounded-t-lg text-center" elevation="1">
+                <v-card class=" rounded-t-lg text-center" elevation="1">
                     <v-row class="rounded-t-lg red ">
                         <v-col cols="12" md="4" class=" py-3">ເລກໃບບິນ</v-col>
                         <v-col md="2" class="d-none d-md-flex py-3">ໝວດໝູ່</v-col>
@@ -145,10 +145,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.backgroundHT{
-    background: red;
-    // text-align: center;
-}
+// .backgroundHT{
+//     background: red;
+//     // text-align: center;
+// }
 .border-set{
     border-radius: 50px;    
 }
