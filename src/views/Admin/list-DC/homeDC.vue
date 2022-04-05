@@ -73,7 +73,7 @@
         
             <v-container pa-4 >
                 <div>
-                <v-row class="mt-3 pb-3" style="background-color: #E5E5E5;"
+                <v-row class="mt-3 " style="background-color: #E5E5E5;"
                 >
                     <v-col cols="8" class="d-flex  flex-wrap " style="">
                         <!-- <img src="../../../assets/Admin/homeContent/box-white.svg" alt="">   -->
@@ -82,16 +82,15 @@
                         </div>
                         <span class=" py-1">ປະຫວັດການຈັດສົ່ງພັດສະດຸ</span>
                     </v-col>
-                    <div class="red  d-flex justify-space-between px-md-4 px-3  flex-wrap text-center border-set" >
-                        <div class="pt-1 pr-md-2 d-none d-sm-flex d-lg-flex">
+                    <div class="red  d-flex px-md-4 px-3    border-set" >
+                        <div class=" pr-md-2 d-none d-sm-flex d-lg-flex">
                             <v-img max-width="20" max-height="20" min-width="10" min-height="10" class="" src="../../../assets/Admin/homeContent/history.svg"></v-img> 
                         </div>
-                        <!-- <img src="../../../assets/Admin/homeContent/history.svg" class="px-3 d-none d-sm-flex d-lg-flex" alt="" srcset=""> -->
-                        <p class="white--text pt-0  ">ຝາກເຄື່ອງເອງ</p>
+                        ຝາກເຄື່ອງເອງ
                     </div>
                 </v-row>
                 <!-- table header -->
-                <v-card class=" rounded-t-lg text-center" elevation="1">
+                <v-card class=" rounded-t-lg text-center mt-3" elevation="1">
                     <v-row class="rounded-t-lg red ">
                         <v-col cols="12" md="4" class=" py-3">ເລກໃບບິນ</v-col>
                         <v-col md="2" class="d-none d-md-flex py-3">ໝວດໝູ່</v-col>
@@ -121,7 +120,6 @@
                         <td>{{item.date}}</td>
                         <td>{{item.send}}</td>
                     </tr>
-                    
                 </table> -->
                 </div>
             </v-container>
@@ -145,18 +143,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .backgroundHT{
-//     background: red;
-//     // text-align: center;
-// }
+
 .border-set{
-    border-radius: 50px;    
-}
-*{
-  font-family: 'Phetsarath', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    border-radius: 50px; 
+    text-align: center;   
+    align-items: center;
 }
 </style>
 

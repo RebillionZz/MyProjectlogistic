@@ -1,5 +1,7 @@
 <template>
-    <h1>DataDC</h1>
+    <v-container>
+        
+    </v-container>
 </template>
 
 <script>

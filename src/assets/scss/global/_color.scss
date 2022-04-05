@@ -1,2 +1,16 @@
 $bg-footer: #ffffff;
-$bg-red:#E21312;
+$red:#E21312;
+$d-gray:#E5E5E5;
+
+.redHT{
+    color: $red;
+}
+.bg-redHT{
+    background: $red;
+}
+.redHT{
+    color: $d-gray;
+}
+.bg-redHT{
+    background: $d-gray;
+}

@@ -21,7 +21,7 @@
                             {{LG1.text}}
                         </v-list-item-title>
                     </v-list-item-content>
-                </v-list-item>
+        </v-list-item>
                 <!-- Group my item -->
                 <v-list-group :value="false" no-action>
                     
@@ -31,8 +31,8 @@
                             <v-list-item-title>ພັດສະດຸຂອງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
                     </template>
-                    <v-list-item :value="true" active-class="clickBR"
-                        no-action
+        <v-list-item :value="true" active-class="clickBR" 
+                        
                     >
                         
                         <v-list-item-content>
@@ -108,24 +108,11 @@ export default {
 // class active
 
 .clickBR{
-    border-right: 2px solid red;
+    border-right: 4px solid $red;
+    color: $red;
 }
 
-.backgroundHT{
-    background: red;
-    text-align: center;
-}
 
-</style>
-<style lang="scss" scoped>
-.backgroundHT{
-    background: red;
-    text-align: center;
-}
-*{
-  font-family: 'Phetsarath', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+
 </style>
