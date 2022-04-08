@@ -3,10 +3,8 @@
         <v-toolbar  flat class="bg-grey">
             <v-toolbar-items class="d-flex align-center">
                 <v-avatar color="red lighten-4"><img src="../../../assets/Admin/homeContent/box-header.svg" alt=""></v-avatar>
-                
             </v-toolbar-items>
             <v-toolbar-title class="d-flex align-center">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
-            <v-spacer></v-spacer>
             <img src="../../../assets/Admin/homeContent/date-icon.svg" alt="">
         </v-toolbar>
         <v-container pa-2>
@@ -82,6 +80,7 @@
                         </div>
                         <span class=" py-1">ປະຫວັດການຈັດສົ່ງພັດສະດຸ</span>
                     </v-col>
+                    <v-spacer></v-spacer>
                     <div class="red  d-flex px-md-4 px-3    border-set" >
                         <div class=" pr-md-2 d-none d-sm-flex d-lg-flex">
                             <v-img max-width="20" max-height="20" min-width="10" min-height="10" class="" src="../../../assets/Admin/homeContent/history.svg"></v-img> 

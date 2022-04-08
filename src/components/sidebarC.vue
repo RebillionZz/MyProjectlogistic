@@ -1,6 +1,6 @@
 <template>
     <v-app class="bg-grey">
-        <v-navigation-drawer app >
+        <v-navigation-drawer app  v-model="drawer">
         <v-list>
                 <v-list-item>
                     <v-list-item-title class="d-flex flex-column justify-center pt-3">
@@ -68,7 +68,7 @@
             <!-- <div>
                 
             </div> -->
-            <v-col cols="1" class="d-lg-none d-xs-block d-sm-block mr-sm-2 ml-sm-1  max-test "><v-img max-height="27" max-width="27" src="../assets/Admin/sidebar/toolbar/ham.svg"></v-img></v-col>
+            <v-col cols="1" class="d-lg-none d-xs-block d-sm-block mr-sm-2 ml-sm-1  max-test "><v-img max-height="27" max-width="27" src="../assets/Admin/sidebar/toolbar/ham.svg" @click="drawer = !drawer"></v-img></v-col>
             <v-col cols="8" class="search-form mr-lg-2 mr-md-3  pl-lg-1 pl-xs-2 pr-sm-2 ">
                 <label for="searchBar" class="for-search"><v-img src="../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                 <input type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max">
@@ -101,6 +101,7 @@ export default {
     name:'sidebarC',
     data() {
         return {
+            drawer: null,
             userAPI:'bebe',
             CoinAPI:'220',
             listG1:[
