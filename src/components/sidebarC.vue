@@ -1,5 +1,5 @@
 <template>
-    <v-app style="background-color: #E5E5E5;">
+    <v-app class="bg-grey">
         <v-navigation-drawer app >
         <v-list>
                 <v-list-item>
@@ -7,7 +7,6 @@
                         <v-list-item-title class="logo-box pl-3 point"><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
                         <v-list-item-content class="point">HAL logistic</v-list-item-content>
                     </v-list-item-title>
-                    
                 </v-list-item>
             </v-list>
         <!-- end logo -->
@@ -26,7 +25,7 @@
                 <v-list-group :value="false" no-action>
                     
                     <template v-slot:activator >
-                        <v-list-item-icon><v-img max-width="45" max-height="65" src="../assets/Admin/sidebar/my-item0.svg"></v-img></v-list-item-icon>
+                        <v-list-item-icon><img src="" class="svg_width" alt="" srcset=""></v-list-item-icon>
                         <v-list-item-content>
                             <v-list-item-title>ພັດສະດຸຂອງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
@@ -59,11 +58,33 @@
                     </v-list-item-content>
                 </v-list-item>
     </v-navigation-drawer>
-    <!-- container -->
+
+
+    <!-- container Toolbar main -->
     <v-container >
-        <v-toolbar flat class="" style="background-color: #E5E5E5;">
+        <v-toolbar dense flat class="bg-grey">
         <!-- search -->
-        <h1>THis is tool bar</h1>
+        <v-row class="d-flex align-center" >
+            <!-- <div>
+                
+            </div> -->
+            <v-col cols="1" class="d-lg-none d-xs-block d-sm-block mr-sm-2 ml-sm-1  max-test "><v-img max-height="27" max-width="27" src="../assets/Admin/sidebar/toolbar/ham.svg"></v-img></v-col>
+            <v-col cols="8" class="search-form mr-lg-2 mr-md-3  pl-lg-1 pl-xs-2 pr-sm-2 ">
+                <label for="searchBar" class="for-search"><v-img src="../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
+                <input type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max">
+            </v-col>
+            <v-col cols="3" class=" d-flex align-center ">
+                <div class="d-flex align-center boar-grey pr-1  border-user">
+                    <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
+                    <div class=" align-center d-none d-md-flex d-lg-flex pl-3">{{userAPI}} <v-flex class="px-1"><img src="../assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" class="d-none d-md-flex  d-lg-flex"></v-flex></div>
+                    
+                </div>
+                <div class="d-flex align-center">
+                    <v-flex class="pl-2"><v-avatar size="20" class=""><v-img src="../assets/Admin/sidebar/toolbar/coin.svg"></v-img></v-avatar></v-flex>
+                    <div class="d-none d-md-block d-lg-block pl-2 " >{{CoinAPI}}   Coin</div>
+                </div>
+            </v-col>
+        </v-row>
         </v-toolbar>
     </v-container>
     <!-- container view -->
@@ -80,6 +101,8 @@ export default {
     name:'sidebarC',
     data() {
         return {
+            userAPI:'bebe',
+            CoinAPI:'220',
             listG1:[
                 {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sidebarC'},
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sendDC'},
@@ -93,26 +116,76 @@ export default {
     },
 }
 </script>
-<style scoped>
-    .svg_width{
-        width: 20px;
-        
-    }
-</style>
+
 
 
 
 
 <style lang="scss" scoped>
-
+.max-test{
+    max-width: 30px !important;
+}
 // class active
-
+.svg_width{
+        width: 20px;
+        
+    }
 .clickBR{
     border-right: 4px solid $red;
     color: $red;
 }
+.bg-grey{
+    background: $d-grey !important;
+}
+.bg-red{
+    background-color: $red !important;
+}
 
+// Toolbar for-search
+.search-form{
+    position: relative;
+    
+    .input-max{
+        width: 100%;
+        height: 40px;
+        padding-left: 45px;
+        background:$bg-footer;
+        border-radius: 34px;
+        outline: none;
+    }
+    .for-search{
+        position: absolute;
+        left: 10px;
+        top: 0px;
+    }
+}
 
+.user-AVA{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.border-user{
+    border-right: 2px solid #ABABAB;
+}
+@media screen and (max-width: 600px) {
+    .search-form{
+    // position: relative;
+    padding:0 5px !important;
 
-
+        .input-max{
+            // width: 100%;
+            height: 35px;
+            padding-left: 45px;
+            // background:$bg-footer;
+            border-radius: 34px;
+            outline: none;
+        }
+        .for-search{
+            position: absolute;
+            left: 15px;
+            top: -3px;
+        }
+    }
+}
 </style>

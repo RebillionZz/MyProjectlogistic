@@ -1,11 +1,11 @@
 <template>
-    <v-container class="pa-4 pa-md-0">
-        <v-toolbar dense flat style="background-color: #E5E5E5;">
-            <v-toolbar-items>
+    <v-container class="pa-4 pa-md-0"   >
+        <v-toolbar  flat class="bg-grey">
+            <v-toolbar-items class="d-flex align-center">
                 <v-avatar color="red lighten-4"><img src="../../../assets/Admin/homeContent/box-header.svg" alt=""></v-avatar>
                 
             </v-toolbar-items>
-            <v-toolbar-title>ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
+            <v-toolbar-title class="d-flex align-center">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
             <v-spacer></v-spacer>
             <img src="../../../assets/Admin/homeContent/date-icon.svg" alt="">
         </v-toolbar>
@@ -14,7 +14,7 @@
             <!-- v-for="card in cards" :key="card.id" -->
             <v-row class="">
                 <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" style="background-color: #E21312;">
+                    <v-avatar color="" size="87" class="bg-red">
                         <v-avatar  size="45" color="">
                             <img src="../../../assets/Admin/homeContent/rounded.svg" alt="">
                         </v-avatar>
@@ -28,7 +28,7 @@
                 </v-col>
                 <!-- car here -->
                 <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" style="background-color: #E21312;">
+                    <v-avatar color="" size="87" class="bg-red">
                         <v-avatar  size="45" color="">
                             <img src="../../../assets/Admin/homeContent/car.svg" alt="">
                         </v-avatar>
@@ -41,7 +41,7 @@
                     </v-card-text>
                 </v-col>
                 <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" style="background-color: #E21312;">
+                    <v-avatar color="" size="87" class="bg-red">
                         <v-avatar  size="45" color="">
                             <img src="../../../assets/Admin/homeContent/compeled.svg" alt="">
                         </v-avatar>
@@ -54,7 +54,7 @@
                     </v-card-text>
                 </v-col>
                 <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" style="background-color: #E21312;">
+                    <v-avatar color="" size="87" class="bg-red">
                         <v-avatar  size="45" color="">
                             <img src="../../../assets/Admin/homeContent/COD.svg" alt="">
                         </v-avatar>
@@ -73,9 +73,9 @@
         
             <v-container pa-4 >
                 <div>
-                <v-row class="mt-3 " style="background-color: #E5E5E5;"
+                <v-row class="mt-3 bg-grey"
                 >
-                    <v-col cols="8" class="d-flex  flex-wrap " style="">
+                    <v-col cols="8" class="d-flex  flex-wrap align-center " style="">
                         <!-- <img src="../../../assets/Admin/homeContent/box-white.svg" alt="">   -->
                         <div class="pr-3 pr-sm-2">
                             <v-img max-width="30" max-height="30" min-width="10" min-height="10" src="../../../assets/Admin/homeContent/box-white.svg"></v-img>
@@ -90,17 +90,17 @@
                     </div>
                 </v-row>
                 <!-- table header -->
-                <v-card class=" rounded-t-lg text-center mt-3" elevation="1">
+                <v-card class=" rounded-t-lg text-center mt-6" elevation="1">
                     <v-row class="rounded-t-lg red ">
                         <v-col cols="12" md="4" class=" py-3">ເລກໃບບິນ</v-col>
-                        <v-col md="2" class="d-none d-md-flex py-3">ໝວດໝູ່</v-col>
-                        <v-col md="2" class="d-none d-md-flex py-3">ວັນທີ</v-col>
-                        <v-col md="2" class="d-none d-md-flex py-3">ສະຖານະ</v-col>
-                        <v-col md="2" class="d-none d-md-flex py-3"></v-col>
+                        <v-col md="2" class="d-none d-md-flex py-3 px-2">ໝວດໝູ່</v-col>
+                        <v-col md="2" class="d-none d-md-flex py-3 px-2">ວັນທີ</v-col>
+                        <v-col md="2" class="d-none d-md-flex py-3 px-2">ສະຖານະ</v-col>
+                        <v-col md="2" class="d-none d-md-flex py-3 px-2"></v-col>
                     </v-row>
                 <!-- table content -->
                     <v-row v-for="item in items" :key="item.bin" class="white" >
-                        <v-col cols="6" md="4" class=" pa-2">{{item.bin}}</v-col>
+                        <v-col cols="6" md="4" class=" ">{{item.bin}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.group}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.date}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.send}}</v-col>
@@ -143,6 +143,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.bg-grey{
+    background: $d-grey !important;
+}
+.bg-red{
+    background-color: $red;
+}
 
 .border-set{
     border-radius: 50px; 
