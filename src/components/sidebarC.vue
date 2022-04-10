@@ -4,7 +4,7 @@
         <v-list>
                 <v-list-item>
                     <v-list-item-title class="d-flex flex-column justify-center pt-3">
-                        <v-list-item-title class="logo-box pl-3 point"><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
+                        <v-list-item-title class="logo pl-3 "><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
                         <v-list-item-content class="point">HAL logistic</v-list-item-content>
                     </v-list-item-title>
                 </v-list-item>
@@ -25,22 +25,17 @@
                 <v-list-group :value="false" no-action>
                     
                     <template v-slot:activator >
-                        <v-list-item-icon><img src="" class="svg_width" alt="" srcset=""></v-list-item-icon>
+                        <v-list-item-icon><img src="../assets/Admin/sidebar/COD.svg" class="svg_width" alt="" srcset=""></v-list-item-icon>
                         <v-list-item-content>
                             <v-list-item-title>ພັດສະດຸຂອງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
                     </template>
-        <v-list-item :value="true" active-class="clickBR" 
-                        
-                    >
-                        
+                    <v-list-item :value="true" active-class="clickBR">
                         <v-list-item-content>
                             <v-list-item-title>ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-list-item :value="true" active-class="clickBR"
-                        
-                    >
+                    <v-list-item :value="true" active-class="clickBR">
                         <v-list-item-content>
                             <v-list-item-title>ພັດສະດຸທີ່ສົ່ງເຖິງຂ້ອຍ</v-list-item-title>
                         </v-list-item-content>
@@ -48,12 +43,22 @@
                 </v-list-group>
                 <!-- end group  and start loop list 2-->
                 <v-list-item 
-                v-for="LG2 in listG2" :key="LG2.id" :to="LG2.route" active-class="clickBR"
+                v-for="LG2 in listG2" :key="LG2.id" :to="LG2.route" active-class="clickBR" 
                 >
                     <v-list-item-icon><v-img max-width="30" max-height="30" :src="LG2.imgG2"></v-img></v-list-item-icon>
                     <v-list-item-content>
                         <v-list-item-title>
                             {{LG2.text}}
+                        </v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+                <!-- @click="RemoveToolbar()" -->
+                <v-list-item  v-for="LG3 in listG3" :key="LG3.id" :to="LG3.route" active-class="clickBR"
+                >
+                    <v-list-item-icon><v-img max-width="28" max-height="28" src="../assets/Admin/sidebar/treeData.svg"></v-img></v-list-item-icon>
+                    <v-list-item-content>
+                        <v-list-item-title>
+                            {{LG3.text}}
                         </v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
@@ -74,6 +79,7 @@
                 <input type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max">
             </v-col>
             <v-col cols="3" class=" d-flex align-center ">
+                
                 <div class="d-flex align-center boar-grey pr-1  border-user">
                     <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
                     <div class=" align-center d-none d-md-flex d-lg-flex pl-3">{{userAPI}} <v-flex class="px-1"><img src="../assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" class="d-none d-md-flex  d-lg-flex"></v-flex></div>
@@ -92,7 +98,7 @@
         <router-view></router-view>
     </v-container>
         
-
+    
     </v-app>
 </template>
 
@@ -109,12 +115,18 @@ export default {
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:'../assets/Admin/sidebar/home.svg',route:'/sendDC'},
             ],
             listG2:[
-                {id:1,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/priceDC'},
-                {id:2,text:'COD',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/CODDC'},
-                {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/DataDC'},
+                {id:3,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/priceDC'},
+                {id:4,text:'COD',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/CODDC'},
+                // {id:3,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/DataDC'},
+            ],
+            listG3:[
+                {id:5,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/DataDC'},
             ]
         }
     },
+    methods:{
+        
+    }
 }
 </script>
 
@@ -123,6 +135,11 @@ export default {
 
 
 <style lang="scss" scoped>
+
+
+.logo{
+    cursor: pointer;
+}
 .max-test{
     max-width: 30px !important;
 }
@@ -133,7 +150,7 @@ export default {
     }
 .clickBR{
     border-right: 4px solid $red;
-    color: $red;
+    // color: $red;
 }
 .bg-grey{
     background: $d-grey !important;

@@ -2,7 +2,14 @@
     <v-container>
             <!-- Important this component background red name not are the same other component -->
             
-                
+                <v-container>
+                    <v-toolbar  flat class="bg-grey">
+                        <v-toolbar-items class="d-flex align-center">
+                            <v-avatar color="red lighten-4"><img src="../../../assets/Admin/homeContent/box-header.svg" alt=""></v-avatar>
+                        </v-toolbar-items>
+                        <v-toolbar-title class="d-flex align-center ml-3">ຝາກເຄື່ອງເອງ</v-toolbar-title>
+                    </v-toolbar>
+                </v-container>
                 <v-stepper flat v-model="e1" class="v_step_header">
                 
                 <v-stepper-header class="v_step_header bg-grey">
@@ -10,7 +17,7 @@
                     <v-divider color="red"></v-divider>
                     <v-stepper-step :complete="e1 >2" step="2" color="red"><span :class="{step111:dew}" :dew="false">ລາຍລະອຽດອໍເດີ້</span></v-stepper-step>
                     <v-divider :class="{backL:dew}" :dew="false"></v-divider>
-                    <v-stepper-step :complete="e1 > 3" step="3 " color="red" :class="{step111:dew2}" :dew2="false"></v-stepper-step>
+                    <v-stepper-step :complete="e1 > 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
                     
                 </v-stepper-header>
                 
@@ -116,7 +123,7 @@
                             <!-- S2 -->
                             <div>
                                 <h4 class="text-center pb-2">ຂໍ້ມູນພັດສະດຸ</h4>
-                                <v-divider class="bg-red"></v-divider>
+                                <v-divider class="bg-red" ></v-divider>
                                 <div class="pt-2">
                                     <div class="d-flex justify-space-between">
                                         <p>ປະເພດພັດສະດຸ</p><p>ພັດສະດຸທົ່ວໄປ</p>

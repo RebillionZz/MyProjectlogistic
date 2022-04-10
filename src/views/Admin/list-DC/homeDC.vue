@@ -2,9 +2,10 @@
     <v-container class="pa-4 pa-md-0"   >
         <v-toolbar  flat class="bg-grey">
             <v-toolbar-items class="d-flex align-center">
-                <v-avatar color="red lighten-4"><img src="../../../assets/Admin/homeContent/box-header.svg" alt=""></v-avatar>
+                <v-avatar color="red lighten-4" size="40"><v-img src="../../../assets/Admin/homeContent/box-header.svg" max-height="30" max-width="30"></v-img></v-avatar>
             </v-toolbar-items>
-            <v-toolbar-title class="d-flex align-center">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
+            <v-toolbar-title class="d-flex align-center ml-2">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
+            <v-spacer></v-spacer>
             <img src="../../../assets/Admin/homeContent/date-icon.svg" alt="">
         </v-toolbar>
         <v-container pa-2>

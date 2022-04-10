@@ -1,14 +1,10 @@
 <template>
-    <v-container>
-        DATA
-
-        
-    </v-container>
+    
 </template>
 
 <script>
 export default {
-    name:'DataDC'
+
 }
 </script>
 
