@@ -48,6 +48,15 @@ const routes = [
       {
         path:'/DataDC',
         component:() => import('../views/Admin/list-DC/DataDC.vue')
+      },
+      {
+        path:'/myItempushC',
+        component:() => import('../views/Admin/list-DC/myItempushC.vue')
+      },
+      {
+        path:'/myItemGetC',
+        component:() => import('../views/Admin/list-DC/myItemGetC.vue')
+        
       }
     ]
   },

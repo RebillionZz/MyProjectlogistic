@@ -1,11 +1,11 @@
 <template>
     <v-container>
-        <v-toolbar  flat class="bg-grey mb-4">
-            <v-toolbar-items class="d-flex align-center">
-                <v-avatar color="red lighten-4"><v-img src="../../../assets/Admin/priceContent/caculator.svg" max-height="40" max-width="40"></v-img></v-avatar>
-            </v-toolbar-items>
+        <div class="d-flex bg-grey mb-4">
+            <div class="d-flex align-center">
+                <v-avatar color="red lighten-4"><v-img src="../../../assets/Admin/priceContent/caculator.svg" max-height="35" max-width="35"></v-img></v-avatar>
+            </div>
             <v-toolbar-title class="d-flex align-center ml-3">ຄິດໄລ່ຄ່າຂົນສົ່ງ</v-toolbar-title>
-        </v-toolbar>
+        </div>
         <form class="form pa-8">
             <h4 class="text-center">ຄິດໄລ່ຄ່າຂົນສົ່ງ</h4>
             <div class="d-md-flex justify-space-around">

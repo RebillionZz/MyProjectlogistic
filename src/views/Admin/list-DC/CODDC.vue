@@ -6,14 +6,24 @@
             </v-toolbar-items>
             <v-toolbar-title class="d-flex align-center ml-2 Header-C">ລາຍການເຄື່ອງ COD</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-dialog v-model="dialog2" width="600">
+            <v-dialog v-model="dialog2" width="600" >
                 <template  v-slot:activator="{ on, attrs } ">
                 <div class="d-flex edit-COD" v-bind="attrs" v-on="on">
                     <v-img src="../../../assets/Admin/CODContent/editIcon.svg" max-height="25" max-width="25" class="mr-2"></v-img>
                     <div class="d-flex align-center color-red ">ແກ້ໄຂCOD</div>
                 </div>
                 </template>
-                <dialogCOD2></dialogCOD2>
+                <div action="" class="dialog2Form pa-5">
+                    <div class="">
+                        <div class="d-flex justify-space-between align-center  ">
+                                <div></div>
+                                <div class="my-3 color-red text-center">ຂໍ້ມູນບັນຊີ COD</div>
+                                <div @click="dialog2= false" class="closeDA1 "><v-img src="../../../assets/Admin/CODContent/CloseDialog1.svg" max-height="25" max-width="25"></v-img></div>
+                        </div>
+                        <dialogCOD2></dialogCOD2>
+                    </div>
+                </div>
+                
                 </v-dialog>
         </v-toolbar>
         <!--  -->
@@ -108,6 +118,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+// dialog2
+.dialog2Form{
+    background: #ffffff;
+}
 // card
     .card-normal{
         width: 100%;
