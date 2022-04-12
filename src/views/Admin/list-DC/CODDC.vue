@@ -69,7 +69,7 @@
                 </v-col>
             </div>
             <div class="card-normal mt-5">
-
+                
             </div>
                 <v-dialog
                     v-model="dialog1" width="500" >

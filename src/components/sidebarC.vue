@@ -46,7 +46,8 @@
                 >
                     <v-list-item-icon><v-img max-width="30" max-height="30" ></v-img></v-list-item-icon>
                     <v-list-item-content>
-                        <v-list-item-title v-text="LG321.text">
+                        <div>{{LG321.text}}</div>
+                        <v-list-item-title >
                             
                         </v-list-item-title>
                     </v-list-item-content>
@@ -108,7 +109,46 @@
                 
                 <div class="d-flex align-center boar-grey pr-1  border-user">
                     <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
-                    <div class=" align-center d-none d-md-flex d-lg-flex pl-3">{{userAPI}} <v-flex class="px-1"><img src="../assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" class="d-none d-md-flex  d-lg-flex"></v-flex></div>
+                    <v-menu offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">{{userAPI}} <v-flex class="px-1"><img src="../assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" class="d-none d-md-flex  d-lg-flex"></v-flex></div>
+
+                        </template>
+                        <!--  -->
+                        <div class="User_Dropdown_Conntent pa-5">
+                            <div class="d-flex mb-4">
+                                <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
+                                <div class="pl-5">
+                                    <div>{{userAPI}}</div>
+                                    <div class="color-grey-text">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <v-divider color="red"></v-divider>
+                            <!-- Content change to col easy and fast control just back -->
+                            <div class="d-flex align-center">
+                                <div class="my-3  d-flex align-center  ">
+                                    <v-avatar color="red lighten-4" size="40" class="pl-1 mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/accout.svg" max-height="30" max-width="30"></v-img></v-avatar>
+                                    <div class=" pt-1 ">ຂໍ້ມູນບັນຊີ</div>
+                                </div>
+                                <div class=" pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                            </div>
+                            <div class="d-flex align-center">
+                                <div class="my-3  d-flex align-center ">
+                                    <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/service.svg" max-height="25" max-width="25"></v-img></v-avatar>
+                                    <div class=" pt-1 ">ຕິດຕໍ່ພວກເຮົາ</div>
+                                </div>
+                                <div class=" pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                            </div>
+                            <div class="d-flex align-center">
+                                <div class="my-3  d-flex align-center ">
+                                    <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
+                                    <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
+                                </div>
+                                <div class="pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                            </div>
+                        </div>
+                    </v-menu>
                     
                 </div>
                 <div class="d-flex align-center">
@@ -136,7 +176,7 @@ export default {
         return {
             // D_search:true,
             // D_data:false,
-            
+            TEST:[{id:1,text:'Comple'}],
             dataC:'Show',
             drawer: null,
             userAPI:'bebe',
@@ -154,10 +194,12 @@ export default {
                 {id:5,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/DataDC'},
             ],
             listG322:[
-                {id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/myItempushC'},
+                {id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/myItemGetC'}
+                
             ],
             listG321:[
-                {id:7,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/myItemGetC'}
+                {id:7
+                ,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ',icon:'ICON',imgG2:'../assets/Admin/sidebar/COD.svg',route:'/myItempushC'},
             ],
         }
     },
@@ -182,6 +224,9 @@ export default {
 
 
 <style lang="scss" scoped>
+.v-application--is-ltr .v-list-group--no-action > .v-list-group__items > .v-list-item{
+    padding-left:24px;
+}
 .max-test{
     max-width: 30px !important;
     
@@ -208,6 +253,9 @@ export default {
 }
 .bg-red{
     background-color: $red !important;
+}
+.color-grey-text{
+    color: #888888;
 }
 
 // Toolbar for-search
@@ -245,6 +293,9 @@ export default {
 }
 .toolbar-mb-pd{
     padding-top:6px;
+}
+.User_Dropdown_Conntent{
+    background: #FFFFFF;
 }
 // @media screen and (max-width: 1024px) {
     
