@@ -51,7 +51,21 @@ const routes = [
       },
       {
         path:'/myItempushC',
-        component:() => import('../views/Admin/list-DC/myItempushC.vue')
+        component:() => import('../views/Admin/list-DC/myItempushC.vue'),
+        children:[
+          {
+            path:'/myItempushC',
+          component:() => import('../views/Admin/list-DC/dataC/push1C.vue'),
+          },
+          {
+            path:'/push2C',
+          component:() => import('../views/Admin/list-DC/dataC/push2C.vue'),
+          },
+          {
+            path:'/push3C',
+          component:() => import('../views/Admin/list-DC/dataC/push3C.vue'),
+          },
+        ]
       },
       {
         path:'/myItemGetC',

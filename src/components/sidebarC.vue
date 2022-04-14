@@ -126,7 +126,7 @@
                             <!--  -->
                             <v-divider color="red"></v-divider>
                             <!-- Content change to col easy and fast control just back -->
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center TTTT" >
                                 <div class="my-3  d-flex align-center  ">
                                     <v-avatar color="red lighten-4" size="40" class="pl-1 mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/accout.svg" max-height="30" max-width="30"></v-img></v-avatar>
                                     <div class=" pt-1 ">ຂໍ້ມູນບັນຊີ</div>
@@ -151,6 +151,7 @@
                     </v-menu>
                     
                 </div>
+                <!-- COin -->
                 <div class="d-flex align-center">
                     <v-flex class="pl-2"><v-avatar size="31" class=""><v-img src="../assets/Admin/sidebar/toolbar/coin.svg" max-height="40" max-width="40"></v-img></v-avatar></v-flex>
                     <div class="d-none d-md-block d-lg-block pl-2 " >{{CoinAPI}}   Coin</div>
@@ -170,6 +171,7 @@
 </template>
 
 <script>
+
 export default {
     name:'sidebarC',
     data() {
@@ -296,6 +298,13 @@ export default {
 }
 .User_Dropdown_Conntent{
     background: #FFFFFF;
+}
+.TTTT{
+    cursor: pointer;
+    width: 220px;
+    &:hover{
+        color: $red;
+    }
 }
 // @media screen and (max-width: 1024px) {
     

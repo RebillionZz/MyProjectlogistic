@@ -201,6 +201,8 @@ export default {
     name:'home2HT',
     data() {
         return {
+            dew2:null,
+            dew:null,
             e1:1,
             e2:false,
             slecteritem:'020',
