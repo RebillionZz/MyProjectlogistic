@@ -96,7 +96,7 @@ export default {
         padding-left: 48px;
         font-size: 16px;
         position: relative;
-        // height: 110px;
+        padding-bottom: 10px;
         margin-bottom: 20px;
     }
     .line-1::before{

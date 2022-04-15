@@ -96,7 +96,7 @@ export default {
         padding-left: 48px;
         font-size: 16px;
         position: relative;
-        // height: 110px;
+        padding-bottom: 10px;
         margin-bottom: 20px;
     }
     .line-1::before{
@@ -112,6 +112,7 @@ export default {
         top: 6px;
         left: 0.5px;
     }
+    // ------------------------line2-------------------
     .line-2{
         padding-left: 48px;
         font-size: 16px;
