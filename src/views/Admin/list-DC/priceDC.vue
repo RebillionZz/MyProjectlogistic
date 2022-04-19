@@ -72,9 +72,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.t1{
-    padding-right: -10px;
-}
+// .t1{
+//     padding-right: -10px;
+// }
 .form{
     background: white;
     border-radius: 4px;
@@ -92,6 +92,7 @@ export default {
     border :1px solid #888888;
     border-radius: 28px;
 }
+
 .btn-round1{
     border-radius: 28px;
 }

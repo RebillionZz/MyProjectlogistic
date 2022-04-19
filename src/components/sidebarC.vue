@@ -119,33 +119,36 @@
                             <div class="d-flex mb-4">
                                 <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
                                 <div class="pl-5">
-                                    <div>{{userAPI}}</div>
+                                    <div>{{userAPI}} <span>Soudalat</span></div>
                                     <div class="color-grey-text">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</div>
                                 </div>
                             </div>
                             <!--  -->
                             <v-divider color="red"></v-divider>
                             <!-- Content change to col easy and fast control just back -->
-                            <div class="d-flex align-center TTTT" >
+                            <div class="d-flex align-center TTTT justify-space-between" >
                                 <div class="my-3  d-flex align-center  ">
                                     <v-avatar color="red lighten-4" size="40" class="pl-1 mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/accout.svg" max-height="30" max-width="30"></v-img></v-avatar>
                                     <div class=" pt-1 ">ຂໍ້ມູນບັນຊີ</div>
                                 </div>
-                                <div class=" pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                                <!-- THis arrow -->
+                                <div class=" pt-1  "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </div>
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center TTTT justify-space-between">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/service.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ຕິດຕໍ່ພວກເຮົາ</div>
                                 </div>
-                                <div class=" pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                                <!-- THis arrow -->
+                                <div class=" pt-1 "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </div>
-                            <div class="d-flex align-center">
+                            <div class="d-flex align-center TTTT justify-space-between">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
                                 </div>
-                                <div class="pt-1 d-flex justify-end"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
+                                <!-- THis arrow -->
+                                <div class="pt-1 "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </div>
                         </div>
                     </v-menu>

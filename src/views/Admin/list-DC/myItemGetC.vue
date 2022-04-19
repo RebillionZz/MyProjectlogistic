@@ -1,10 +1,19 @@
 <template>
-    <h1>MY get item C</h1>
+    <div>
+        <!-- <UserInfoC></UserInfoC> -->
+        <UserBunzyC></UserBunzyC>
+    </div>
 </template>
 
 <script>
+// import UserInfoC from './UserPage/UserInfoC.vue'
+import UserBunzyC from './UserPage/UserBunzyC.vue'
 export default {
-    name:'myItemGetC'
+    name:'myItemGetC',
+    components:{
+        // UserInfoC
+        UserBunzyC
+    }
 }
 </script>
 

@@ -33,9 +33,9 @@
                                     <input type="text" name="" id="" placeholder="ຊື່ຜູ້ຮັບ" class="input-max box-border">
                                 </v-col>
                                 
-                                <div class="d-flex align-center">
+                                <div class="d-flex align-center justify-center ">
                                     <v-col cols="4" lg="2" md="2" class="pa-0"><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill " solo  ></v-select></v-col>
-                                    <v-col cols="8" lg="10" md="10"><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col>
+                                    <v-col cols="8" lg="10" md="10" ><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col>
                                 </div>
                                 
                                 <v-col cols="12"  class="mb-6">
