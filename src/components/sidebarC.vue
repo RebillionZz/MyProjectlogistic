@@ -89,79 +89,7 @@
 
     <!-- container Toolbar main -->
     <v-container > <!-- This important for change Search And remove add new Icon this section remove col add to Search Comment -->
-        <v-toolbar dense flat class="bg-grey toolbar-mb-pd ">
-        <!-- search -->
-
-        <v-row class="d-flex align-center">
-            <!-- MENU ICON -->
-            <v-col cols="1" class="d-lg-none d-xs-block d-sm-block max-test"><v-img max-height="27" max-width="27" src="../assets/Admin/sidebar/toolbar/ham.svg" @click="drawer = !drawer"></v-img></v-col>
-            <v-col cols="8" class="search-form mr-lg-2 mr-md-3  pushICONHAM" v-if="dataC === 'Show' " >
-                <label for="searchBar" class="for-search"><v-img src="../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
-                <input type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max">
-            </v-col>
-            <v-col cols="8" v-if="dataC === 'Not' " >
-                <div class="d-lg-flex align-center d-none">
-                    <v-avatar class="Background_head" size="60"><v-img src="../assets/Admin/dataContent/mainIcon.svg" max-height="40" max-width="40"></v-img></v-avatar>
-                    <h2 class="pl-3">ຂໍ້ມູນສາຂາ</h2>
-                </div>
-            </v-col>
-            <v-col cols="3" class=" d-flex align-center Push_User ">
-                
-                <div class="d-flex align-center boar-grey pr-1  border-user">
-                    <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
-                    <v-menu offset-y>
-                        <template v-slot:activator="{ on, attrs }">
-                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">{{userAPI}} <v-flex class="px-1"><img src="../assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" class="d-none d-md-flex  d-lg-flex"></v-flex></div>
-
-                        </template>
-                        <!--  -->
-                        <div class="User_Dropdown_Conntent pa-5">
-                            <div class="d-flex mb-4">
-                                <v-avatar size="40"><v-img src="../assets/Admin/sidebar/toolbar/userAVATA.png"></v-img></v-avatar>
-                                <div class="pl-5">
-                                    <div>{{userAPI}} <span>Soudalat</span></div>
-                                    <div class="color-grey-text">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</div>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <v-divider color="red"></v-divider>
-                            <!-- Content change to col easy and fast control just back -->
-                            <div class="d-flex align-center TTTT justify-space-between" >
-                                <div class="my-3  d-flex align-center  ">
-                                    <v-avatar color="red lighten-4" size="40" class="pl-1 mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/accout.svg" max-height="30" max-width="30"></v-img></v-avatar>
-                                    <div class=" pt-1 ">ຂໍ້ມູນບັນຊີ</div>
-                                </div>
-                                <!-- THis arrow -->
-                                <div class=" pt-1  "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
-                            </div>
-                            <div class="d-flex align-center TTTT justify-space-between">
-                                <div class="my-3  d-flex align-center ">
-                                    <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/service.svg" max-height="25" max-width="25"></v-img></v-avatar>
-                                    <div class=" pt-1 ">ຕິດຕໍ່ພວກເຮົາ</div>
-                                </div>
-                                <!-- THis arrow -->
-                                <div class=" pt-1 "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
-                            </div>
-                            <div class="d-flex align-center TTTT justify-space-between">
-                                <div class="my-3  d-flex align-center ">
-                                    <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
-                                    <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
-                                </div>
-                                <!-- THis arrow -->
-                                <div class="pt-1 "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
-                            </div>
-                        </div>
-                    </v-menu>
-                    
-                </div>
-                <!-- COin -->
-                <div class="d-flex align-center">
-                    <v-flex class="pl-2"><v-avatar size="31" class=""><v-img src="../assets/Admin/sidebar/toolbar/coin.svg" max-height="40" max-width="40"></v-img></v-avatar></v-flex>
-                    <div class="d-none d-md-block d-lg-block pl-2 " >{{CoinAPI}}   Coin</div>
-                </div>
-            </v-col>
-        </v-row>
-        </v-toolbar>
+        <searchbarC></searchbarC>
     </v-container>
     <!-- container view -->
     <v-container>
@@ -174,7 +102,7 @@
 </template>
 
 <script>
-
+import searchbarC from './searchbarC.vue'
 export default {
     name:'sidebarC',
     data() {
@@ -208,6 +136,10 @@ export default {
             ],
         }
     },
+    components:{
+        searchbarC
+    }
+    ,
     methods:{
         // hide_DataC(){
         //     data_CSearch =  !data_CSearch;
@@ -232,10 +164,6 @@ export default {
 .v-application--is-ltr .v-list-group--no-action > .v-list-group__items > .v-list-item{
     padding-left:24px;
 }
-.max-test{
-    max-width: 30px !important;
-    
-}
 .logo{
     cursor: pointer;
 }
@@ -247,11 +175,9 @@ export default {
     }
 .clickBR{
     border-right: 4px solid $red;
-    // color: $red;
 }
 .clickBR-G{
     border-right: 4px solid $red;
-    // padding-left: 12px;
 }
 .bg-grey{
     background: $d-grey !important;
@@ -264,38 +190,13 @@ export default {
 }
 
 // Toolbar for-search
-.search-form{
-    position: relative;
-    
-    .input-max{
-        width: 100%;
-        height: 40px;
-        padding-left: 45px;
-        background:$bg-footer;
-        border-radius: 34px;
-        outline: none;
-    }
-    .for-search{
-        position: absolute;
-        left: 10px;
-        top: 0px;
-    }
-}
-.Background_head{
-    background: #FFD9D9;
-}
+
 .user-AVA{
     width: 45px;
     height: 45px;
     border-radius: 50%;
 }
-.border-user{
-    border-right: 2px solid #ABABAB;
-    
-}
-.Push_User{
-    margin-left: 0px;
-}
+
 .toolbar-mb-pd{
     padding-top:6px;
 }
@@ -315,40 +216,12 @@ export default {
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;
-    .pushICONHAM{
-        margin-left: 12px;
-    }
-    .Push_User{
-        margin-left: 16px;
-    }
+    
 }
 }
 @media screen and (max-width: 600px) {
-    .search-form{
-    // position: relative;
     
-    padding:0 5px !important;
-
-        .input-max{
-            // width: 100%;
-            height: 35px;
-            padding-left: 45px;
-            // background:$bg-footer;
-            border-radius: 34px;
-            outline: none;
-        }
-        .for-search{
-            position: absolute;
-            left: 15px;
-            top: -3px;
-        }
-    }
-    .pushICONHAM{
-        margin-left: 0px;
-    }
-    .Push_User{
-        margin-left: 0px;
-    }
+    
 }
     
 </style>

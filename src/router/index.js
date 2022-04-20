@@ -72,6 +72,25 @@ const routes = [
         component:() => import('../views/Admin/list-DC/myItemGetC.vue')
         
       }
+      // User
+      ,
+      {
+        path:'/UserInfoC',
+        component:() => import('../views/Admin/list-DC/UserPage/UserInfoC.vue')
+        
+      }
+      ,
+      {
+        path:'/UserBunzyC',
+        component:() => import('../views/Admin/list-DC/UserPage/UserBunzyC.vue')
+        
+      }
+      ,
+      {
+        path:'/contactC',
+        component:() => import('../views/Admin/list-DC/UserPage/contactC.vue')
+        
+      }
     ]
   },
   
