@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
 import sidebarC from '@/components/sidebarC.vue'
+import Homepage from '../views/userview/homepage.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -74,6 +75,11 @@ const routes = [
       }
     ]
   },
+  {
+    path: '/homepage',
+    name: 'Homepage',
+    component: homepage
+  }
   
   
 ]
