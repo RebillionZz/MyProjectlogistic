@@ -1,23 +1,26 @@
 <template>
     <v-container>
-        <v-toolbar  flat class="bg-grey mb-4">
-            <v-toolbar-items class="d-flex align-center">
-                <v-avatar color="red lighten-4" size="55"><v-img src="../../../assets/Admin/CODContent/CODIcon.svg" max-height="50" max-width="50"></v-img></v-avatar>
-            </v-toolbar-items>
-            <v-toolbar-title class="d-flex align-center ml-2 Header-C">ລາຍການເຄື່ອງ COD</v-toolbar-title>
+        <v-container class="d-flex">
+            <v-flex class="d-flex align-center bg-grey">
+                <v-col class="d-flex align-center" >
+                    <div class="home_head"><img class="imgH" src="../../../assets/Admin/CODContent/CODIcon.svg" max-height="50" max-width="50"></div>
+                    <div class="d-flex align-center ml-2 Header-C">ລາຍການເຄື່ອງ COD</div>
+
+                </v-col>
+            </v-flex>
             <v-spacer></v-spacer>
             <v-dialog v-model="dialog2" width="600" >
                 <template  v-slot:activator="{ on, attrs } ">
-                <div class="d-flex edit-COD" v-bind="attrs" v-on="on">
-                    <v-img src="../../../assets/Admin/CODContent/editIcon.svg" max-height="25" max-width="25" class="mr-2"></v-img>
-                    <div class="d-flex align-center color-red ">ແກ້ໄຂCOD</div>
+                <div class="d-flex edit-COD align-center" v-bind="attrs" v-on="on">
+                    <div class="edit-icon-box"><img src="../../../assets/Admin/CODContent/editIcon.svg"  class="mr-2 edit-icon"></div>
+                    <div class="d-flex align-center color-red pt-1 pl-2">ແກ້ໄຂCOD</div>
                 </div>
                 </template>
                 <div action="" class="dialog2Form pa-5">
                     <div class="">
                         <div class="d-flex justify-space-between align-center  ">
                                 <div></div>
-                                <div class="my-3 color-red text-center">ຂໍ້ມູນບັນຊີ COD</div>
+                                <div class="my-3 text-center">ຂໍ້ມູນບັນຊີ COD</div>
                                 <div @click="dialog2= false" class="closeDA1 "><v-img src="../../../assets/Admin/CODContent/CloseDialog1.svg" max-height="25" max-width="25"></v-img></div>
                         </div>
                         <dialogCOD2></dialogCOD2>
@@ -25,7 +28,7 @@
                 </div>
                 
                 </v-dialog>
-        </v-toolbar>
+        </v-container>
         <!--  -->
         <v-container>
             <!-- not have box shadow -->
@@ -73,12 +76,13 @@
             </div>
                 <v-dialog
                     v-model="dialog1" width="500" >
-                    <template v-slot:activator="{ on, attrs }">
+                    <template v-slot:activator="{ on, attrs }" >
                         
-                        <div class="mt-3 color-red COD-service "   v-bind="attrs" v-on="on">
+                        <v-col cols="4" class="mt-3 color-red COD-service "   v-bind="attrs" v-on="on">
                         ເງື່ອນໄຂການໃຫ້ບໍລິການ COD 
                         
-                        </div>
+                        </v-col>
+                        <v-col cols="8"></v-col>
                     </template>
 
                     <v-card class="pa-5">
@@ -118,6 +122,27 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+// ---------------------
+
+.home_head{
+    width: 50px;
+    height: 50px;
+    padding:4px;
+    border-radius: 50%;
+    background: $dashhead;
+    .imgH{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+// end-----------------
 // dialog2
 .dialog2Form{
     background: #ffffff;
@@ -131,6 +156,7 @@ export default {
     }
     .COD-service{
         cursor: pointer;
+        
     }
     .DCOD{
         font-size: 20px;
@@ -161,6 +187,15 @@ export default {
 // End
 .edit-COD{
     cursor: pointer;
+    .edit-icon-box{
+        width: 30px;
+        height: 30px;
+        .edit-icon{
+            width: 100%;
+            height: 100%;
+        }
+
+    }
 }
 .arrow-mobile{
     display: none;
@@ -252,6 +287,18 @@ export default {
     height: 35px;
     .DCOD{
         font-size: 16px;
+    }
+}
+    .edit-COD{
+    cursor: pointer;
+    .edit-icon-box{
+        width: 24px;
+        height: 24px;
+        .edit-icon{
+            width: 100%;
+            height: 100%;
+        }
+
     }
 }
 }

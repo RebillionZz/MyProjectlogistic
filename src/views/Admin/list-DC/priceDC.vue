@@ -1,11 +1,11 @@
 <template>
     <v-container>
-        <div class="d-flex bg-grey mb-4">
-            <div class="d-flex align-center">
-                <v-avatar color="red lighten-4"><v-img src="../../../assets/Admin/priceContent/caculator.svg" max-height="35" max-width="35"></v-img></v-avatar>
-            </div>
-            <v-toolbar-title class="d-flex align-center ml-3">ຄິດໄລ່ຄ່າຂົນສົ່ງ</v-toolbar-title>
-        </div>
+        <v-flex class="d-flex align-center bg-grey mb-4">
+            <v-col cols="9" class="d-flex align-center">
+                <div class="home_head"><img class="imgH" src="../../../assets/Admin/priceContent/caculator.svg" max-height="35" max-width="35"></div>
+                <div class="d-flex align-center ml-2">ຄິດໄລ່ຄ່າຂົນສົ່ງ</div>
+            </v-col>
+        </v-flex>
         <form class="form pa-8">
             <h4 class="text-center">ຄິດໄລ່ຄ່າຂົນສົ່ງ</h4>
             <div class="d-md-flex justify-space-around">
@@ -72,6 +72,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home_head{
+    width: 45px;
+    height: 45px;
+    padding:4px;
+    border-radius: 50%;
+    background: $dashhead;
+    .imgH{
+        width: 100%;
+        height: 100%;
+    }
+}
 // .t1{
 //     padding-right: -10px;
 // }

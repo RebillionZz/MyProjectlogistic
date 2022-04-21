@@ -2,14 +2,14 @@
     <v-container>
             <!-- Important this component background red name not are the same other component -->
             
-                <v-container>
-                    <v-toolbar  flat class="bg-grey">
-                        <v-toolbar-items class="d-flex align-center">
-                            <v-avatar color="red lighten-4"><img src="../../../assets/Admin/homeContent/box-header.svg" alt=""></v-avatar>
-                        </v-toolbar-items>
-                        <v-toolbar-title class="d-flex align-center ml-3">ຝາກເຄື່ອງເອງ</v-toolbar-title>
-                    </v-toolbar>
-                </v-container>
+                <!-- <v-container> -->
+                    <v-flex class="d-flex align-center bg-grey">
+                        <v-col cols="12" class="d-flex align-center">
+                            <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" alt=""></div>
+                            <div class="d-flex align-center ml-2">ຝາກເຄື່ອງເອງ</div>
+                        </v-col>
+                    </v-flex>
+                <!-- </v-container> -->
                 <v-stepper flat v-model="e1" class="v_step_header">
                 
                 <v-stepper-header class="v_step_header bg-grey">
@@ -19,7 +19,7 @@
                     <v-divider :class="{backL:dew}" :dew="false"></v-divider>
                     <v-stepper-step :complete="e1 > 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
                     
-                </v-stepper-header>
+                </v-stepper-header> 
                 
                 <v-stepper-items rounded>
                     <!-- step 1 -->
@@ -29,54 +29,48 @@
                             <form>
                                 <h4 class="text-center pt-2">ຂໍ້ມູນຜູ້ຮັບ</h4>
                                 
-                                <v-col cols="12" class="mb-6">
+                                <v-col cols="12" class="mb-5">
                                     <input type="text" name="" id="" placeholder="ຊື່ຜູ້ຮັບ" class="input-max box-border">
                                 </v-col>
                                 
-                                <div class="d-flex align-center justify-center ">
-                                    <v-col cols="4" lg="2" md="2" class="pa-0"><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill " solo  ></v-select></v-col>
-                                    <v-col cols="8" lg="10" md="10" ><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col>
-                                </div>
+                                <div class="d-flex ">
+                                    <v-col cols="2" class=""><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill  " solo  ></v-select></v-col>
+                                    <v-col cols="10" class="pl-2"><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col>
+                                    <!-- <v-col cols="4" lg="2" md="2" class="px-0"><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill  " solo  ></v-select></v-col>
+                                    <v-col cols="8" lg="10" md="10" class="pt-3"><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col> -->
                                 
+                                </div>
                                 <v-col cols="12"  class="mb-6">
                                     <input type="text" name="" id="" placeholder="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" class="input-max box-border">
                                 </v-col>
+                                
 
                                 <!-- form 2 -->
-                                <h4 class="text-center ">ຂໍ້ມູນພັດສະດຸ</h4>
+                                <h4 class="text-center mb-3">ຂໍ້ມູນພັດສະດຸ</h4>
                                 <!-- checkbox 1 if comback take it out -->
+                                <div class="d-flex itemSelect mb-3 align-center">
+                                    <!--  -->
+                                    <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
+                                        <div class=" ">ປະເພດພັດສະດຸ</div>
+                                    </v-col>
+                                    <v-col cols="8" class="d-flex">
+                                        <!-- 4 md lg// 6 xs -->
+                                        <v-col cols="6" md="4" lg="4" xs="6" class="line-leftR pa-0">
+                                            <div class="d-flex align-center line-left pl-3">
+                                                <input type="radio" id="itemGeneralID" name="itemSelect" value="1">
+                                                <label for="itemGeneralID" class="pl-1">ພັດສະດຸທົ່ວໄປ</label>
+                                            </div>
+                                        </v-col>
+                                        <!-- 8 md lg 6 xs -->
+                                        <v-col cols="8" xs="6" md="8" lg="8" class=" pa-0">
+                                            <div class="d-flex align-center">
+                                                <input type="radio" id="itemDocumentID" name="itemSelect" value="2">
+                                                <label for="itemDocumentID" class="pl-1">ເອກະສານ</label>
+                                            </div>
+                                        </v-col>
+                                    </v-col>
+                                </div>
                                 <div>
-                                        <!-- <v-row flat class=" mb-6 shadow-box">
-                                        <v-col cols="4"  class="d-flex align-center text-center     border-R ">
-                                            <v-flex class="" >ປະເພດພັດສະດຸ</v-flex>
-                                        </v-col>
-                                        <v-col cols="4" md="3"  class="d-flex align-center">
-                                                <v-checkbox label="ພັດສະດຸທົ່ວໄປ" class="pl-5 "  hide-details ></v-checkbox>
-                                        </v-col>
-                                        <v-col cols="4" class="d-flex align-center">
-                                            <v-checkbox label="ເອກະສານ" class="pl-1  " hide-details  ></v-checkbox>
-                                        </v-col>
-                                    </v-row>
-                                check box2
-                                <v-row flat class=" mb-6 shadow-box">
-                                        <v-col cols="4"  class="d-flex align-center text-center     border-R ">
-                                            <v-flex class="">ບໍລິການເສີມ</v-flex>
-                                        </v-col>
-                                        <v-col cols="8"  class="d-flex align-center">
-                                                    <div class="pl-md-10 pl-sm-10"><v-checkbox label="COD" class="pl-1"></v-checkbox></div>
-                                                    <div class="pl-md-15 pl-sm-15"><v-checkbox label="ປະກັນໄພ" class="pl-1"></v-checkbox></div>
-                                                    <div class="pl-md-16 pl-sm-16"><v-checkbox label="CDC" class="pl-1"></v-checkbox></div>
-                                        </v-col>
-                                </v-row>
-                                <v-row flat class="d-flex align-center ">
-                                    <v-col cols="5" class="pl-md-2 test55 "><v-select label="ເລືອກຕົ້ນທາງ" flat outlined dense single-line :items="startWays" class="rounded-pill "></v-select></v-col>
-                                    <v-col cols="7" class="test55 ">
-                                        <v-row class=" ">
-                                            <div class="pl-lg-5"><v-avatar size="30" class=""><v-img src="../../../assets/Admin/sendContent/Arrow.svg" ></v-img></v-avatar></div>
-                                            <v-select label="ເລືອກປາຍທາງ" flat outlined dense solo :items="endWays" class="rounded-pill px-3"></v-select>
-                                        </v-row>
-                                        </v-col>
-                                </v-row> -->
                                 </div>
 
 
@@ -215,6 +209,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// head bar
+
+.home_head{
+    width: 45px;
+    height: 45px;
+    padding:4px;
+    border-radius: 50%;
+    background: $dashhead;
+    .imgH{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// end
 .rountest{
     border-radius: 10px;
 }
@@ -251,7 +261,7 @@ export default {
 // INput form design
 .input-max{
     width: 100%;
-    height: 38px;
+    height: 40px;
     padding-left: 24px;
     outline: none;
     // display: block;
@@ -259,13 +269,10 @@ export default {
 
 
 
-// v-select seting
-// .v-text-field.v-text-field--enclosed:not(.v-text-field--rounded) > .v-input__control > .v-input__slot, .v-text-field.v-text-field--enclosed .v-text-field__details{
-//     padding: 0 0px;
-// }
- .v-text-field--outlined.v-input--dense.v-text-field--single-line > .v-input__control > .v-input__slot, .v-text-field--outlined.v-input--dense.v-text-field--outlined > .v-input__control > .v-input__slot{
+
+.v-text-field--outlined.v-input--dense.v-text-field--single-line > .v-input__control > .v-input__slot, .v-text-field--outlined.v-input--dense.v-text-field--outlined > .v-input__control > .v-input__slot{
     min-height: 35px;
- }
+}
 
 
 
@@ -280,26 +287,31 @@ export default {
     border-right: 2px solid grey;
     
 }
-// .border-R::after{
-//     content: "";
-//     // border-right: 3px solid rgb(150, 145, 145);
-//     width: 3px;
-//     position: absolute;
-//     background: $d-grey !important;
-//     height: 45px;
-//     top: 2px;
-//     left: 150px;
-//     border-radius: 10px;
-// }
-
-.shadow-box{
-     box-shadow: 8px 5px 8px -5px grey,
-     ;
-    //  clip-path: inset(5px 0px -5px 5px);
-     position: relative;
-    //  border-radius: 8px;
-    // box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+// Form2
+.itemSelect{
+    position: relative;
+    box-shadow: 0px 0px 3px 0.2px #ABABAB;
+    border-radius: 28px;
+    height: 40px;
 }
+.line-leftR{
+    position:relative;
+    .line-left::before{
+        content: '';
+            width: 2px;
+            height: 36px;
+            // display: block;
+            top: -6px;
+            // bottom: 2%;
+            left: 0;
+            position: absolute;
+            background: #ABABAB;
+            // padding: 0.5px;
+            border-radius: 2px;
+    }
+}
+
+// end
 @media screen and (max-width: 600px) {
     *{
         font-size: 14px !important;

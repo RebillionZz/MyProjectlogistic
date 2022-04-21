@@ -1,15 +1,16 @@
 <template>
     <v-container class="pa-4 pa-md-0"   >
-        <v-toolbar  flat class="bg-grey">
-            <v-toolbar-items class="d-flex align-center">
-                <v-avatar color="red lighten-4" size="40"><v-img src="../../../assets/Admin/homeContent/box-header.svg" max-height="30" max-width="30"></v-img></v-avatar>
-            </v-toolbar-items>
-            <v-toolbar-title class="d-flex align-center ml-2">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <img src="../../../assets/Admin/homeContent/date-icon.svg" alt="">
-        </v-toolbar>
+        <v-container>
+            <v-flex class="d-flex align-center bg-grey">
+                <v-col cols="9" class="d-flex align-center">
+                    <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
+                    <div class="d-flex align-center ml-2">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</div>
+                </v-col>
+                <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col>
+            </v-flex>
+        </v-container>
         <v-container pa-2>
-            <v-card flat elevation="1"   class="mt-8 mb-8 pa-4" color="white">
+            <v-card flat elevation="1"   class="mt-3 mb-8 pa-4" color="white">
             <!-- v-for="card in cards" :key="card.id" -->
             <v-row class="">
                 <v-col cols="6" md="3" lg="3" align="center">
@@ -154,6 +155,18 @@ export default {
     border-radius: 50px; 
     text-align: center;   
     align-items: center;
+}
+// -----------------------------
+.home_head{
+    width: 40px;
+    height: 40px;
+    padding:4px;
+    border-radius: 50%;
+    background: $dashhead;
+    .imgH{
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>
 
