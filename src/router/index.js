@@ -91,6 +91,13 @@ const routes = [
         component:() => import('../views/Admin/list-DC/UserPage/contactC.vue')
         
       }
+      // Reason
+      ,
+      {
+        path:'/ReasonC',
+        component:() => import('../views/Admin/ReasonC.vue')
+        
+      }
     ]
   },
   
