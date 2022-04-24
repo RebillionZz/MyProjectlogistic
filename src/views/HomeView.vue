@@ -1,7 +1,7 @@
 <template>
   <v-app>
     
-    <router-link to="/DashbordView" class="d-flex justify-center">Go DashBoard</router-link>
+    <router-link to="/sidebarC/" class="d-flex justify-center">Go DashBoard</router-link>
   </v-app>
   
 </template>

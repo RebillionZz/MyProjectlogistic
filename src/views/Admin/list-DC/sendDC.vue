@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <div>
             <!-- Important this component background red name not are the same other component -->
             
                 <!-- <v-container> -->
@@ -186,7 +186,7 @@
             </v-stepper>
                 
         
-    </v-container>
+    </div>
     
 </template>
 
@@ -270,9 +270,9 @@ export default {
 
 
 
-.v-text-field--outlined.v-input--dense.v-text-field--single-line > .v-input__control > .v-input__slot, .v-text-field--outlined.v-input--dense.v-text-field--outlined > .v-input__control > .v-input__slot{
-    min-height: 35px;
-}
+// .v-text-field--outlined.v-input--dense.v-text-field--single-line > .v-input__control > .v-input__slot, .v-text-field--outlined.v-input--dense.v-text-field--outlined > .v-input__control > .v-input__slot{
+//     min-height: 35px;
+// }
 
 
 

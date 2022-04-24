@@ -93,7 +93,7 @@
     </v-container>
     <!-- container view -->
     <v-container>
-        {{data_CSearch}}
+        <!-- {{data_CSearch}} -->
         <router-view></router-view>
     </v-container>
         
