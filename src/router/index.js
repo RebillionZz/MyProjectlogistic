@@ -3,10 +3,15 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
 import sidebarC from '@/components/sidebarC.vue'
-import Homepage from '../views/userview/homepage.vue'
+import homeuser from '../views/userview/HomePageHal.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/homepage',
+    name: 'homeuser',
+    component: homeuser
+  },
   {
     path: '/',
     name: 'home',
@@ -75,11 +80,6 @@ const routes = [
       }
     ]
   },
-  {
-    path: '/homepage',
-    name: 'Homepage',
-    component: homepage
-  }
   
   
 ]
