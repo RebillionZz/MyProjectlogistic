@@ -4,7 +4,7 @@
     <v-row no-gutters >
         <v-flex class="d-flex align-center" >
             <!-- MENU ICON -->
-            <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block">
+            <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" >
                 <div class="d-flex align-center justify-center ">
                     <img class="HamSide" src="../assets/Admin/sidebar/toolbar/ham.svg" @click="drawer = !drawer">
                 </div>
@@ -13,12 +13,6 @@
                 <label class="for-search" for="searchBar" ><v-img src="../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                 <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
             </v-col>
-            <!-- <v-col cols="8" v-if="dataC === 'Not' " >
-                <div class="d-lg-flex align-center d-none">
-                    <v-avatar class="Background_head" size="60"><v-img src="../assets/Admin/dataContent/mainIcon.svg" max-height="40" max-width="40"></v-img></v-avatar>
-                    <h2 class="pl-3">ຂໍ້ມູນສາຂາ</h2>
-                </div>
-            </v-col> -->
             <v-col cols="3" sm="2" lg="2" md="2" xs="3"  class=" d-flex align-center pl-1  ">
                 
                 <div class="d-flex align-center pr-1  border-user">
@@ -93,6 +87,10 @@ data() {
             CoinAPI:'220',
         }
     },
+    props:[
+        // slide(),
+    ]
+    ,
     methods:{
         hildeDATAC:function(newItem){
             this.dataC = newItem;

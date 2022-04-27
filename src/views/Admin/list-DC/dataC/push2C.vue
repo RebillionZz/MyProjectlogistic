@@ -164,41 +164,6 @@ export default {
     width: 40px;
     height: 40px;
 }
-    .timeline-zone{
-    position: relative;
-    width: 100%;
-    // display: flex;
-    justify-content: space-between;
     
-    .line{
-        width: 1.5px;
-        background-color: #ABABAB;
-        height: 70%;
-        top: 10px;
-        left: 5px;
-        display:none;
-        position: absolute;
-    }
-    .line-1{
-        padding-left: 48px;
-        font-size: 16px;
-        position: relative;
-        margin-bottom: 20px;
-    }
-    .line-1::before{
-        content: '';
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border:none;
-        background: #ABABAB;
-        padding: 2.5px;
-        position: absolute;
-        // top: 0px;
-        // left: 0px;
-        bottom: 0px;
-    }
-    }
 }
 </style>

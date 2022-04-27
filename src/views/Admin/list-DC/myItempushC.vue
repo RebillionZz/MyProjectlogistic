@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <div    >
         <v-toolbar  flat class="bg-grey">
             <v-toolbar-items class="d-flex align-center">
                 <v-avatar color="red lighten-4" size="45"><v-img src="../../../assets/Admin/PushGET/PushC/pushLogo.svg" max-height="35" max-width="35"></v-img></v-avatar>
@@ -7,16 +7,14 @@
             <v-toolbar-title class="d-flex align-center ml-2">ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-toolbar-title>
             <v-spacer></v-spacer>
         </v-toolbar>
-        <v-container flat>
-            <v-list class="d-flex line_D" dense>
+            <v-list class="d-flex line_D" dense fl>
                 <v-list-item link   v-for="listH in HeaderPush" :key="listH.id" :to="listH.routeA"  class="text-center d-flex align-center justify-center L-item" active-class="T1"> 
                     <div>{{listH.text}}</div>
                 </v-list-item>
             </v-list>
             <router-view></router-view>
             <!-- <push1C></push1C> -->
-        </v-container>
-    </v-container>
+    </div   >
 </template>
 
 <script>
@@ -44,9 +42,7 @@ export default {
     border-radius: 34px;
     
 }
-.L-item{
-    
-}
+
 .T1{
     background: $red !important;
     color: #FFFFFF;
@@ -63,4 +59,7 @@ export default {
     background: $d-grey !important;
 }
 // End
+.v-list{
+    padding: 0 0 ;
+}
 </style>
