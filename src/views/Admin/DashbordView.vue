@@ -27,9 +27,9 @@ export default {
     border-top: 2px solid red;
 }
 *{
-  font-family: 'Phetsarath', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: 'Phetsarath', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 </style>

@@ -6,7 +6,7 @@
                     <v-list-item-title class="d-flex flex-column justify-center pt-3">
                         <v-list-item-title class="logo pl-3 "><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
                         <v-list-item-content class="point">HAL logistic</v-list-item-content>
-                        <v-btn @click="slide">drawer</v-btn>
+                        <v-btn @click="Pushleft">drawer</v-btn>
                     </v-list-item-title>
                 </v-list-item>
             </v-list>
@@ -19,7 +19,7 @@
 
     <!-- container Toolbar main -->
     <v-container > <!-- This important for change Search And remove add new Icon this section remove col add to Search Comment -->
-        <searchbarC></searchbarC>
+        <searchbarC :Sidebarpush='drawer' :Getleft='Pushleft'></searchbarC>
     </v-container>
     <!-- container view -->
     <v-container>
@@ -32,27 +32,26 @@
 <script>
 import searchbarC from './searchbarC.vue'
 import sidebarviewC from '../views/Admin/sidebarviewC.vue'
+
 export default {
     name:'sidebarC',
     data() {
         return {
-            // drawer:null,
+            drawer:null,
+            hello:'hi',
             TEST:[{id:1,text:'Comple'}],
             
         }
     },
     components:{
         searchbarC,
-        sidebarviewC
+        sidebarviewC,
     }
     ,
     methods:{
-        // slide()
-        
-        
-        // {
-        //     this.drawer = !this.drawer;
-        // }
+        Pushleft(){
+            this.drawer = !this.drawer;
+        }
     },
     computed:{
             

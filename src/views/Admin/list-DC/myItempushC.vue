@@ -62,4 +62,17 @@ export default {
 .v-list{
     padding: 0 0 ;
 }
+@media only screen and (max-width: 768px) {
+    *{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 600px) {
+    *{
+        font-size: 14px;
+    }
+    // form checkbox mobile
+    
+
+}
 </style>

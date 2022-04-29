@@ -1,7 +1,7 @@
 <template>
-    <footer style="background-color: #E5E5E5;" class="px-16 d-none d-md-flex">
+    <footer style="background-color: #E5E5E5;" class=" d-none d-md-flex">
             <v-container class="border-set d-flex py-2 ">
-                <v-col cols="6">ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂການຂົນສົ່ງ</v-col>
+                <v-col cols="6" to="">ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂການຂົນສົ່ງ</v-col>
                 <!-- <v-spacer></v-spacer> -->
                 <v-col cols="6" class="text-right">COPYRIGHT© 2021 BY HAL TECH</v-col>
             </v-container>

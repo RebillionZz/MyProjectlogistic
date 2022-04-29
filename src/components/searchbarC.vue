@@ -2,11 +2,12 @@
     <v-container>
 
     <v-row no-gutters >
+        
         <v-flex class="d-flex align-center" >
             <!-- MENU ICON -->
             <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" >
                 <div class="d-flex align-center justify-center ">
-                    <img class="HamSide" src="../assets/Admin/sidebar/toolbar/ham.svg" @click="drawer = !drawer">
+                    <img class="HamSide" src="../assets/Admin/sidebar/toolbar/ham.svg"  @click="Getleft()">
                 </div>
             </v-col>
             <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3" v-if="dataC === 'Show' " >
@@ -82,19 +83,19 @@ data() {
     return {
         TEST:[{id:1,text:'Comple'}],
             dataC:'Show',
-            drawer: null,
+            // drawer:null,
             userAPI:'bebe',
             CoinAPI:'220',
         }
     },
-    props:[
-        // slide(),
-    ]
+    props:{
+        Getleft:Function,
+        
+    }
     ,
     methods:{
-        hildeDATAC:function(newItem){
-            this.dataC = newItem;
-            
+        Test(){
+            console.log('hi')
         }
     },
     computed:{

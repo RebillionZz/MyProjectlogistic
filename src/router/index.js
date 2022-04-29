@@ -26,7 +26,7 @@ const routes = [
     // ]
   },
   {
-    path: '/sidebarC',
+    path: '/sidebarc',
     component: sidebarC,
     children:[
       {
