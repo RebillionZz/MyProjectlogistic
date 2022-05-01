@@ -50,7 +50,7 @@
 
 <script>
 export default {
-    name:'UserInfoC'
+    name:'userinfoc'
 }
 </script>
 

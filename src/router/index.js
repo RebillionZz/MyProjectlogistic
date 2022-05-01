@@ -30,71 +30,76 @@ const routes = [
     component: sidebarC,
     children:[
       {
-        path:'/sidebarC',
+        path:'/sidebarc',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {
-        path:'/sendDC',
+        path:'/senddc',
         component:() => import('../views/Admin/list-DC/sendDC.vue')
       },
       {
-        path:'/priceDC',
+        path:'/pricedc',
         component:() => import('../views/Admin/list-DC/priceDC.vue')
       },
       {
-        path:'/CODDC',
+        path:'/coddc',
         component:() => import('../views/Admin/list-DC/CODDC.vue')
       },
       {
-        path:'/DataDC',
+        path:'/datadc',
         component:() => import('../views/Admin/list-DC/DataDC.vue')
       },
       {
-        path:'/myItempushC',
+        path:'/myitempushc',
         component:() => import('../views/Admin/list-DC/myItempushC.vue'),
         children:[
           {
-            path:'/myItempushC',
+            path:'/myitempushc',
           component:() => import('../views/Admin/list-DC/dataC/push1C.vue'),
           },
           {
-            path:'/push2C',
+            path:'/push2c',
           component:() => import('../views/Admin/list-DC/dataC/push2C.vue'),
           },
           {
-            path:'/push3C',
+            path:'/push3c',
           component:() => import('../views/Admin/list-DC/dataC/push3C.vue'),
           },
         ]
       },
       {
-        path:'/myItemGetC',
+        path:'/myitemgetc',
         component:() => import('../views/Admin/list-DC/myItemGetC.vue')
         
-      }
+      },
+      // footer
+      {
+        path:'/footerc',
+        component:()=> import('../components/footerC.vue')
+      },
       // User
       ,
       {
-        path:'/UserInfoC',
+        path:'/userinfoc',
         component:() => import('../views/Admin/list-DC/UserPage/UserInfoC.vue')
         
       }
       ,
       {
-        path:'/UserBunzyC',
+        path:'/userbunzyc',
         component:() => import('../views/Admin/list-DC/UserPage/UserBunzyC.vue')
         
       }
       ,
       {
-        path:'/contactC',
+        path:'/contactc',
         component:() => import('../views/Admin/list-DC/UserPage/contactC.vue')
         
       }
       // Reason
       ,
       {
-        path:'/ReasonC',
+        path:'/reasonc',
         component:() => import('../views/Admin/ReasonC.vue')
         
       }

@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name:'push2C',
+    name:'push2c',
     data() {
         return {
             itemUser:[

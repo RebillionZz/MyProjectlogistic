@@ -37,7 +37,7 @@
                             
                             <v-divider color="red"></v-divider>
                             <!-- Content change to col easy and fast control just back -->
-                            <router-link to="/UserBunzyC" class="d-flex align-center TTTT justify-space-between" >
+                            <router-link to="/userbunzyc" class="d-flex align-center TTTT justify-space-between" >
                                 <div class="my-3  d-flex align-center  ">
                                     <v-avatar color="red lighten-4" size="40" class="pl-1 mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/accout.svg" max-height="30" max-width="30"></v-img></v-avatar>
                                     <div class=" pt-1 ">ຂໍ້ມູນບັນຊີ</div>
@@ -45,7 +45,7 @@
                                 <!-- THis arrow -->
                                 <div class=" pt-1  "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </router-link>
-                            <router-link to="/contactC" class="d-flex align-center TTTT justify-space-between">
+                            <router-link to="/contactc" class="d-flex align-center TTTT justify-space-between">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/service.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ຕິດຕໍ່ພວກເຮົາ</div>

@@ -1,6 +1,8 @@
 <template>
     <v-container class="pa-0 pa-md-0"   >
-    
+            <div>
+                <!-- <hamburgur ></hamburgur> -->
+            </div>
             <v-flex class="d-flex align-center bg-grey">
                 <v-col cols="9" class="d-flex align-center">
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
@@ -111,12 +113,14 @@
                 </div>
                 </div>
             </v-container>
+            <footerC class="mt-5"></footerC>
     </v-container>
 </template>
 
 <script>
+import footerC from '../../../components/footerC.vue'
 export default {
-    name:'homeDC',
+    name:'homedc',
     data() {
         return {
             items:[
@@ -127,6 +131,9 @@ export default {
             ]
         };
     },
+    components:{
+        footerC
+    }
 }
 </script>
 

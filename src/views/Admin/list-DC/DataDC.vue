@@ -75,7 +75,7 @@
 
 <script>
 export default {
-    name:'DataDC',
+    name:'datadc',
     data() {
         return {
             Locations:[

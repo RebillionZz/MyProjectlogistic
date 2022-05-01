@@ -20,13 +20,13 @@
 <script>
 // import push1C from './dataC/push1C.vue'
 export default {
-    name:'myItempushC',
+    name:'myitempushc',
     data() {
         return {
             HeaderPush:[
-                {id:1,text:'ບິນສ້າງເອງ',routeA:'/myItempushC'},
-                {id:2,text:'ກຳລັງດຳເນີນການ',routeA:'/push2C'},
-                {id:3,text:'ຈັດສົ່ງສຳເລັດ',routeA:'/push3C'}
+                {id:1,text:'ບິນສ້າງເອງ',routeA:'/myitempushc'},
+                {id:2,text:'ກຳລັງດຳເນີນການ',routeA:'/push2c'},
+                {id:3,text:'ຈັດສົ່ງສຳເລັດ',routeA:'/push3c'}
             ]
         };
     },

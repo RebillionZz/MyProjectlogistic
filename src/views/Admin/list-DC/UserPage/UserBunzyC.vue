@@ -116,7 +116,7 @@
 
 <script>
 export default {
-    name:'UserInfoC',
+    name:'userbunzyc',
     data() {
         return {
             activeD1:1,

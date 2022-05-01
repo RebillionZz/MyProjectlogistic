@@ -47,18 +47,18 @@ export default {
         return {
 
             listG1:[
-                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebarC',},
-                {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/give.svg'),route:'/sendDC',},
+                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebarc',},
+                {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/give.svg'),route:'/senddc',},
             ],
             listG2:[
-                {id:3,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/priceDC'},
-                {id:4,text:'COD',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/COD.svg'),route:'/CODDC'},
-                {id:5,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/treeData.svg'),route:'/DataDC'},
+                {id:3,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/pricedc'},
+                {id:4,text:'COD',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/COD.svg'),route:'/coddc'},
+                {id:5,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/treeData.svg'),route:'/datadc'},
 
             ],
             listG322:[
-                {id:7,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myItempushC'},
-                {id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myItemGetC'},
+                {id:7,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myitempushc'},
+                {id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myitemgetc'},
                 
             ],
             // A1:[{id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebarC',}],

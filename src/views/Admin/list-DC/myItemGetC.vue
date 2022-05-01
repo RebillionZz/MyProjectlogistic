@@ -11,7 +11,7 @@
 // import UserBunzyC from './UserPage/UserBunzyC.vue'
 import ReasonC from '../ReasonC.vue'
 export default {
-    name:'myItemGetC',
+    name:'myitemgetc',
     components:{
         // UserInfoC
         // UserBunzyC

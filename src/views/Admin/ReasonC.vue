@@ -85,7 +85,7 @@ import r4C from './ReasonChild/r4C.vue'
 import r5C from './ReasonChild/r5C.vue'
 import r6C from './ReasonChild/r6C.vue'
 export default {
-    name:'ReasonC',
+    name:'reasonc',
     data() {
         return {
             box1:false,

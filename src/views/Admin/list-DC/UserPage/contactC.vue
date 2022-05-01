@@ -129,7 +129,7 @@
 
 <script>
 export default {
-    name:'contactC'
+    name:'contactc'
 }
 </script>
 

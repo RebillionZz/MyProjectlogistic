@@ -39,7 +39,7 @@
 
 <script>
 export default {
-    name:'push1C',
+    name:'push1c',
     data() {
         return {
             itemUser:[

@@ -184,15 +184,16 @@
                 </v-stepper-items>
                 
             </v-stepper>
-                
+            <footerC class="mt-5"></footerC>
         
     </div>
     
 </template>
 
 <script>
+import footerC from '../../../components/footerC.vue'
 export default {
-    name:'home2HT',
+    name:'senddc',
     data() {
         return {
             dew2:null,
@@ -205,6 +206,9 @@ export default {
             endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
         }
     },
+    components:{
+        footerC
+    }
 }
 </script>
 

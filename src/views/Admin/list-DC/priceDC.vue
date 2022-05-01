@@ -60,7 +60,7 @@
 
 <script>
 export default {
-    name:'priceDC',
+    name:'pricedc',
     data() {
         return {
             totalPrice:0,

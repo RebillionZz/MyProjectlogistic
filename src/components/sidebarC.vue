@@ -19,22 +19,24 @@
 
     <!-- container Toolbar main -->
     <v-container > <!-- This important for change Search And remove add new Icon this section remove col add to Search Comment -->
-        <searchbarC :Sidebarpush='drawer' :Getleft='Pushleft'></searchbarC>
+        <searchbarC ></searchbarC>
     </v-container>
-    <!-- container view -->
     <v-container>
-        <!-- {{data_CSearch}} -->
         <router-view></router-view>
+
+        <!-- <footerC class="mt-5"></footerC> -->
     </v-container>
     </v-app>
 </template>
 
 <script>
+// import footerC from '../components/footerC.vue'
 import searchbarC from './searchbarC.vue'
+import hamburgur from './DashTopview/hamburgur.vue'
 import sidebarviewC from '../views/Admin/sidebarviewC.vue'
 
 export default {
-    name:'sidebarC',
+    name:'sidebarc',
     data() {
         return {
             drawer:null,
@@ -46,6 +48,8 @@ export default {
     components:{
         searchbarC,
         sidebarviewC,
+        hamburgur,
+        // footerC
     }
     ,
     methods:{
