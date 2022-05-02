@@ -4,9 +4,21 @@ import HomeView from '../views/HomeView.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
 import sidebarC from '@/components/sidebarC.vue'
 import homeuser from '../views/userview/HomePageHal.vue'
+import branch from '../views/userview/BranchView.vue'
+import login from '../views/userview/loginView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/branchservice',
+    name: 'branch',
+    component: branch
+  },
   {
     path: '/homepage',
     name: 'homeuser',

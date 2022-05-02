@@ -14,7 +14,7 @@
       </div>
       <v-spacer></v-spacer>
       <v-row>
-        <v-col cols="12" sm class="py-2">
+        <v-col cols="12" sm class="py-2 hiddenSmAndDown">
           <v-btn
           color="#E21312"
           elevation="0"
