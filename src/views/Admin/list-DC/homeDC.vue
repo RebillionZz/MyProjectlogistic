@@ -1,7 +1,7 @@
 <template>
     <v-container class="pa-0 pa-md-0"   >
             <div>
-                <!-- <hamburgur ></hamburgur> -->
+                <hamburgur ></hamburgur>
             </div>
             <v-flex class="d-flex align-center bg-grey">
                 <v-col cols="9" class="d-flex align-center">
@@ -118,6 +118,7 @@
 </template>
 
 <script>
+import hamburgur from '../../../components/DashTopview/hamburgur.vue'
 import footerC from '../../../components/footerC.vue'
 export default {
     name:'homedc',
@@ -132,7 +133,8 @@ export default {
         };
     },
     components:{
-        footerC
+        footerC,
+        hamburgur
     }
 }
 </script>

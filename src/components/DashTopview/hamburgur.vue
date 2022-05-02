@@ -1,7 +1,7 @@
 <template>
-    <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" >
+    <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" id="hamburgur">
         <div class="d-flex align-center justify-center "> <!-- @click="Getleft()"   -->
-            <img class="HamSide" src="../../assets/Admin/sidebar/toolbar/ham.svg" @click="Getleft()" >
+            <img class="HamSide" src="../../assets/Admin/sidebar/toolbar/ham.svg" @click="Getleft2" >
         </div>
     </v-col>
 </template>
@@ -11,15 +11,25 @@ export default {
     name:'hamburgur',
     data() {
         return {
-            
+            // A1:$store.state.drawer
         }
     },
-    props:{
-        Getleft:Function,
-    }
+    // props:{
+    //     Getleft:Function,
+    // },
+    methods: {
+        Getleft2(){
+            this.$store.state.drawer = !this.$store.state.drawer
+        }
+    },
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@media only screen and (max-width: 768px) {
+    .HamSide{
+    width: 25px;
+    height: 25px;
+}
+}
 </style>

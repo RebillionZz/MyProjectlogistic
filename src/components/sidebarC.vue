@@ -1,12 +1,13 @@
 <template>
     <v-app class="bg-grey">
-        <v-navigation-drawer app  v-model="drawer">
+        <v-navigation-drawer app  v-model="$store.state.drawer">
         <v-list>
                 <v-list-item>
                     <v-list-item-title class="d-flex flex-column justify-center pt-3">
                         <v-list-item-title class="logo pl-3 "><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
                         <v-list-item-content class="point">HAL logistic</v-list-item-content>
-                        <v-btn @click="Pushleft">drawer</v-btn>
+                        <!-- <v-btn >{{$store.state.drawer}}</v-btn> -->
+                        <!-- <v-btn @click="$store.state.drawer = !$store.state.drawer">{{$store.state.drawer}}</v-btn> -->
                     </v-list-item-title>
                 </v-list-item>
             </v-list>
@@ -32,14 +33,14 @@
 <script>
 // import footerC from '../components/footerC.vue'
 import searchbarC from './searchbarC.vue'
-import hamburgur from './DashTopview/hamburgur.vue'
+// import hamburgur from './DashTopview/hamburgur.vue'
 import sidebarviewC from '../views/Admin/sidebarviewC.vue'
 
 export default {
     name:'sidebarc',
     data() {
         return {
-            drawer:null,
+            // drawer2:$store.state.drawer,
             hello:'hi',
             TEST:[{id:1,text:'Comple'}],
             
@@ -48,14 +49,11 @@ export default {
     components:{
         searchbarC,
         sidebarviewC,
-        hamburgur,
+        // hamburgur,
         // footerC
     }
     ,
     methods:{
-        Pushleft(){
-            this.drawer = !this.drawer;
-        }
     },
     computed:{
             
