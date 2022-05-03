@@ -138,6 +138,9 @@ export default {
         height: 100%;
     }
 }
+.User_Dropdown_Conntent{
+    background: #FFFFFF;
+}
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;

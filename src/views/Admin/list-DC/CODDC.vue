@@ -1,5 +1,17 @@
 <template>
-    <v-container>
+    <div>
+        <v-container>
+            <v-row no-gutters>
+            <v-flex class="d-flex align-center">
+                <hamburgur ></hamburgur>
+                <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                    <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
+                    <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
+                </v-col>
+                <userAcoin></userAcoin>
+            </v-flex>
+        </v-row>
+        </v-container>
         <v-container class="d-flex">
             <v-flex class="d-flex align-center bg-grey">
                 <v-col class="d-flex align-center" >
@@ -99,12 +111,15 @@
                     </v-card>
                     </v-dialog>
         </v-container>
-    </v-container>
+    </div>
 </template>
 
 <script>
 import dialogCOD1 from './CODchild/dialogCOD1.vue'
 import dialogCOD2 from './CODchild/dialogCOD2.vue'
+import hamburgur from '../../../components/DashTopview/hamburgur.vue'
+import userAcoin from '../../../components/DashTopview/userAcoin.vue'
+import footerC from '../../../components/footerC.vue'
 export default {
     name:'COD',
     data() {
@@ -117,7 +132,11 @@ export default {
     },
     components:{
         dialogCOD1,
-        dialogCOD2
+        dialogCOD2,
+        footerC,
+        hamburgur,
+        userAcoin
+
     }
 }
 </script>
@@ -212,42 +231,24 @@ export default {
 .animate-none-Bg{
     background: #EEEEEE;
 }
-// .nav-animate{
-//     background: rgb(103, 103, 124);
-//     position: relative;
-   
-//     display: inline-block;
-    
-//     width: 100%;
-//     height: 45px;
-//     border: 1px solid #000000;
-//     border-radius: 28px;
-
-//     .a-child{
-//     z-index: 1;
-//     text-align: center;
-//     position: relative;
-//     width: 100%;
-//     display: inline-block;
-//     .animate-text{
-//         position: absolute;
-//         top: 0;
-//         z-index: 0;
-//         background: $red;
-//         height: 100%;
-//         width: 50%;
-//     }
-    
-// }
-// }
-
-// // 
-// .a-child:nth-child(1){
-//     width: 50%;
-// }
-// .a-child:nth-child(2){
-//     width: 50%;
-// }
+.search-form{
+    position: relative;
+    width: 100%;
+    .input-max{
+        width: 100%;
+        height: 40px;
+        padding-left: 45px;
+        background:$bg-footer;
+        border-radius: 34px;
+        outline: none;
+    }
+    .for-search{
+        position: absolute;
+        left: 8px;
+        top:0px;
+    }
+}
+// -------------------------------------------------------End search
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;
@@ -265,6 +266,28 @@ export default {
     border-radius: 28px;
     width: 100%;
     height: 35px;
+}
+    .search-form{
+        position: relative;
+        padding-right: 8px;
+        
+        .input-max{
+            width: 100%;
+            height: 35px;
+            padding-left: 40px;
+            
+            border-radius: 34px;
+        }
+        .for-search{
+            position: absolute;
+            left: 8px;
+            top:2px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    input::placeholder{
+    font-size: 14px;
 }
 }
 @media screen and (max-width: 600px) {
@@ -301,6 +324,19 @@ export default {
 
     }
 }
+    .search-form{
+        padding:0 5px !important;
+            .input-max{
+            height: 35px;
+        }
+        .for-search{
+            position: absolute;
+            left: 12px;
+            top: 2px;
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 </style>
