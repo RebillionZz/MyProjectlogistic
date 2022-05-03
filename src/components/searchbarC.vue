@@ -5,9 +5,9 @@
         
         <v-flex class="d-flex align-center" >
             <!-- MENU ICON -->
-            <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" >
+            <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" @click="Getdata()">
                 <div class="d-flex align-center justify-center ">
-                    <img class="HamSide" src="../assets/Admin/sidebar/toolbar/ham.svg"  @click="this.$store.state.drawer = !this.$store.state.drawer">
+                    <img class="HamSide" src="../assets/Admin/sidebar/toolbar/ham.svg" >
                 </div>
             </v-col>
 
@@ -24,9 +24,13 @@
             <v-col cols="3" sm="2" lg="2" md="2" xs="3"  class=" d-flex align-center pl-1  ">
                 <!-- box user-Dropdown and slide -->
                 <div class="d-flex align-center pr-1  border-user">
-                    <div class="avataUser"><img class="userIMG d-none d-lg-block d-md-block" src="../assets/Admin/sidebar/toolbar/userAVATA.png"></div>
-                    <router-link to="/userinfoc" class="avataUser d-block d-lg-none- d-md-none"><img class="userIMG" src="../assets/Admin/sidebar/toolbar/userAVATA.png"></router-link>
-                    <!-- cra -->
+                    <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " src="../assets/Admin/sidebar/toolbar/userAVATA.png"></div>
+                    <div @click="$store.state.userAVT = !$store.state.userAVT" class="avataUser d-block d-lg-none- d-md-none">
+                        
+                        <img class="userIMG" src="../assets/Admin/sidebar/toolbar/userAVATA.png">
+
+                    </div>
+                    <!--  -->
                     <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
 
@@ -110,6 +114,12 @@ data() {
     computed:{
             
     }
+    ,
+    methods: {
+        Getdata(){
+            this.$store.state.drawer = !this.$store.state.drawer
+        }
+    },
     }
 </script>
 
@@ -133,7 +143,7 @@ data() {
     .input-max{
         width: 100%;
         height: 40px;
-        padding-left: 45px;
+        // padding-left: 40px;
         background:$bg-footer;
         border-radius: 34px;
         outline: none;
@@ -157,12 +167,13 @@ data() {
     
 }
     .avataUser{
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
         .userIMG{
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 100%;
         }
     }
 .User_Dropdown_Conntent{

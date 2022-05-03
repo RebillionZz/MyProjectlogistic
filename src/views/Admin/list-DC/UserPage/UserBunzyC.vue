@@ -99,15 +99,15 @@
             <v-divider color="red"></v-divider>
             <div class="pt-3">
                 <label class="">ລະຫັດຜ່ານປະຈຸບັນ</label>
-                <input  class="getCpass" type="number" name="" id="" placeholder="ລະຫັດຜ່ານປະຈຸບັນ">
+                <input  class="getCpass" type="password" name="" id="" placeholder="ລະຫັດຜ່ານປະຈຸບັນ">
             </div>
             <div class="pt-3">
                 <label class="">ລະຫັດຜ່ານໃໝ່</label>
-                <input  class="getCpass" type="number" name="" id="" placeholder="ລະຫັດຜ່ານໃໝ່">
+                <input  class="getCpass" type="password" name="" id="" placeholder="ລະຫັດຜ່ານໃໝ່">
             </div>
             <div class="pt-3">
                 <label class=""> ຢືນຢັນລະຫັດຜ່ານໃໝ່</label>
-                <input  class="getCpass" type="number" name="" id="" placeholder="ຢືນຢັນລະຫັດຜ່ານໃໝ່">
+                <input  class="getCpass" type="password" name="" id="" placeholder="ຢືນຢັນລະຫັດຜ່ານໃໝ່">
             </div>
             <div class="my-6"><button class="btnCPass">ບັນທຶກ</button></div>
         </form>

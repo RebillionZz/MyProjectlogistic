@@ -1,7 +1,7 @@
 <template>
     <v-col cols="1" class="d-lg-none d-md-none d-xs-block d-sm-block" id="hamburgur">
         <div class="d-flex align-center justify-center "> <!-- @click="Getleft()"   -->
-            <img class="HamSide" src="../../assets/Admin/sidebar/toolbar/ham.svg" @click="Getleft2" >
+            <img class="HamSide" src="@/assets/Admin/sidebar/toolbar/ham.svg" @click="Getleft2" >
         </div>
     </v-col>
 </template>
