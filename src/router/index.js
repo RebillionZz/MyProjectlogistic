@@ -6,9 +6,15 @@ import sidebarC from '@/components/sidebarC.vue'
 import homeuser from '../views/userview/HomePageHal.vue'
 import branch from '../views/userview/BranchView.vue'
 import login from '../views/userview/loginView.vue'
+import servicearea from '../views/userview/serviceView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/servicearea',
+    name: 'servicearea',
+    component: servicearea
+  },
   {
     path: '/login',
     name: 'login',
