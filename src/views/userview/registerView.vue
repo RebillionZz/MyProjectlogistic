@@ -15,55 +15,74 @@
           <div class="formlogin">
             <form action="">
               <div class="textlogin">
-                <h4>ເຂົ້າສູ່ລະບົບ</h4>
-                <h4>ເພື່ອໃຊ້ບໍລິການຂອງ HAL LOGISTIC</h4>
+                <h4>ລົງທະບຽນ</h4>
+                <h4>ເພື່ອເປັນສະມາຊິກຂອງ HAL LOGISTIC</h4>
               </div>
               <div class="formlogin">
-                  <h4>ເບີິໂທລະສັບ</h4>
-                  <v-row>
-                <v-col class="d-flex" cols="2" sm="2">
-                  <v-select
-                    :items="items"
-                    label="020"
-                    dense
-                    outlined
-                    color="red darken-1"
-                    rounded
-                  ></v-select>
-                </v-col>
-                <v-col class="d-flex" cols="9" sm="9">
+                <h4>ຊື່</h4>
+                <v-row>
+                  <v-col class="d-flex" cols="10">
                     <v-text-field
-                    :item="items"
-                    label="ເບີໂທລະສັບ"
-                    dense
-                    outlined
-                    color="red darken-1"
-                    rounded>
+                      label="ຊື່"
+                      dense
+                      outlined
+                      rounded
+                    ></v-text-field>
+                  </v-col>
+                  <v-col class="d-flex" cols="10">
+                    <h4>ນາມສະກຸນ</h4>
+                    <v-text-field
+                      label="ນາມສະກູນ"
+                      dense
+                      outlined
+                      rounded
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <h4>ເບີິໂທລະສັບ</h4>
+                <v-row>
+                  <v-col class="d-flex" cols="3" sm="3">
+                    <v-select
+                      :items="items"
+                      label="020"
+                      dense
+                      outlined
+                      rounded
+                    ></v-select>
+                  </v-col>
+                  <v-col class="d-flex" cols="8" sm="8">
+                    <v-text-field
+                      :item="items"
+                      label="ເບີໂທລະສັບ"
+                      dense
+                      outlined
+                      rounded
+                    >
                     </v-text-field>
-                </v-col>
-                  </v-row>
-                  <h4>ລະຫັດຜ່ານ</h4>
-                  <v-row>
-                      <v-col cols="11" sm="11">
-                          <v-text-field
-                          :item="items"
-                          label="ລະຫັດຜ່ານ"
-                          dense
-                          color="red darken-1"
-                          outlined
-                          rounded>
-                          </v-text-field>
-                      </v-col>
-                  </v-row>
-                  <div class="centertext">
-                  <v-row>
-                      <v-col cols="12" sm="12">
-                          <v-btn color="red darken-1" rounded dark class="col-10 sm-10">                  ເຂົ້າສູ່ລະບົບ         </v-btn>
-                          <h4>ລືມລະຫັດຜ່ານ</h4>
-                      </v-col>
-                  </v-row>
-                          <p>ຍັງບໍ່ມີບັນຊີເທື່ອບໍ? <a class="redtext">ລົງທະບຽນ</a></p>
-                  </div>
+                  </v-col>
+                </v-row>
+                <h4>ລະຫັດຜ່ານ</h4>
+                <v-row>
+                  <v-col cols="12" sm="12">
+                    <v-text-field
+                      :item="items"
+                      label="ລະຫັດຜ່ານ"
+                      dense
+                      outlined
+                      rounded
+                    >
+                    </v-text-field>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col cols="12" sm="12">
+                    <v-btn color="red darken-1" rounded dark class="col-10 sm-10"
+                      >ລົງທະບຽນ</v-btn
+                    >
+                    <h4>ລືມລະຫັດຜ່ານ</h4>
+                  </v-col>
+                </v-row>
+                <p>ຍອມຮັບເງື່ອນໄຂ ແລະ ຂໍ້ກຳນົດ <a>ອ່ານເພີ່ມເຕີມ</a></p>
               </div>
             </form>
           </div>
@@ -107,16 +126,13 @@ export default {
     Toolbar,
     Footer,
     HomeView,
-    data: () => ({
-      items: ['020', '030',],
-    }),
   },
 };
 </script>
 
 <style>
-.redtext{
-    color: #e21312;
+.redtext {
+  color: #e21312;
 }
 .textlogin {
   text-align: center;
@@ -138,12 +154,8 @@ export default {
 }
 .formlogin {
   background: white;
-  color: black;
-  
-  align-items: center;
-  border-radius: 10px;
 }
-.centertext{
-  text-align: center;
+.rountest {
+  border-radius: 10px;
 }
 </style>

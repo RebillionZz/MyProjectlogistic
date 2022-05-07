@@ -12,6 +12,7 @@
 <p>
   ສາຍດ່ວນ 1419
 </p>
+<img src="../assets/Frontend/footer/facebook-email icon.svg" alt="">
     </v-col>
     <v-col cols="4" class="margintop">
       <h3>ບໍລິການຂອງເຮົາ</h3>

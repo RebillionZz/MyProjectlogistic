@@ -7,9 +7,33 @@ import homeuser from '../views/userview/HomePageHal.vue'
 import branch from '../views/userview/BranchView.vue'
 import login from '../views/userview/loginView.vue'
 import servicearea from '../views/userview/serviceView.vue'
+import pricecal from '../views/userview/pricecalView.vue'
+import register from '../views/userview/registerView.vue'
+import follow from '../views/userview/followView.vue'
+import codregister from '../views/userview/codregisterView.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/codregister',
+    name: 'codregister',
+    component: codregister
+  },
+  {
+    path: '/follow',
+    name: 'follow',
+    component: follow
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: register
+  },
+  {
+    path: '/pricecal',
+    name: 'pricecal',
+    component: pricecal
+  },
   {
     path: '/servicearea',
     name: 'servicearea',
