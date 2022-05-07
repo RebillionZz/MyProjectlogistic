@@ -10,13 +10,15 @@
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
-        <v-toolbar  flat class="bg-grey">
-            <v-toolbar-items class="d-flex align-center">
+        <div class="d-flex bg-grey">
+            <div class="d-flex align-center">
                 <v-avatar color="red lighten-4" size="45"><v-img src="../../../assets/Admin/PushGET/PushC/pushLogo.svg" max-height="35" max-width="35"></v-img></v-avatar>
-            </v-toolbar-items>
-            <v-toolbar-title class="d-flex align-center ml-2">ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-toolbar-title>
-            <v-spacer></v-spacer>
-        </v-toolbar>
+            </div>
+            <div class="d-flex align-center ml-2">ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</div>
+        </div>
+            
+
+
             <v-list class="d-flex line_D" dense fl>
                 <v-list-item link   v-for="listH in HeaderPush" :key="listH.id" :to="listH.routeA"  class="text-center d-flex align-center justify-center L-item" active-class="T1"> 
                     <div>{{listH.text}}</div>
@@ -26,20 +28,24 @@
             <!-- <push1C></push1C> -->
     </div   >
 </template>
-
 <script>
 import hamburgur from '../../../components/DashTopview/hamburgur.vue'
 import userAcoin from '../../../components/DashTopview/userAcoin.vue'
+// import userAcoin from '../../../components/DashTopview/userAcoin.vue'
 // import push1C from './dataC/push1C.vue'
 export default {
     name:'myitempushc',
     data() {
         return {
+        //     tab: null,
+        // text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        //     tabs: null,
             HeaderPush:[
                 {id:1,text:'ບິນສ້າງເອງ',routeA:'/myitempushc'},
                 {id:2,text:'ກຳລັງດຳເນີນການ',routeA:'/push2c'},
                 {id:3,text:'ຈັດສົ່ງສຳເລັດ',routeA:'/push3c'}
-            ]
+            ],
+            
         };
     },
     components:{

@@ -10,8 +10,7 @@
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
-            <div>
-            </div>
+            
             <v-flex class="d-flex align-center bg-grey">
                 <v-col cols="9" class="d-flex align-center">
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
@@ -20,66 +19,65 @@
                 <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col>
             </v-flex>
         
-        <v-container pa-2>
-            <v-card flat elevation="1"   class="mt-3 mb-8 pa-4" color="white">
-            <!-- v-for="card in cards" :key="card.id" -->
-            <v-row class="">
-                <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" class="bg-red">
-                        <v-avatar  size="45" color="">
-                            <img src="../../../assets/Admin/homeContent/rounded.svg" alt="">
+    
+            <v-card flat elevation="1"   class="mt-3 mb-8 pa-3" color="white">
+                <v-row class="">
+                    <v-col cols="6" md="3" lg="3" align="center">
+                        <v-avatar color="" size="87" class="bg-red">
+                            <v-avatar  size="45" color="">
+                                <img src="../../../assets/Admin/homeContent/rounded.svg" alt="">
+                            </v-avatar>
                         </v-avatar>
-                    </v-avatar>
-                    <v-card-text>
-                        <v-flex>ລໍຖ້າດຳເນີນການ</v-flex>
-                        <v-flex >
-                            <p class="red--text">0 ລາຍການ</p>
-                        </v-flex>
-                    </v-card-text>
-                </v-col>
-                <!-- car here -->
-                <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" class="bg-red">
-                        <v-avatar  size="45" color="">
-                            <img src="../../../assets/Admin/homeContent/car.svg" alt="">
+                        <v-card-text>
+                            <v-flex>ລໍຖ້າດຳເນີນການ</v-flex>
+                            <v-flex >
+                                <p class="red--text">0 ລາຍການ</p>
+                            </v-flex>
+                        </v-card-text>
+                    </v-col>
+                    <!-- car here -->
+                    <v-col cols="6" md="3" lg="3" align="center">
+                        <v-avatar color="" size="87" class="bg-red">
+                            <v-avatar  size="45" color="">
+                                <img src="../../../assets/Admin/homeContent/car.svg" alt="">
+                            </v-avatar>
                         </v-avatar>
-                    </v-avatar>
-                    <v-card-text>
-                        <v-flex>ກຳລັງດຳເນີນການ</v-flex>
-                        <v-flex >
-                            <p class="red--text">0 ລາຍການ</p>
-                        </v-flex>
-                    </v-card-text>
-                </v-col>
-                <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" class="bg-red">
-                        <v-avatar  size="45" color="">
-                            <img src="../../../assets/Admin/homeContent/compeled.svg" alt="">
+                        <v-card-text>
+                            <v-flex>ກຳລັງດຳເນີນການ</v-flex>
+                            <v-flex >
+                                <p class="red--text">0 ລາຍການ</p>
+                            </v-flex>
+                        </v-card-text>
+                    </v-col>
+                    <v-col cols="6" md="3" lg="3" align="center">
+                        <v-avatar color="" size="87" class="bg-red">
+                            <v-avatar  size="45" color="">
+                                <img src="../../../assets/Admin/homeContent/compeled.svg" alt="">
+                            </v-avatar>
                         </v-avatar>
-                    </v-avatar>
-                    <v-card-text>
-                        <v-flex>ຈັດສົ່ງສຳເລັດ</v-flex>
-                        <v-flex >
-                            <p class="red--text">0 ລາຍການ</p>
-                        </v-flex>
-                    </v-card-text>
-                </v-col>
-                <v-col cols="6" md="3" lg="3" align="center">
-                    <v-avatar color="" size="87" class="bg-red">
-                        <v-avatar  size="45" color="">
-                            <img src="../../../assets/Admin/homeContent/COD.svg" alt="">
+                        <v-card-text>
+                            <v-flex>ຈັດສົ່ງສຳເລັດ</v-flex>
+                            <v-flex >
+                                <p class="red--text">0 ລາຍການ</p>
+                            </v-flex>
+                        </v-card-text>
+                    </v-col>
+                    <v-col cols="6" md="3" lg="3" align="center">
+                        <v-avatar color="" size="87" class="bg-red">
+                            <v-avatar  size="45" color="">
+                                <img src="../../../assets/Admin/homeContent/COD.svg" alt="">
+                            </v-avatar>
                         </v-avatar>
-                    </v-avatar>
-                    <v-card-text>
-                        <v-flex>COD</v-flex>
-                        <v-flex >
-                            <p class="red--text">0 ລາຍການ</p>
-                        </v-flex>
-                    </v-card-text>
-                </v-col>
-            </v-row>
+                        <v-card-text>
+                            <v-flex>COD</v-flex>
+                            <v-flex >
+                                <p class="red--text">0 ລາຍການ</p>
+                            </v-flex>
+                        </v-card-text>
+                    </v-col>
+                </v-row>
         </v-card>
-        </v-container>
+        
         <!-- Start here table section -->
         
             <v-container  >
@@ -117,8 +115,9 @@
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.group}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.date}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.send}}</v-col>
-                        <v-col cols="6" md="2" class="pa-2">{{item.morethan}}</v-col>
+                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id,item.bin)">ເບິ່ງລາຍລະອຽດ</a></v-col>
                     </v-row>
+                    
                 </div>
                 </div>
             </v-container>
@@ -135,12 +134,27 @@ export default {
     data() {
         return {
             items:[
-                {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',morethan:'ເບິ່ງລາຍລະອຽດ >'},
-                {id:2,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',morethan:'ເບິ່ງລາຍລະອຽດ >'},
-                {id:3,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',morethan:'ເບິ່ງລາຍລະອຽດ >'},
-                {id:4,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',morethan:'ເບິ່ງລາຍລະອຽດ >'},
+                {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:2,bin:'VTE22222222222',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:3,bin:'VTE33333333333',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:4,bin:'VTE44444444444',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
             ]
         };
+    },
+    methods:{
+        push(id,bin){
+            // id = this.item.bin
+            this.$router.push({
+                name:'sidebarcE',
+                params:{
+                    id :id,
+                    bin:bin
+                    }
+                // id = this.items.id,
+            })
+            // router.push({ path: '/dataCC', params: { id } }) // -> /user
+            
+        }
     },
     components:{
         footerC,

@@ -13,10 +13,12 @@
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
+        
     </div>
 </template>
 
 <script>
+
 // import UserInfoC from './UserPage/UserInfoC.vue'
 // import UserBunzyC from './UserPage/UserBunzyC.vue'
 // import ReasonC from '../ReasonC.vue'

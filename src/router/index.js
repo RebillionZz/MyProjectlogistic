@@ -34,6 +34,12 @@ const routes = [
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {
+        name:'sidebarcE',
+        path:'/sidebarc/:id/:bin',
+        
+        component:() => import('../views/Admin/list-DC/HomeDetail/homeDetail.vue')
+      },
+      {
         path:'/senddc',
         component:() => import('../views/Admin/list-DC/sendDC.vue')
       },
@@ -47,8 +53,16 @@ const routes = [
       },
       {
         path:'/datadc',
-        component:() => import('../views/Admin/list-DC/DataDC.vue')
+        component:() => import('../views/Admin/list-DC/DataDC.vue'),
+        children:[
+          {
+            path:'/dataCC/:id',
+            name:"dataCC",
+            component:() => import('../views/Admin/list-DC/ForDataDC/dataCC.vue')
+          },
+        ]
       },
+      
       {
         path:'/myitempushc',
         component:() => import('../views/Admin/list-DC/myItempushC.vue'),
