@@ -79,6 +79,34 @@
                                         </v-col>
                                     </v-col>
                                 </div>
+                                <div class="d-flex itemSelect mb-3 align-center">
+                                    <!--  -->
+                                    <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
+                                        <div class=" ">ບໍລິການເສີມ</div>
+                                    </v-col>
+                                    <v-col cols="8" class="d-flex">
+                                        <!-- 4 md lg// 6 xs -->
+                                        <v-col cols="4" md="4" lg="4" xs="4" class="line-leftR pa-0">
+                                            <div class="d-flex align-center line-left pl-3">
+                                                <input type="checkbox" id="CDC" name="itemSelect" value="1">
+                                                <label for="CDC" class="pl-1">CDC</label>
+                                            </div>
+                                        </v-col>
+                                        <!-- 8 md lg 6 xs -->
+                                        <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
+                                            <div class="d-flex align-center">
+                                                <input type="checkbox" id="COD" name="itemSelect" value="2">
+                                                <label for="COD" class="pl-1">COD</label>
+                                            </div>
+                                        </v-col>
+                                        <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
+                                            <div class="d-flex align-center">
+                                                <input type="checkbox" id="itemDocumentID" name="itemSelect" value="3">
+                                                <label for="itemDocumentID" class="pl-1">ປະກັນໄພ</label>
+                                            </div>
+                                        </v-col>
+                                    </v-col>
+                                </div>
                                 <div>
                                 </div>
 

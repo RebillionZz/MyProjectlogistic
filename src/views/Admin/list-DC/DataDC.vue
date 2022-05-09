@@ -125,18 +125,20 @@
                 
             </v-col>
             <v-col cols="10" class="box-search">
-                <label for="Location_search" class="icon-search"><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
-                <input  type="text" name="" id="Location_search" placeholder="ຄົ້ນຫາດ້ວຍຊື່ສາຂາ, ເມືອງ ຫຼື ແຂວງ" class="input-max box-border sha input-search ">
+                <form >
+                    <label for="Location_search" class="icon-search"><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
+                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ຄົ້ນຫາດ້ວຍຊື່ສາຂາ, ເມືອງ ຫຼື ແຂວງ" class="input-max box-border sha input-search ">
+                </form>
             </v-col>
             <v-col cols="1">
             </v-col>
         </div>
         
         <v-row  class="px-5" no-gutters >
-            <v-col  cols="12" md="4" lg="4" v-for="LocatV in VT" :key="LocatV.id"  class="px-2 py-2" v-show="topclick == 1">
+            <v-col  cols="12" md="4" lg="4" v-for="LocatV in maps" :key="LocatV.id"  class="px-2 py-2" v-show="topclick == 1">
                 <v-btn class="d-flex align-center locate_BTN backW sha">
                     <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
-                    <div class="pt-1 pl-2">{{LocatV.text}}</div>
+                    <div class="pt-1 pl-2">{{LocatV.name}}</div>
                 </v-btn>
             </v-col>
 
@@ -158,6 +160,11 @@
                     <div class="pt-1 pl-2">{{LocatS.text}}</div>
                 </v-btn>
             </v-col>
+            <v-col cols="12" md="4" lg="4"   class="px-2 py-2"  v-show="topclick == 5">
+                <v-btn class="d-flex align-center locate_BTN backW sha">
+                    <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
+                </v-btn>
+            </v-col>
             
         </v-row>
         </div>
@@ -169,12 +176,16 @@
 import hamburgur from '../../../components/DashTopview/hamburgur.vue'
 import userAcoin from '../../../components/DashTopview/userAcoin.vue'
 import footerC from '../../../components/footerC.vue'
+// import { ref, onMounted } from "vue";
+import Vue from 'vue'
 export default {
     name:'datadc',
     data() {
         return {
+            search:"",
             topclick:1,
             footshow:1,
+            // Search:"",
             VT:
                 [
                     {id:1,text:"ເມືອງ ຈັນທະບູລີ"},
@@ -228,8 +239,29 @@ export default {
             ]
         }
     },
-    
+    // mounted:{
+    //     SearchLocation()
+    // }
+    // ,
+    computed:{
+        maps(){
+            console.log(this.$store.state.mapState)
+            return this.$store.state.mapState
+            
+        }
+    },
     methods:{
+        SearchLocation(){
+            if (this.search != ""){
+                this.topclick == 5
+                console.log(this.topclick == 5)
+                
+            }
+            else{
+                return console.log(this.topclick)
+            }
+        },
+    
         demo(id){
             this.$router.push({
                 name:"dataCC.edit",
@@ -238,9 +270,17 @@ export default {
                 }
             }).catch(()=>{})
         },
-        Location(La){
-            console.log(this.Laos = La)
-        },
+        
+        
+
+    },
+    mounted(){
+        Vue.axios.get('https://hal.hal-logistics.la/api/v1/listing/branches?')
+        .then((resp)=>{
+            this.lists = resp.data;
+            console.warn(resp.data)
+        })
+        this.$store.dispatch("mapAction");
     },
     
     components:{
@@ -248,16 +288,6 @@ export default {
         hamburgur,
         userAcoin
     },
-    computed:{
-        
-        // ra2:function(){
-        //     this.IMG1==false,
-        //     this.IMG2==true,
-        //     this.IMG3==false,
-        //     this.IMG4==false
-        // }
-        
-    }
 }
 </script>
 

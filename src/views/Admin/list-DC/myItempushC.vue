@@ -41,9 +41,9 @@ export default {
         // text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         //     tabs: null,
             HeaderPush:[
-                {id:1,text:'ບິນສ້າງເອງ',routeA:'/myitempushc'},
-                {id:2,text:'ກຳລັງດຳເນີນການ',routeA:'/push2c'},
-                {id:3,text:'ຈັດສົ່ງສຳເລັດ',routeA:'/push3c'}
+                {id:1,text:'ບິນສ້າງເອງ',routeA:'/myitempushc/push1c'},
+                {id:2,text:'ກຳລັງດຳເນີນການ',routeA:'/myitempushc/push2c'},
+                {id:3,text:'ຈັດສົ່ງສຳເລັດ',routeA:'/myitempushc/push3c'}
             ],
             
         };

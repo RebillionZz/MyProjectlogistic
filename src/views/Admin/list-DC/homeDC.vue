@@ -12,11 +12,13 @@
         </v-row>
             
             <v-flex class="d-flex align-center bg-grey">
-                <v-col cols="9" class="d-flex align-center">
+                <v-col cols="8" class="d-flex align-center">
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
                     <div class="d-flex align-center ml-2">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</div>
                 </v-col>
-                <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col>
+                
+                <v-col cols="4" class="d-flex justify-end "><date-picker v-model="time3" range></date-picker></v-col>
+                <!-- <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col> -->
             </v-flex>
         
     
@@ -115,12 +117,13 @@
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.group}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.date}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.send}}</v-col>
-                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id,item.bin)">ເບິ່ງລາຍລະອຽດ</a></v-col>
+                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id,)">ເບິ່ງລາຍລະອຽດ</a></v-col>
                     </v-row>
                     
                 </div>
                 </div>
             </v-container>
+            
             <footerC class="mt-5"></footerC>
     </v-container>
 </template>
@@ -129,15 +132,20 @@
 import hamburgur from '../../../components/DashTopview/hamburgur.vue'
 import userAcoin from '../../../components/DashTopview/userAcoin.vue'
 import footerC from '../../../components/footerC.vue'
+import DatePicker from 'vue2-datepicker';
+import 'vue2-datepicker/index.css';
 export default {
     name:'homedc',
     data() {
         return {
+            time1: null,
+            time2: null,
+            time3: null,
             items:[
                 {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:2,bin:'VTE22222222222',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:3,bin:'VTE33333333333',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:4,bin:'VTE44444444444',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:2,bin:'VTE22222222222',group:'ເຄື່ອງໂທລະສັບ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:3,bin:'VTE33333333333',group:'ເຄື່ອງໂມງ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
+                {id:4,bin:'VTE44444444444',group:'ເຄື່ອງບໍ່ແມ່ນເຄື່ອງ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
             ]
         };
     },
@@ -148,7 +156,7 @@ export default {
                 name:'sidebarcE',
                 params:{
                     id :id,
-                    bin:bin
+                    items: this.items,
                     }
                 // id = this.items.id,
             })
@@ -159,7 +167,8 @@ export default {
     components:{
         footerC,
         hamburgur,
-        userAcoin
+        userAcoin,
+        DatePicker
     }
 }
 </script>

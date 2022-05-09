@@ -28,6 +28,7 @@ const routes = [
   {
     path: '/sidebarc',
     component: sidebarC,
+    name:'sidebarc',
     children:[
       {
         path:'/sidebarc',
@@ -35,7 +36,7 @@ const routes = [
       },
       {
         name:'sidebarcE',
-        path:'/sidebarc/:id/:bin',
+        path:'/sidebarc/:id',
         
         component:() => import('../views/Admin/list-DC/HomeDetail/homeDetail.vue')
       },
@@ -68,15 +69,15 @@ const routes = [
         component:() => import('../views/Admin/list-DC/myItempushC.vue'),
         children:[
           {
-            path:'/myitempushc',
+            path:'/myitempushc/push1c',
           component:() => import('../views/Admin/list-DC/dataC/push1C.vue'),
           },
           {
-            path:'/push2c',
+            path:'/myitempushc/push2c',
           component:() => import('../views/Admin/list-DC/dataC/push2C.vue'),
           },
           {
-            path:'/push3c',
+            path:'/myitempushc/push3c',
           component:() => import('../views/Admin/list-DC/dataC/push3C.vue'),
           },
         ]

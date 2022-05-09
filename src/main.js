@@ -5,6 +5,11 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import "../src/assets/scss/main.scss"
 // import "../src/assets/scss/global/_variables.scss"
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+
+Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
 new Vue({

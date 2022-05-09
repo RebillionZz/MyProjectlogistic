@@ -13,7 +13,12 @@
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
-        
+        <!-- <div v-for="map in maps" :key="map.id" class="d-flex">
+            <v-col cols="3">{{map.id}}</v-col>
+            <v-col cols="6">{{map.name}}</v-col>
+            <v-col cols="3">{{map.prefix}}</v-col>
+            
+        </div> -->
     </div>
 </template>
 
@@ -24,15 +29,37 @@
 // import ReasonC from '../ReasonC.vue'
 import hamburgur from '../../../components/DashTopview/hamburgur.vue'
 import userAcoin from '../../../components/DashTopview/userAcoin.vue'
+// import Vue from 'vue'
+
+
+
 export default {
     name:'myitemgetc',
+    data() {
+        return {
+            lists:[]
+        }
+    },
+    methods: {
+    },
+    computed:{
+        maps(){
+            return this.$store.state.mapState
+        }
+    }
+    ,
+    mounted(){
+        this.$store.dispatch("mapAction");
+    },
     components:{
         // UserInfoC
         // UserBunzyC
         // ReasonC,
         hamburgur,
-        userAcoin
-    }
+        userAcoin,
+        
+    },
+    
 }
 </script>
 

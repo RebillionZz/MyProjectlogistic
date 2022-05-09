@@ -117,6 +117,10 @@ export default {
     color: #E21312;
     
 }
+.clickBR{
+    border-right: 3px solid $red;
+    
+}
 // sssss
 .svg_width{
         width: 30px;
