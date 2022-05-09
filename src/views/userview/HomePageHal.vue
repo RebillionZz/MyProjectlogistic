@@ -38,42 +38,42 @@
     <div class="card6">
       <v-row>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/box 1.png" alt="">
             <p>ຝາກເຄື່ອງເອງ</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/trace 1 (1).png" alt="">
             <p>ພັດສະດຸຂອງຂ້ອຍ</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/calculator 1.png" alt="">
             <p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/fluent_branch-fork-16-regular.png" alt="">
             <p>ຂໍ້ມູນສາຂາ</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/cod 1 (1).png" alt="">
             <p>COD</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="330" min-width="174" height="200">
+          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/homepage/dashicons_money-alt.png" alt="">
             <p>ຄ່າບໍລິການ</p>
             <img src="../../assets/Frontend/homepage/Arrow 5.svg" alt="">

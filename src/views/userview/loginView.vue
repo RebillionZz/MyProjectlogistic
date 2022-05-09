@@ -4,18 +4,20 @@
     <div class="loginpage">
       <v-row>
         <v-col cols="12" lg="5" md="5" sm="12">
+          <div class="welcum">
           <h2>ຍິນດີຕ້ອນຮັບ</h2>
-          <p>
+          <p class="linktoregis">
             ເຂົ້າສູ່ລະບົບ ເພື່ອຮັບສິດໃນການໃຊ້ <br />
             ບໍລິການຕ່າງໆ ຂອງ HAL LOGISTIC ແລະ
             <br />ສິດທິໃນການສະສົມຄະແນນເພື່ອຮັບຂອງລາງວັນຕ່າງໆ
           </p>
+          </div>
         </v-col>
         <v-col cols="12" lg="7" md="7" sm="12">
           <div class="formlogin">
             <form action="">
               <div class="textlogin">
-                <h4>ເຂົ້າສູ່ລະບົບ</h4>
+                <h2>ເຂົ້າສູ່ລະບົບ</h2>
                 <h4>ເພື່ອໃຊ້ບໍລິການຂອງ HAL LOGISTIC</h4>
               </div>
               <div class="formlogin">
@@ -62,7 +64,7 @@
                           <h4>ລືມລະຫັດຜ່ານ</h4>
                       </v-col>
                   </v-row>
-                          <p>ຍັງບໍ່ມີບັນຊີເທື່ອບໍ? <a class="redtext">ລົງທະບຽນ</a></p>
+                          <div class="linktoregis">ຍັງບໍ່ມີບັນຊີເທື່ອບໍ? <a class="redtext">ລົງທະບຽນ</a></div>
                   </div>
               </div>
             </form>
@@ -85,11 +87,15 @@
           </p>
         </v-col>
         <v-col cols="12" lg="6" md="6" sm="12">
+          <div class="halpoint">
           <img src="../../assets/Frontend/service/Group 46.png" alt="" />
+          </div>
+          <div class="halp">
           <h4>ສະສົມຄະແນນ</h4>
           <p>
             ເມື່ອທ່ານໃຊ້ບໍລິການຝາກເຄື່ອງ,ຮັບເຄື່ອງ<br />ທ່ານຈະໄດ້ຮັບຄະແນນສະສົມເພື່ອແລກສິດ<br />ພິເສດ
           </p>
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -142,8 +148,21 @@ export default {
   
   align-items: center;
   border-radius: 10px;
+  padding: 20px;
 }
 .centertext{
   text-align: center;
+}
+.linktoregis{
+  margin-top: 20px;
+}
+.welcum{
+  padding: 15%;
+}
+.halpoint{
+  margin-top: 6%;
+}
+.halp{
+  margin-top: 5%;
 }
 </style>
