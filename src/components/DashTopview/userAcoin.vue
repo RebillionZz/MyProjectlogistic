@@ -1,5 +1,5 @@
 <template>
-    <v-col cols="4" sm="3" lg="4" md="4" xs="3"  class=" d-flex align-center pl-1 justify-md-end justify-lg-end justify-center">
+    <v-col cols="5" xl="5" lg="4" md="4" xs="3" sm="3"   class=" d-flex align-center    justify-end">
                 <!-- box user-Dropdown and slide -->
                 <div class="d-flex align-center pr-1  border-user">
                     <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
@@ -20,7 +20,7 @@
                             <div class="d-flex mb-4">
                                 <div class="avataUser"><img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
                                 <div class="pl-5">
-                                    <div>{{this.userGet.name}} <span>{{this.userGet.lastname}}</span></div>
+                                    <div>{{userGet.name}} <span>{{userGet.lastname}}</span></div>
                                     <router-link to="/userinfoc"  style="text-decoration: none;   color: #888888;">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</router-link>
                                 </div>
                             </div>
@@ -72,7 +72,8 @@ export default {
         return {
             // userAPI:'bebe',
             // CoinAPI:'220',
-            userGet:[],
+            userGet:this.$store.state.users,
+            
         };
     },
     created(){
@@ -80,9 +81,17 @@ export default {
         // console.log('alert',res);
         // const user = localStorage.getItem('user-info',)
         // console.log('user',user)
-        var user = JSON.parse(localStorage.getItem("user-info"));
-        this.userGet = user;
-        console.log(this.userGet.name)
+
+        // const resp = await axios.get('http://localhost:3000/user', {
+        //     headers:{
+        //         Authorization:'Bearer' + localStorage.getItem('token')
+        //     }
+        // })
+        // console.log(resp)
+
+        // var user = JSON.parse(localStorage.getItem("user-info"));
+        // this.userGet = user;
+        // console.log('Tester',this.userGet.name)
 
     },
     methods:{
@@ -164,7 +173,10 @@ export default {
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;
-    
+    .avataUser{
+        height: 40px;
+        width: 40px;
+    }
 }
 }
 @media screen and (max-width: 420px) {

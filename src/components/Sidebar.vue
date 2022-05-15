@@ -271,7 +271,7 @@ export default {
 @media screen and (max-width: 600px) {
     .index{
     z-index: 1000;
-    width: 100% !important;
+    width: 99% !important;
     height: 100% !important;
 }
     

@@ -24,5 +24,10 @@ export default {
     
     // padding: 0;
 }
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 </style>

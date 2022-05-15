@@ -1,6 +1,6 @@
 <template>
     <div class="body-form">
-        <v-row no-gutters class=" my-5">
+        <v-row no-gutters class=" my-5 hide-overflow ">
             <v-flex class="d-flex align-center ">
                 <hamburgur ></hamburgur>
                 <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0 ">

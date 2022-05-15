@@ -1,5 +1,5 @@
 <template>
-    <div class="Body">
+    <div class="Body dashboard-container-wrap">
         <v-row no-gutters>
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
@@ -127,6 +127,12 @@
             
         </v-row>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <footerC class="mt-5 "></footerC>
     </div>
 </template>
@@ -204,7 +210,7 @@ export default {
     // ,
     computed:{
         maps(){
-            console.log(this.$store.state.mapState)
+            // console.log(this.$store.state.mapState)
             return this.$store.state.mapState
             
         }

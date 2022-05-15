@@ -61,15 +61,16 @@ import axios from 'axios'
         const result =await axios.get(
             `http://localhost:3000/user?email=${this.email}&password=${this.password}`
         )
-        console.log(result)
+        // console.log(result)
         if(result.status==200 && result.data.length>0){ 
 
           console.log(result)
           localStorage.setItem("user-info",JSON.stringify(result.data[0]))
-          this.$router.push("/sidebar");
+          this.$router.push("/Sidebar");
           
           console.log('ok')
-        }else{
+        }
+        else{
           console.log('no no no')
         }
       },

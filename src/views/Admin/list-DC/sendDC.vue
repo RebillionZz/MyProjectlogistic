@@ -1,7 +1,7 @@
 <template>
-    <div class="page-wrap">
+    <div class=" dashboard-container-wrap">
             <!-- Important this component background red name not are the same other component -->
-            <v-row no-gutters>
+            <v-row no-gutters class="hide-overflow ">
                 <v-flex class="d-flex align-center">
                     <hamburgur ></hamburgur>
                     <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0">
@@ -19,7 +19,7 @@
                         </v-col>
                     </v-flex>
                 <!-- </v-container> -->
-                <v-stepper flat v-model="e1" class="v_step_header">
+                <v-stepper flat v-model="e1" class="v_step_header" >
                 
                 <v-stepper-header class="v_step_header bg-grey">
                     <v-stepper-step :complete="e1 >1" step="1" color="red" @click="e1 = 1"><span class="step111" >ສ້າງບິນດ້ວຍຕົນເອງ</span></v-stepper-step>
@@ -33,7 +33,6 @@
                 <v-stepper-items rounded>
                     <!-- step 1 -->
                     <v-stepper-content step="1">
-                        <!-- <div class="px-0 px-md-2" > -->
                             <!-- form 1 -->
                             
                             <v-form>
@@ -41,7 +40,7 @@
                                 <v-text-field class="mt-4" label="ຊື່ຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
                                 <v-row class="   " no-gutters>
                                     <v-col cols="3" lg="2" md="2" sm="2" xs="4" >
-                                        <v-select class=" pt-4" label="hi" outlined dense   rounded hide-details append-icon :items="numberPhone" ></v-select>
+                                        <v-select class=" pt-4" label="ເບີໂທ" outlined dense   rounded hide-details append-icon :items="numberPhone" ></v-select>
 
                                     </v-col>
                                     <v-col cols="9" lg="10" md="10" sm="10" xs="8" class="">
@@ -52,7 +51,7 @@
                                 <v-text-field class="mt-4" label="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
                                 <h4 class="text-center my-3">ຂໍ້ມູນພັດສະດຸ</h4>
 
-                                <div class="d-flex itemSelect mb-3 align-center">
+                                <div class="d-flex itemSelect mb-4 align-center">
                                     <!--  -->
                                     <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
                                         <div class=" ">ປະເພດພັດສະດຸ</div>
@@ -74,21 +73,20 @@
                                         </v-col>
                                     </v-col>
                                 </div>
-                                <!--  -->
-                                <div class="d-flex itemSelect mb-3 align-center">
-                                    <!--  -->
+
+
+
+                                <div class="d-flex itemSelect mb-4 align-center">
                                     <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
                                         <div class=" ">ບໍລິການເສີມ</div>
                                     </v-col>
                                     <v-col cols="8" class="d-flex">
-                                        <!-- 4 md lg// 6 xs -->
                                         <v-col cols="4" md="4" lg="4" xs="4" class="line-leftR pa-0">
                                             <div class="d-flex align-center line-left pl-3">
                                                 <input type="checkbox" id="CDC" name="itemSelect" value="1">
                                                 <label for="CDC" class="pl-1">CDC</label>
                                             </div>
                                         </v-col>
-                                        <!-- 8 md lg 6 xs -->
                                         <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
                                             <div class="d-flex align-center">
                                                 <input type="checkbox" id="COD" name="itemSelect" value="2">
@@ -103,9 +101,27 @@
                                         </v-col>
                                     </v-col>
                                 </div>
+
+
+
+                                <div class="d-flex align-center mb-4">
+                                    <v-col cols="6">
+                                        <v-select class="  pr-2" label=" ເລືອກຕົ້ນທາງ " outlined dense   rounded hide-details  :items="startWays" ></v-select>
+                                    </v-col>
+                                    <v-col cols="6" class="d-flex align-center">
+                                        <div class=""><v-img src="../../../assets/Admin/sendContent/Arrow.svg" max-height="37" max-width="37"></v-img></div>
+                                        <v-select class="  pl-2" label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon="d-none" :items="startWays" ></v-select>
+                                    </v-col>
+                                </div>
+
+
+                                <v-col cols="12" class="mb-4">
+                                    <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
+                                    <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                </v-col>
+                                <v-btn width="100%" color="bg-red white--text" @click="e1=2;dew=true">ຢືັນຢັນການບັນທຶກ</v-btn>
                             </v-form>
                             <!-- ------------------------------END Step1------------------------------ -->
-                        <!-- </div> -->
                     </v-stepper-content>
 
 
@@ -114,7 +130,6 @@
                     <!-- step 2 -->
                     <v-stepper-content step="2">
                         <form>
-                            <!-- S1 -->
                             <div>
                                 <h4 class="text-center pb-2">ຂໍ້ມູນຜູ້ຮັບ</h4>
                                 <v-divider class="bg-red"></v-divider>
@@ -201,6 +216,11 @@
                 </v-stepper-items>
                 
             </v-stepper>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <footerC class="mt-5"></footerC>    
         
     </div>
@@ -223,7 +243,7 @@ export default {
             slecteritems:['020','030'],
             numberPhone:['020','030'],
             startWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
-            endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+            // endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
         }
     },
     components:{

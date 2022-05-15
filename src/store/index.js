@@ -10,7 +10,10 @@ export default new Vuex.Store({
   state: {
     drawer:null,
     userAVT:null,
-    users: localStorage.getItem("user-info"),
+    // userHistory:[],
+
+    users: JSON.parse(localStorage.getItem("user-info")),
+    // A1: JSON.parse(localStorage.getItem("user-info").history),
     // couter:1,
     itemHome:[
       {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name1' , getter:'Getname1'},
@@ -26,6 +29,10 @@ export default new Vuex.Store({
     getUser(state){
         return state.users;
     },
+
+    // getHistory(state){
+    //   return state.userHistory;
+    // },
     // getUsers: (state) => state.users,
     // getMapState: (state) => state.mapState,
     itemHome: state => {
@@ -33,7 +40,19 @@ export default new Vuex.Store({
     },
     homeItem: state => id =>{
       return state.itemHome.find(homeItem =>homeItem.id === id);
-    }
+    },
+
+
+
+
+    // HISTORY HOMEPAGE
+
+    // itemHistory: state => {
+    //   return state.users.history;
+    // },
+    // homeHistory: state => id =>{
+    //   return state.itemHistory.find(homeItem =>homeItem.id === id);
+    // }
     
   },
   mutations: {
@@ -47,13 +66,12 @@ export default new Vuex.Store({
     Set_MapState(state, mapState) {
       state.mapState = mapState
   },
+  // userIteminHomepage
+    // Set_userHistory(state,history){
+    //   state.userHistory = history
+    // }
   
-  // INCREDCOUTER:function(state){
-  //   state.couter = state.couter +1
-  // },
-  add(state, value){
-    state.couter = value
-  }
+  
   },
   actions: {
     slideAction(context){
@@ -72,6 +90,14 @@ export default new Vuex.Store({
             )
             
       },
+      // userHistory_Action({commit}){
+      //   Vue.axios.get('http://localhost:3000/user')
+      //     .then((resp)=>{
+      //       commit('Set_userHistory',resp.data)
+      //     }).catch(err=>{
+      //       console.log(err)
+      //     })
+      // },
     clearStore(){
       
         console.log('logout'); 

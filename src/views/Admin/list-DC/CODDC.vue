@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-container>
-            <v-row no-gutters>
+            <v-row no-gutters class="hide-overflow ">
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
                 <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">

@@ -22,7 +22,7 @@
                     <!-- id -->
                     <v-col cols="12" md="9" lg="9" class="d-flex  align-center  id-item">
                         <div class="Card-img-id">
-                            <div class="text-id">{{user.bin}}</div>
+                            <div class="text-id">{{detail.binID}}</div>
                         </div>
                     </v-col>
                     <!-- Timeline -->
@@ -31,7 +31,7 @@
                     time-item
                     ">
                         <!-- <div>12/09/2021 - 11:25</div> -->
-                        <div>{{user.date}}</div>
+                        <div>{{detail.date}}</div>
                     </v-col>
                 </v-row>
                 <div class="box-CDC-COD">
@@ -40,14 +40,14 @@
                         <v-col cols="12" md="9" lg="9">
                             <div class="CDC-name">
                                 <div class="CDC-name-item">ຜູ້ຝາກ</div>
-                                <div class="CDC-name-item ">{{user.sender}}</div>
+                                <div class="CDC-name-item ">{{User.name}}</div>
                                 <div class="CDC-name-item">22557799</div>
                             </div>
                         </v-col>
                         <v-col cols="12" md="2" lg="2" class="">
                             <div class="COD-name">
                                 <div class="COD-name-item">ຜູ້ຮັບ</div>
-                                <div class="COD-name-item for-name">{{user.getter}}</div>
+                                <div class="COD-name-item for-name">{{detail.detail.name_uget}}</div>
                                 <div class="COD-name-item">22557799</div>
                             </div>
                         </v-col>
@@ -241,11 +241,20 @@ import userAcoin from '../../../../components/DashTopview/userAcoin.vue'
 import footerC from '../../../../components/footerC.vue'
 export default {
     name:'homeDetail',
+    // itemHome: state => {
+    //   return state.itemHome;
+    // },
+    // homeItem: state => id =>{
+    //   return state.itemHome.find(homeItem =>homeItem.id === id);
+    // },
     data() {
         return {
             id:this.$route.params.id,
-            Store:this.$store.state.itemHome
+            Store:this.$store.state.itemHome,
             // bin:this.$route.params.bin,
+            // item:'',
+            History:this.$store.state.users.history,
+            User:this.$store.state.users,
         }
     },
     methods:{
@@ -255,13 +264,24 @@ export default {
         maps(){
             // return this.$store.state.mapState
         },
-        user(){
-            return this.$store.getters.homeItem(parseInt((this.$route.params.id)))
+        // user(){
+        //     return this.$store.getters.homeItem(parseInt((this.$route.params.id)))
+        // },
+        detailID(){
+            return parseInt(this.$route.params.id)
+
+        },
+        detail(){
+            let item = this.History
+            return item.find(item => item.H_id === this.detailID)
         }
     }
     ,
     mounted(){
-        this.$store.dispatch("mapAction");
+        // this.$store.dispatch("mapAction");
+        // return 
+        // console.log('this is homedetail',this.History)
+        // console.log('this is homedetail',this.$store.state.A1)
     },
     components:{
         footerC,

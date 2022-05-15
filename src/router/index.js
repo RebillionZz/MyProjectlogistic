@@ -38,6 +38,7 @@ const routes = [
     children:[
       {
         path:'/Sidebar',
+        name:'homedc',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {

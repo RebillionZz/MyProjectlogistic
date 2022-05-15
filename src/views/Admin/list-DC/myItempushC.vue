@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <v-row no-gutters>
+    <div class="dashboard-container-wrap">
+        <v-row no-gutters class="hide-overflow ">
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
                 <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0">
@@ -18,8 +18,8 @@
         </div>
             
 
-            <v-tabs v-model="tab"  background-color="green" dark>
-            <v-tabs-slider style="height: 100% !important;"></v-tabs-slider>
+            <v-tabs v-model="tab"  background-color="" class="border-tab" active-class="tab-active"  color="red" height="38" fixed-tabs mobile-breakpoint  slider-color="red " slider-size="100">
+            <v-tabs-slider ></v-tabs-slider>
             <v-col cols="4" >
                 <v-tab href="#tab-1" class="test">
                     ບິນສ້າງເອງ
@@ -98,6 +98,24 @@ export default {
     height: 100%;
     z-index: 10;
 }
+.border-tab{
+    border-radius: 28px;
+    background: #EEEEEE !important;
+    color: #222222;
+}
+.tab-active{
+    color: #FFFFFF !important;
+
+}
+.slide{
+    border-radius: 28px;
+    background: $red !important;
+    color: #FFFFFF;
+    transition: .3s ease-in-out;
+    
+}
+
+
 .v-window-item{
     background: #E5E5E5 ;
 }

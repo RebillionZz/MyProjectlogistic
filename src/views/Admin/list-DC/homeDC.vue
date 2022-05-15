@@ -1,16 +1,17 @@
 <template>
-    <v-container class="pa-0 pa-md-0"   >
-        <v-row no-gutters>
+    <v-container class=" pa-md-0 dashboard-container-wrap"   >
+        <v-row no-gutters class="hide-overflow ">
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
-                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="8" md="8" sm="8" xs="7"   class="search-form  pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
-
+        <!-- <buuton @click="test">test</buuton> -->
+        <!-- <div>{{this.$store.state.users}}</div> -->
             <v-flex class="d-flex align-center bg-grey">
                 <v-col cols="8" class="d-flex align-center">
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
@@ -84,9 +85,9 @@
         </v-card>
         
         <!-- Start here table section -->
-        <div>{{user.history}}</div>
-        
-            <v-container  >
+        <!-- <div>{{user.history}}</div> -->
+        <!-- <div>{{}}</div> -->
+            <v-container>
                 <div>
                 <v-row class="mt-3 bg-grey d-flex justify-space-between"
                 >
@@ -116,18 +117,22 @@
                         <v-col md="2" class="d-none d-md-flex py-3 px-2"></v-col>
                     </v-row>
                 <!-- table content -->
-                    <v-row v-for="item in items" :key="item.id" class="white" >
-                        <v-col cols="6" md="4" class=" ">{{item.bin}}</v-col>
-                        <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.group}}</v-col>
+                    <v-row v-for="item in History" :key="item.H_id" class="white" >
+                        <v-col cols="6" md="4" class=" ">{{item.binID}}</v-col>
+                        <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.itemName}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.date}}</v-col>
-                        <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.send}}</v-col>
-                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id)">ເບິ່ງລາຍລະອຽດ</a></v-col>
+                        <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.detail.status}}</v-col>
+                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.H_id)">ເບິ່ງລາຍລະອຽດ</a></v-col>
                     </v-row>
                     
                 </div>
                 </div>
             </v-container>
-            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <footerC class="mt-5"></footerC>
     </v-container>
 </template>
@@ -146,20 +151,14 @@ export default {
             time2: null,
             time3: null,
             items:this.$store.state.itemHome,
-            name : '  ',
-
-
+            name : '',
+            // history:[]
+            History:this.$store.state.users.history,
 
 
             
             
         };
-    },
-    mounted(){
-        var test = this.$store.state.users
-        console.log('hi',test.name)
-        
-        
     },
     methods:{
         push(id){
@@ -168,19 +167,36 @@ export default {
                 name:'sidebarcE',
                 params:{
                     id :id,
-                    items: this.items,
+                    History: this.History,
                     },
 
-                // id = this.items.id,
+                
             })
-            // router.push({ path: '/dataCC', params: { id } }) // -> /user
             
         },
-        logout(){
-                console.log('logout') 
-                localStorage.clear();
-                this.$router.push('/');
+        
+    },
+    computed:{
+        user(){
+            // return  this.$store.getters.getUser;
         }
+        ,
+        
+    },
+    mounted(){
+        // var test = this.$store.state.users
+        // var test = this.$store.state.userHistory
+        // var test  = localStorage
+        // console.log('This is test',test)
+        
+        if(localStorage.getItem("user-info")){
+            console.log()
+        }
+
+
+        // let user = localStorage.getItem('user-info');
+        // this.Test = JSON.parse(user).name
+        // console.log(this.name.email)
     },
     components:{
         footerC,
@@ -188,12 +204,6 @@ export default {
         userAcoin,
         DatePicker
     },
-    computed:{
-        user(){
-            return this.test = this.$store.getters.getUser;
-            
-        }
-    }
 }
 </script>
 
