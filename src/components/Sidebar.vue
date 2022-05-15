@@ -1,7 +1,7 @@
 <template>
     <v-app class="bg-grey position-app">
-        <v-navigation-drawer app  v-model="$store.state.drawer">
-        <v-list>
+        <v-navigation-drawer app  class="index" v-model="$store.state.drawer">
+        <v-list class="my-5">
                 <v-list-item>
                     <v-list-item-title class="d-flex flex-column justify-center pt-3">
                         <v-list-item-title class="logo pl-3 "><img width="100px" src="../assets/Admin/sidebar/HalLogo.png" alt=""></v-list-item-title>
@@ -12,17 +12,15 @@
                 </v-list-item>
             </v-list>
         <!-- end logo -->
-
+        <!-- <div>{{user}}</div> -->
+        <div class="ham-sidebar d-lg-none d-xl-none  d-md-none d-sm-flex  d-xs-flex" @click="$store.state.drawer = !$store.state.drawer"><v-img width="22" height="19" src="../assets/Admin/sidebar/toolbar/ham.svg"></v-img></div>
         <!-- start list logo not working -->
-            
-                <sidebarviewC></sidebarviewC>
+            <sidebarviewC></sidebarviewC>
     </v-navigation-drawer>
 
 
     <!-- container Toolbar main -->
-    <v-container > <!-- This important for change Search And remove add new Icon this section remove col add to Search Comment -->
-        <!-- <searchbarC ></searchbarC> -->
-    </v-container>
+    
     <v-container>
         <router-view></router-view>
 
@@ -83,12 +81,12 @@
 
 <script>
 // import footerC from '../components/footerC.vue'
-import searchbarC from './searchbarC.vue'
+import SearchBar from './SearchBar.vue'
 // import hamburgur from './DashTopview/hamburgur.vue'
 import sidebarviewC from '../views/Admin/sidebarviewC.vue'
 
 export default {
-    name:'sidebarc',
+    name:'Sidebar',
     data() {
         return {
             
@@ -100,17 +98,33 @@ export default {
         }
     },
     components:{
-        searchbarC,
+        SearchBar,
         sidebarviewC,
         // hamburgur,
         // footerC
     }
     ,
+    mounted(){
+      let user = localStorage.getItem('user-info');
+      if(!user){
+        this.$router.push("/Sidebar");
+      }
+    },
     methods:{
+        // getnum(){
+        //     this.$store.dispatch("eventCout")
+        // }
     },
     computed:{
-            
+        user(){
+            return this.$store.getters.getUser;
+        }
     }
+    // created(){
+            
+    //             console.log(this.$store.state.users)
+            
+    // }
 }
 </script>
 
@@ -119,7 +133,15 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.index{
+    z-index: 1000;
+}
+.ham-sidebar{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    // display: none;
+}
 .fade_mobile-enter-active, .fade_mobile-leave-active{
     transition:  .3s ease-in-out;
     right: 0%;
@@ -247,7 +269,11 @@ export default {
 }
 }
 @media screen and (max-width: 600px) {
-    
+    .index{
+    z-index: 1000;
+    width: 100% !important;
+    height: 100% !important;
+}
     
 }
     

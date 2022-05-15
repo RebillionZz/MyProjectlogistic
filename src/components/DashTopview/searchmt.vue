@@ -1,6 +1,6 @@
 <template>
     <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0" v-if="dataC === 'Show' " >
-        <label class="for-search" for="searchBar" ><v-img src="../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
+        <label class="for-search" for="searchBar" ><v-img src="@/assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
         <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
     </v-col>
 </template>

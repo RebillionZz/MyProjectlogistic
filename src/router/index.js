@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import register from '../views/register.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
-import sidebarC from '@/components/sidebarC.vue'
+import Sidebar from '@/components/Sidebar.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +11,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: register
   },
   {
     path: '/DashbordView',
@@ -26,17 +32,17 @@ const routes = [
     // ]
   },
   {
-    path: '/sidebarc',
-    component: sidebarC,
-    name:'sidebarc',
+    path: '/Sidebar',
+    component: Sidebar,
+    name:'Sidebar',
     children:[
       {
-        path:'/sidebarc',
+        path:'/Sidebar',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {
         name:'sidebarcE',
-        path:'/sidebarc/:id',
+        path:'/detail/:id',
         
         component:() => import('../views/Admin/list-DC/HomeDetail/homeDetail.vue')
       },
@@ -69,15 +75,18 @@ const routes = [
         component:() => import('../views/Admin/list-DC/myItempushC.vue'),
         children:[
           {
-            path:'/myitempushc/push1c',
+            path:'/push1c',
+            name:'push1c',
           component:() => import('../views/Admin/list-DC/dataC/push1C.vue'),
           },
           {
-            path:'/myitempushc/push2c',
+            path:'/push2c',
+            name:'push2c',
           component:() => import('../views/Admin/list-DC/dataC/push2C.vue'),
           },
           {
-            path:'/myitempushc/push3c',
+            path:'/push3c',
+            name:'push3c',
           component:() => import('../views/Admin/list-DC/dataC/push3C.vue'),
           },
         ]

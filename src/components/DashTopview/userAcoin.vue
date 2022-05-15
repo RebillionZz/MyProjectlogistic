@@ -1,5 +1,5 @@
 <template>
-    <v-col cols="3" sm="2" lg="2" md="2" xs="3"  class=" d-flex align-center pl-1  ">
+    <v-col cols="4" sm="3" lg="4" md="4" xs="3"  class=" d-flex align-center pl-1 justify-md-end justify-lg-end justify-center">
                 <!-- box user-Dropdown and slide -->
                 <div class="d-flex align-center pr-1  border-user">
                     <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
@@ -12,7 +12,7 @@
                     <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
 
-                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">{{userAPI}} <v-flex class="px-1"><img class="d-none d-md-flex  d-lg-flex" src="@/assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" ></v-flex></div>
+                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">{{userGet.name}} <v-flex class="px-1"><img class="d-none d-md-flex  d-lg-flex" src="@/assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" ></v-flex></div>
 
                         </template>
                         <!--  -->
@@ -20,7 +20,7 @@
                             <div class="d-flex mb-4">
                                 <div class="avataUser"><img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
                                 <div class="pl-5">
-                                    <div>{{userAPI}} <span>Soudalat</span></div>
+                                    <div>{{this.userGet.name}} <span>{{this.userGet.lastname}}</span></div>
                                     <router-link to="/userinfoc"  style="text-decoration: none;   color: #888888;">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</router-link>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@
                                 <!-- THis arrow -->
                                 <div class=" pt-1 "><v-img src="@/assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </router-link>
-                            <div class="d-flex align-center TTTT justify-space-between" style="text-decoration: none;  color:#222222;">
+                            <div class="d-flex align-center TTTT justify-space-between" style="text-decoration: none;  color:#222222;" @click="logout()">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="@/assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
@@ -59,20 +59,40 @@
                 <!-- COin -->
                 <div class="d-flex align-center">
                     <v-flex class="pl-2"><div class="box-coin d-flex align-center"><img class="coinImg" src="@/assets/Admin/sidebar/toolbar/coin.svg" max-height="40" max-width="40"></div></v-flex>
-                    <div class="d-none d-md-flex d-lg-flex pl-2  align-center" ><div class="d-flex align-center">{{CoinAPI}}  <div class="pl-1">Coin</div></div></div>
+                    <div class="d-none d-md-flex d-lg-flex pl-2  align-center" ><div class="d-flex align-center">{{userGet.coin}}  <div class="pl-1">Coin</div></div></div>
                 </div>
             </v-col>
 </template>
 
 <script>
+// import axios from 'axios'
 export default {
     name:'userAcoin',
     data() {
         return {
-            userAPI:'bebe',
-            CoinAPI:'220',
+            // userAPI:'bebe',
+            // CoinAPI:'220',
+            userGet:[],
         };
     },
+    created(){
+        // const res  = await axios.get('http://localhost:3000/user')
+        // console.log('alert',res);
+        // const user = localStorage.getItem('user-info',)
+        // console.log('user',user)
+        var user = JSON.parse(localStorage.getItem("user-info"));
+        this.userGet = user;
+        console.log(this.userGet.name)
+
+    },
+    methods:{
+        logout(){
+            this.$store.dispatch("clearStore");
+        }
+    },
+    mounted(){
+    },
+
 }
 </script>
 

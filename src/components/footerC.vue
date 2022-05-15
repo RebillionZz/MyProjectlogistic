@@ -20,6 +20,8 @@ export default {
     border-top: 2px solid $red;
     width: 100%;
     margin: 0;
+    position:sticky;
+    
     // padding: 0;
 }
 

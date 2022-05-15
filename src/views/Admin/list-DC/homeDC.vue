@@ -3,25 +3,28 @@
         <v-row no-gutters>
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
-                <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
                 <userAcoin></userAcoin>
             </v-flex>
         </v-row>
-            
+
             <v-flex class="d-flex align-center bg-grey">
                 <v-col cols="8" class="d-flex align-center">
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/homeContent/box-header.svg" ></div>
                     <div class="d-flex align-center ml-2">ການຈັດສົ່ງພັດສະດຸທັງໝົດ</div>
                 </v-col>
                 
-                <v-col cols="4" class="d-flex justify-end "><date-picker v-model="time3" range></date-picker></v-col>
+                <v-col cols="4" class="d-flex justify-end ">
+                    <!-- <date-picker v-model="time3" range></date-picker> -->
+                    <!-- <v-btn @click="logout()">HI</v-btn> -->
+                    <div>{{name}}</div>
+                </v-col>
                 <!-- <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col> -->
             </v-flex>
-        
-    
+
             <v-card flat elevation="1"   class="mt-3 mb-8 pa-3" color="white">
                 <v-row class="">
                     <v-col cols="6" md="3" lg="3" align="center">
@@ -81,6 +84,7 @@
         </v-card>
         
         <!-- Start here table section -->
+        <div>{{user.history}}</div>
         
             <v-container  >
                 <div>
@@ -117,7 +121,7 @@
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.group}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.date}}</v-col>
                         <v-col cols="12" md="2" class="d-none d-md-flex pa-2">{{item.send}}</v-col>
-                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id,)">ເບິ່ງລາຍລະອຽດ</a></v-col>
+                        <v-col cols="6" md="2" class="pa-2"><a @click="push(item.id)">ເບິ່ງລາຍລະອຽດ</a></v-col>
                     </v-row>
                     
                 </div>
@@ -141,27 +145,41 @@ export default {
             time1: null,
             time2: null,
             time3: null,
-            items:[
-                {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:2,bin:'VTE22222222222',group:'ເຄື່ອງໂທລະສັບ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:3,bin:'VTE33333333333',group:'ເຄື່ອງໂມງ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-                {id:4,bin:'VTE44444444444',group:'ເຄື່ອງບໍ່ແມ່ນເຄື່ອງ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',},
-            ]
+            items:this.$store.state.itemHome,
+            name : '  ',
+
+
+
+
+            
+            
         };
     },
+    mounted(){
+        var test = this.$store.state.users
+        console.log('hi',test.name)
+        
+        
+    },
     methods:{
-        push(id,bin){
+        push(id){
             // id = this.item.bin
             this.$router.push({
                 name:'sidebarcE',
                 params:{
                     id :id,
                     items: this.items,
-                    }
+                    },
+
                 // id = this.items.id,
             })
             // router.push({ path: '/dataCC', params: { id } }) // -> /user
             
+        },
+        logout(){
+                console.log('logout') 
+                localStorage.clear();
+                this.$router.push('/');
         }
     },
     components:{
@@ -169,6 +187,12 @@ export default {
         hamburgur,
         userAcoin,
         DatePicker
+    },
+    computed:{
+        user(){
+            return this.test = this.$store.getters.getUser;
+            
+        }
     }
 }
 </script>

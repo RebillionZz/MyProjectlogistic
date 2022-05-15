@@ -11,7 +11,7 @@
                     <template  v-slot:activator >
                         <v-col cols="3" class="d-flex align-center justify-center">
                             <div class="imgGbox">
-                                <img src="../../assets/Admin/sidebar/my-item0.svg" class="imgGroup" alt="" srcset="">
+                                <img src="../../assets/Admin/sidebar/Box_GROUP.png" class="svg_width" alt="" srcset="">
 
                             </div>
                         </v-col>
@@ -19,10 +19,10 @@
                         <v-col cols="9" class="d-flex justify-space-between">
                             
                             <div>ພັດສະດຸຂອງຂ້ອຍ</div>
-                            <div>ICON</div>
+                            <div><img src="../../assets/Admin/sidebar/AR-D.svg" alt=""></div>
                         </v-col>
                     </template>
-                    <v-list-item  v-for="LGI in listG322" :value="true" :key="LGI.id" :to="LGI.route"  active-class="clickBR" class="navslide-none">
+                    <v-list-item  v-for="LGI in listG322" :value="true" :key="LGI.id" :to="LGI.route"  active-class="clickBR" class="navslide-none ">
                         <v-col cols="3" class="d-flex align-center justify-center"><img :src="LGI.imgS" class="svg_width" alt="" srcset=""></v-col>
                         <v-col cols="9">{{LGI.text}}</v-col>
                     </v-list-item>
@@ -47,7 +47,7 @@ export default {
         return {
 
             listG1:[
-                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebarc',},
+                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/Sidebar',},
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/give.svg'),route:'/senddc',},
             ],
             listG2:[
@@ -61,13 +61,6 @@ export default {
                 {id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myitemgetc'},
                 
             ],
-            // A1:[{id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebarC',}],
-            // A2:[{id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/give.svg'),route:'/sendDC',}],
-            // A3:[{id:3,text:'ຄິດໄລ່ຄ່າຂົນສົ່ງ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/priceDC'}],
-            // A4:[{id:4,text:'COD',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/COD.svg'),route:'/CODDC'}],
-            // A5:[{id:5,text:'ຂໍ້ມູນສາຂາ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/treeData.svg'),route:'/DataDC'}],
-            // A7:[{id:7,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myItempushC'}],
-            // A6:[{id:6,text:'ພັດສະດຸທີ່ຂ້ອຍສົ່ງເຖິງຂ້ອຍ',icon:'ICON',imgG2:require('../../assets/Admin/sidebar/caculator.svg'),route:'/myItemGetC'}],
         }
     },
 
@@ -93,6 +86,7 @@ export default {
         this.slidec();
         
     },
+    
     
 }
 </script>

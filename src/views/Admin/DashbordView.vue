@@ -11,7 +11,7 @@
 
 <script>
 // import sidebarC from '../components/sidebarC.vue'
-import sidebarC from '@/components/sidebarC.vue'
+import sidebarC from '@/components/Sidebar.vue'
 
 export default {
     name:'DashbordView',
