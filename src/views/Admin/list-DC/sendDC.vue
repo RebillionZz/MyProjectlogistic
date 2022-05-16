@@ -119,6 +119,20 @@
                                     <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
                                     <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
                                 </v-col>
+                                
+
+
+                                <div class="mb-4 d-flex">
+                                    <v-col cols="6" >
+                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    </v-col>
+                                    <v-col cols="6" >
+                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    </v-col>
+                                </div>
+
+
+
                                 <v-btn width="100%" color="bg-red white--text" @click="e1=2;dew=true">ຢືັນຢັນການບັນທຶກ</v-btn>
                             </v-form>
                             <!-- ------------------------------END Step1------------------------------ -->
