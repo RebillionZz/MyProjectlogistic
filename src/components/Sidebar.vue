@@ -36,7 +36,7 @@
                             <div class="d-flex mb-4" @click="$store.state.userAVT = !$store.state.userAVT">
                                 <div class="avataUser"><img class="userIMG" src="../assets/Admin/sidebar/toolbar/userAVATA.png"></div>
                                 <div class="pl-5">
-                                    <div>{{userAPI}} <span>Soudalat</span></div>
+                                    <div>{{User.name}} <span>{{User.lastname}}</span></div>
                                     <router-link to="/userinfoc"  style="text-decoration: none;   color: #888888;">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</router-link>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                     <div class=" pt-1 "><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                                 </router-link>
                             </div>
-                            <div class="d-flex align-center TTTT justify-space-between" @click="$store.state.userAVT = !$store.state.userAVT" style="text-decoration: none;  color:#222222;">
+                            <div class="d-flex align-center TTTT justify-space-between" @click="logout()" style="text-decoration: none;  color:#222222;">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="../assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
@@ -89,9 +89,8 @@ export default {
     name:'Sidebar',
     data() {
         return {
-            
-            userAPI:'bebe',
-            // drawer2:$store.state.drawer,
+            User:this.$store.state.users,
+
             hello:'hi',
             TEST:[{id:1,text:'Comple'}],
             
@@ -114,6 +113,10 @@ export default {
         // getnum(){
         //     this.$store.dispatch("eventCout")
         // }
+        logout(){
+            this.$store.dispatch("clearStore");
+            this.$store.state.userAVT = !this.$store.state.userAVT
+        }
     },
     computed:{
         user(){

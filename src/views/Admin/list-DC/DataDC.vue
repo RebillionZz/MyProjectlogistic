@@ -1,17 +1,17 @@
 <template>
     <div class="Body dashboard-container-wrap">
-        <v-row no-gutters>
+        <v-row no-gutters class="hide-overflow">
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
-                <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0  ">
-                    <div class="d-none bg-grey mb-4 d-lg-flex">
+                <v-col cols="8"  lg="8" md="8" sm="7"    class="search-form mr-lg-2 mr-md-3 pa-0  ">
+                    <div class="d-none bg-grey mb-4 d-lg-flex d-xl-flex">
                         <div class="d-flex align-center">
                             <v-avatar color="red lighten-4 " size="60"><v-img src="../../../assets/Admin/dataContent/mainIcon.svg" max-height="45" max-width="45"></v-img></v-avatar>
                         </div>
                         <h3 class="d-flex  align-center ml-3">ຂໍ້ມູນສາຂາ</h3>
                     </div>
                 </v-col>
-                <userAcoin></userAcoin>
+                <userAcoin ></userAcoin>
             </v-flex>
         </v-row>
         <div class="d-flex bg-grey mb-4 d-lg-none">
@@ -21,7 +21,7 @@
             <h3 class="d-flex  align-center ml-3">ຂໍ້ມູນສາຂາ</h3>
         </div>
         <p class="text-center textHead">ພວກເຮົາມີຫຼາຍສາຂາຄອບຄຸມທົ່ວປະເທດ ແລະ ເປີດໃຫ້ບໍລິການ 365 ມື້ບໍ່ມີພັກ</p>
-        
+        <button @click="dataA">TEST</button>
         
 
 
@@ -31,55 +31,61 @@
            
             
             <!-- ------------------------------------------------------------------- -->
-            <v-tabs class="mb-5 " height="200" color="red">
+            <!-- <v-tabs class="mb-5 " v-model="tab"   color="red" >
             <v-tabs-slider></v-tabs-slider>
-            <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 1"  >
-                <v-tab href="#tab-1"  class="Tab-col">
-                    
-                    <div class="" >
-                        <div class="d-flex ">
-                            <img src="../../../assets/Admin/dataContent/VT-Section.svg" alt="" srcset="" class="maps">
-                        </div>
-                        <div class="text-center text-WE">ນະຄອນຫຼວງວຽງຈັນ</div>
-                    </div>
-                </v-tab>
-            </v-col>
-            <v-col cols="3"   class=" pt-2 mapImg-container"  @click="topclick = 2" >
-                <v-tab href="#tab-2" class="d-flex flex-column Tab-col">
-                    <div class="d-flex ">
-                        <img src="../../../assets/Admin/dataContent/north-Section.png" alt="" srcset="" class="maps"> 
-                    </div>
-                    <div class="text-center text-WE PRES py-1">ພາກເໜືອ</div>
-                </v-tab>
-            </v-col>
+            
+            <v-tab href="#tab-1">
+                ນະຄອນຫຼວງວຽງຈັນ
+            </v-tab>
+            <v-tab href="#tab-2">
+                ພາກເໜືອ
+            </v-tab>
+            <v-tab href="#tab-3">
+                ພາກກາງ
+            </v-tab>
+            <v-tab href="#tab-4">
+                ພາກໃຕ້
+            </v-tab>
 
-            <v-col cols="3"   class="pt-2 mapImg-container"   @click="topclick = 3">
-                <v-tab href="#tab-3 Tab-col">
-                    <div class=" d-flex  flex-column  ">
-                        <div class="d-flex ">
-                            <img src="../../../assets/Admin/dataContent/central-Section.png" alt="" srcset="" class="maps"> 
-                        </div>
-                        <div class="text-center text-WE">ພາກກາງ</div>
-                </div>
+
+
+            <v-tab-items v-model="tab">
+                <v-tab-item  reverse-transition>
+                    
+                </v-tab-item>
+                <v-tab-item  reverse-transition>
+                    TEST2
+                </v-tab-item>
+                <v-tab-item  reverse-transition>
+                    TEST3
+                </v-tab-item>
+                <v-tab-item  reverse-transition>
+                    TEST4
+                </v-tab-item>
+            </v-tab-items>
+        </v-tabs> -->
+
+
+        <v-tabs v-model="tab" height="150" background-color="" slider-color="red " slider-size="border" color="red" centered fixed-tabs>
+            <v-tabs-slider ></v-tabs-slider>
+                <v-tab href="#tab-1" class="test">
+                    ນະຄອນຫຼວງວຽງຈັນ
                 </v-tab>
-            </v-col>
-            <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 4"  >
-                <v-tab href="#tab-4">
-                    <div class=" d-flex align-center flex-column Tab-col  ">
-                        <div class="d-flex ">
-                            <img src="../../../assets/Admin/dataContent/soult-Section.png" alt="" srcset="" class="maps"> 
-                        </div>
-                    <div class="text-center text-WE ">ພາກໃຕ້</div>
-                </div>
+                <v-tab href="#tab-2" class="test">
+                    ພາກເໜືອ
                 </v-tab>
-            </v-col>
+                <v-tab href="#tab-3" class="test">
+                    ພາກກາງ
+                </v-tab>
+                <v-tab href="#tab-4" class="test">
+                    ພາກໃຕ້
+                </v-tab>
+
             
         </v-tabs>
 
 
-
-
-        <div class="d-flex align-center mb-5">
+        <div class="d-flex align-center my-5">
             <v-col cols="1">
                 
             </v-col>
@@ -92,8 +98,79 @@
             <v-col cols="1">
             </v-col>
         </div>
+
+
+
+
+        <v-tabs class="">
+            <v-tabs-items v-model="tab">
+
+
+                <v-tab-item value="tab-1" >
+                    <v-row no-gutters class="px-5">
+                        <v-col  cols="12" md="4" lg="4" v-for="(LocatV, index) in maps" v-show="index < 10" :key="LocatV.id"  class="px-2 py-2" >
+                            <v-btn class="d-flex align-center locate_BTN backW sha">
+                                <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
+                                <div class="pt-1 pl-2">{{LocatV.name}}</div>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-tab-item>
+
+
+                <v-tab-item value="tab-2" >
+
+                    <v-row no-gutters class="px-5">
+                        <v-col  cols="12" md="4" lg="4" v-for="(LocatV, index) in maps" v-show="index < 20" :key="LocatV.id"  class="px-2 py-2" >
+                            <v-btn class="d-flex align-center locate_BTN backW sha">
+                                <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
+                                <div class="pt-1 pl-2">{{LocatV.name}}</div>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+
+                </v-tab-item>
+
+
+                <v-tab-item value="tab-3" >
+                    <v-row no-gutters class="px-5">
+                        <v-col  cols="12" md="4" lg="4" v-for="(LocatV, index) in maps" v-show="index < 25" :key="LocatV.id"  class="px-2 py-2" >
+                            <v-btn class="d-flex align-center locate_BTN backW sha">
+                                <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
+                                <div class="pt-1 pl-2">{{LocatV.name}}</div>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-tab-item>
+                <v-tab-item value="tab-4" >
+
+
+                    <v-row no-gutters class="px-5">
+                        <v-col  cols="12" md="4" lg="4" v-for="(LocatV, index) in maps" v-show="index < 30" :key="LocatV.id"  class="px-2 py-2" >
+                            <v-btn class="d-flex align-center locate_BTN backW sha">
+                                <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
+                                <div class="pt-1 pl-2">{{LocatV.name}}</div>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
+                </v-tab-item>
+            </v-tabs-items>
+        </v-tabs>
+        <!-- <div class="d-flex align-center mb-5">
+            <v-col cols="1">
+                
+            </v-col>
+            <v-col cols="10" class="box-search">
+                <form >
+                    <label for="Location_search" class="icon-search"><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
+                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ຄົ້ນຫາດ້ວຍຊື່ສາຂາ, ເມືອງ ຫຼື ແຂວງ" class="input-max box-border sha input-search ">
+                </form>
+            </v-col>
+            <v-col cols="1">
+            </v-col>
+        </div> -->
     
-        <v-row  class="px-5" no-gutters >
+        <!-- <v-row  class="px-5" no-gutters >
             <v-col  cols="12" md="4" lg="4" v-for="LocatV in maps" :key="LocatV.id"  class="px-2 py-2" v-show="topclick == 1">
                 <v-btn class="d-flex align-center locate_BTN backW sha">
                     <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
@@ -123,9 +200,9 @@
                 <v-btn class="d-flex align-center locate_BTN backW sha">
                     <div class="pl-3"><v-img src="../../../assets/Admin/dataContent/gridicons_location.svg" max-height="35" max-width="35"></v-img></div>
                 </v-btn>
-            </v-col>
+            </v-col> -->
             
-        </v-row>
+        <!-- </v-row> -->
         </div>
         <br>
         <br>
@@ -150,6 +227,7 @@ export default {
             search:"",
             topclick:1,
             footshow:1,
+            tab:null,
             // Search:"",
             VT:
                 [
@@ -226,7 +304,9 @@ export default {
                 return console.log(this.topclick)
             }
         },
-        
+        dataA(){
+            console.log(this.$store.state.mapState)
+        }
         
 
     },
@@ -252,11 +332,12 @@ export default {
     width: 100%;
     height: 100%;
 }
-.Body{
-    min-height: 100%;
-}
+
 .Tab-col{
     height: 100%;
+}
+.border{
+    
 }
 .v-btn__content2{
 

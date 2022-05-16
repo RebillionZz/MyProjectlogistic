@@ -18,7 +18,7 @@
         </div>
             
 
-            <v-tabs v-model="tab"  background-color="" class="border-tab" active-class="tab-active"  color="red" height="38" fixed-tabs mobile-breakpoint  slider-color="red " slider-size="100">
+        <v-tabs v-model="tab"  background-color="" class="border-tab" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="100">
             <v-tabs-slider ></v-tabs-slider>
             <v-col cols="4" >
                 <v-tab href="#tab-1" class="test">

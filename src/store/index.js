@@ -15,12 +15,12 @@ export default new Vuex.Store({
     users: JSON.parse(localStorage.getItem("user-info")),
     // A1: JSON.parse(localStorage.getItem("user-info").history),
     // couter:1,
-    itemHome:[
-      {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name1' , getter:'Getname1'},
-      {id:2,bin:'VTE22222222222',group:'ເຄື່ອງໂທລະສັບ',date:'14/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name2' , getter:'Getname2'},
-      {id:3,bin:'VTE33333333333',group:'ເຄື່ອງໂມງ',date:'15/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name3' , getter:'Getname3'},
-      {id:4,bin:'VTE44444444444',group:'ເຄື່ອງບໍ່ແມ່ນເຄື່ອງ',date:'16/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name4' , getter:'Getname4'}
-    ],
+    // itemHome:[
+    //   {id:1,bin:'VTE12345678901',group:'ເຄື່ອງນຸ່ງຫົ່ມ',date:'13/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name1' , getter:'Getname1'},
+    //   {id:2,bin:'VTE22222222222',group:'ເຄື່ອງໂທລະສັບ',date:'14/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name2' , getter:'Getname2'},
+    //   {id:3,bin:'VTE33333333333',group:'ເຄື່ອງໂມງ',date:'15/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name3' , getter:'Getname3'},
+    //   {id:4,bin:'VTE44444444444',group:'ເຄື່ອງບໍ່ແມ່ນເຄື່ອງ',date:'16/09/2021',send:'ຈັດສົ່ງສຳເລັດ',sender:'Name4' , getter:'Getname4'}
+    // ],
     mapState:[],
     
 

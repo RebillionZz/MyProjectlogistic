@@ -21,7 +21,7 @@
                 <v-col cols="4" class="d-flex justify-end ">
                     <!-- <date-picker v-model="time3" range></date-picker> -->
                     <!-- <v-btn @click="logout()">HI</v-btn> -->
-                    <div>{{name}}</div>
+                    <!-- <div>{{name}}</div> -->
                 </v-col>
                 <!-- <v-col cols="3" class="d-flex justify-end "><img src="../../../assets/Admin/homeContent/date-icon.svg" alt=""></v-col> -->
             </v-flex>
@@ -151,7 +151,7 @@ export default {
             time2: null,
             time3: null,
             items:this.$store.state.itemHome,
-            name : '',
+            // name : '',
             // history:[]
             History:this.$store.state.users.history,
 

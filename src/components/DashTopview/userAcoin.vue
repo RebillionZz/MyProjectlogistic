@@ -1,5 +1,5 @@
 <template>
-    <v-col cols="5" xl="5" lg="4" md="4" xs="3" sm="3"   class=" d-flex align-center    justify-end">
+    <v-col cols="5" xl="5" lg="4" md="4" xs="4" sm="3"   class="d-flex  align-center    justify-control">
                 <!-- box user-Dropdown and slide -->
                 <div class="d-flex align-center pr-1  border-user">
                     <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
@@ -44,7 +44,7 @@
                                 <!-- THis arrow -->
                                 <div class=" pt-1 "><v-img src="@/assets/Admin/sidebar/toolbar/Dropdown/rightIcon.svg" max-height="25" max-width="25"></v-img></div>
                             </router-link>
-                            <div class="d-flex align-center TTTT justify-space-between" style="text-decoration: none;  color:#222222;" @click="logout()">
+                            <div class="d-flex align-center TTTT justify-space-between" style="text-decoration: none;  color:#222222;" @click="logout() ">
                                 <div class="my-3  d-flex align-center ">
                                     <v-avatar color="red lighten-4" size="40" class=" mr-5"><v-img src="@/assets/Admin/sidebar/toolbar/Dropdown/logout.svg" max-height="25" max-width="25"></v-img></v-avatar>
                                     <div class=" pt-1 ">ອອກຈາກລະບົບ</div>
@@ -97,6 +97,7 @@ export default {
     methods:{
         logout(){
             this.$store.dispatch("clearStore");
+            this.$router.push("/");
         }
     },
     mounted(){
@@ -170,6 +171,15 @@ export default {
 .User_Dropdown_Conntent{
     background: #FFFFFF;
 }
+
+
+
+
+.justify-control{
+    // display: flex;
+    align-items: center;
+    justify-content: end;
+}
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;
@@ -184,6 +194,10 @@ export default {
         height: 35px;
         width: 35px;
     }
-    
+    .justify-control{
+    // display: flex;
+    // align-items: center;
+    justify-content: start;
+}
 }
 </style>

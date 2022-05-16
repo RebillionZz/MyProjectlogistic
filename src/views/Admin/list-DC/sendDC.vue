@@ -26,7 +26,7 @@
                     <v-divider color="red"></v-divider>
                     <v-stepper-step :complete="e1 >2" step="2" color="red"><span :class="{step111:dew}" :dew="false">ລາຍລະອຽດອໍເດີ້</span></v-stepper-step>
                     <v-divider :class="{backL:dew}" :dew="false"></v-divider>
-                    <v-stepper-step :complete="e1 > 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
+                    <v-stepper-step :complete="e1 >= 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
                     
                 </v-stepper-header> 
                 
@@ -115,21 +115,32 @@
                                 </div>
 
 
+
                                 <v-col cols="12" class="mb-4">
                                     <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
-                                    <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    <v-text-field class="" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
                                 </v-col>
                                 
 
 
                                 <div class="mb-4 d-flex">
                                     <v-col cols="6" >
-                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                        <v-text-field class="pr-1" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
                                     </v-col>
                                     <v-col cols="6" >
-                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                        <v-text-field class="pl-1" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
                                     </v-col>
                                 </div>
+
+
+
+
+
+
+                                <v-col cols="12" class="mb-4">
+                                    <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
+                                    <v-text-field class="" label="ລາຄາພັດສະດຸ" outlined dense  rounded hide-details></v-text-field>
+                                </v-col>
 
 
 
