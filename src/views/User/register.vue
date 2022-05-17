@@ -138,19 +138,16 @@ import Toolbar from "../../components/Toolbar.vue";
 import Footer from "../../components/Footer.vue";
 import HomeView from "../HomeView.vue";
 export default {
-  name: "homeuser",
   components: {
     Toolbar,
     Footer,
     HomeView,
-    data: () => ({
-      items: ['020', '030',],
-    }),
-  },
-};
+  }
+}
 </script>
 
-<style>
+
+<style scoped>
 .redtext{
     color: #e21312;
 }
@@ -195,4 +192,5 @@ export default {
 .halp{
   margin-top: 5%;
 }
+
 </style>
