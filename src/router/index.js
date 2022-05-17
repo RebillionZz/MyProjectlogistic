@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import register from '../views/register.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
-import sidebarC from '@/components/sidebarC.vue'
 import homeuser from '../views/User/homepage.vue'
 import branch from '../views/User/branch.vue'
 import login from '../views/User/login.vue'
@@ -12,6 +12,7 @@ import register from '../views/User/register.vue'
 import follow from '../views/User/follow.vue'
 import codregister from '../views/User/codregister.vue'
 import infohal from '../views/User/info.vue'
+import Sidebar from '@/components/Sidebar.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -97,6 +98,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/register',
+    name: 'register',
+    component: register
+  },
+  {
     path: '/DashbordView',
     component: DashbordView,
     // children:[
@@ -111,17 +117,18 @@ const routes = [
     // ]
   },
   {
-    path: '/sidebarc',
-    component: sidebarC,
-    name:'sidebarc',
+    path: '/Sidebar',
+    component: Sidebar,
+    name:'Sidebar',
     children:[
       {
-        path:'/sidebarc',
+        path:'/Sidebar',
+        name:'homedc',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
       {
         name:'sidebarcE',
-        path:'/sidebarc/:id',
+        path:'/detail/:id',
         
         component:() => import('../views/Admin/list-DC/HomeDetail/homeDetail.vue')
       },
@@ -154,15 +161,18 @@ const routes = [
         component:() => import('../views/Admin/list-DC/myItempushC.vue'),
         children:[
           {
-            path:'/myitempushc/push1c',
+            path:'/push1c',
+            name:'push1c',
           component:() => import('../views/Admin/list-DC/dataC/push1C.vue'),
           },
           {
-            path:'/myitempushc/push2c',
+            path:'/push2c',
+            name:'push2c',
           component:() => import('../views/Admin/list-DC/dataC/push2C.vue'),
           },
           {
-            path:'/myitempushc/push3c',
+            path:'/push3c',
+            name:'push3c',
           component:() => import('../views/Admin/list-DC/dataC/push3C.vue'),
           },
         ]

@@ -20,7 +20,14 @@ export default {
     border-top: 2px solid $red;
     width: 100%;
     margin: 0;
+    position:sticky;
+    
     // padding: 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 </style>

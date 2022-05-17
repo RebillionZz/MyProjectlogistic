@@ -1,6 +1,20 @@
 <template>
     <v-container>
-                <v-flex class="d-flex align-center bg-grey">
+                <v-row no-gutters class=" my-5 hide-overflow ">
+                    <v-flex class="d-flex align-center ">
+                        <hamburgur ></hamburgur>
+                        <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0 ">
+                            <v-flex class="d-none align-center bg-grey d-lg-flex d-md-flex d-xl-flex">
+                                <v-col cols="12" class="d-flex align-center">
+                                    <div class="home_head"><img class="imgH" src="../../../../assets/Admin/UserInfo/Contact/ContactLogo.svg" ></div>
+                                    <div class="d-flex align-center ml-2">ຕິດຕໍ່ພວກເຮົາ</div>
+                                </v-col>
+                            </v-flex>
+                        </v-col>
+                        <userAcoin></userAcoin>
+                    </v-flex>
+                </v-row>
+                <v-flex class="d-flex align-center bg-grey d-lg-none d-md-none d-xl-none">
                     <v-col cols="12" class="d-flex align-center">
                         <div class="home_head"><img class="imgH" src="../../../../assets/Admin/UserInfo/Contact/ContactLogo.svg" ></div>
                         <div class="d-flex align-center ml-2">ຕິດຕໍ່ພວກເຮົາ</div>
@@ -124,12 +138,21 @@
                         </v-col>
                     </div>
                 </div>
+                <footerC class="mt-5"></footerC>
         </v-container>
 </template>
 
 <script>
+import hamburgur from '../../../../components/DashTopview/hamburgur.vue'
+import userAcoin from '../../../../components/DashTopview/userAcoin.vue'
+import footerC from '../../../../components/footerC.vue'
 export default {
-    name:'contactc'
+    name:'contactc',
+    components:{
+        hamburgur,
+        userAcoin,
+        footerC
+    }
 }
 </script>
 

@@ -1,9 +1,9 @@
 <template>
-    <div class="Body">
+    <div class="Body dashboard-container-wrap">
         <v-row no-gutters>
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
-                <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0  ">
+                <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0  ">
                     <div class="d-none bg-grey mb-4 d-lg-flex">
                         <div class="d-flex align-center">
                             <v-avatar color="red lighten-4 " size="60"><v-img src="../../../assets/Admin/dataContent/mainIcon.svg" max-height="45" max-width="45"></v-img></v-avatar>
@@ -21,15 +21,6 @@
             <h3 class="d-flex  align-center ml-3">ຂໍ້ມູນສາຂາ</h3>
         </div>
         <p class="text-center textHead">ພວກເຮົາມີຫຼາຍສາຂາຄອບຄຸມທົ່ວປະເທດ ແລະ ເປີດໃຫ້ບໍລິການ 365 ມື້ບໍ່ມີພັກ</p>
-        <!-- <div>
-        <router-link to="/dataCC/1" class="px-2">data1</router-link>
-        <router-link to="/dataCC/2" class="px-2">data2</router-link>
-        <router-link to="/dataCC/3" class="px-2">data3</router-link>
-        <router-link to="/dataCC/4" class="px-2">data4</router-link>
-
-        </div>
-        <router-view></router-view>
-         -->
         
         
 
@@ -37,45 +28,12 @@
 
         
         <div class="backW">
-            <!-- <v-row no-gutters class="mb-5">
-            <v-col cols="3"   class="CurBT pt-2"   >
-                <div class=" d-flex align-center flex-column  " >
-                    <div class="d-flex justify-center">
-                        <img src="../../../assets/Admin/dataContent/VT-Section.svg" alt="" srcset="" class="maps">
-                    </div>
-                    <div class="text-center text-WE">ນະຄອນຫຼວງວຽງຈັນ</div>
-                </div>
-            </v-col>
-            <v-col cols="3"   class="CurBT "  align-self="center" >
-                <div class=" d-flex align-center flex-column  ">
-                    <div class="d-flex justify-center">
-                        <img src="../../../assets/Admin/dataContent/north-Section.png" alt="" srcset="" class="maps"> 
-                    </div>
-                    <div class="text-center text-WE PRES py-1">ພາກເໜືອ</div>
-                </div>
-            </v-col>
-            <v-col cols="3"   class="CurBT "  >
-                <div class=" d-flex align-center flex-column  ">
-                    <div class="d-flex justify-center">
-                        <img src="../../../assets/Admin/dataContent/central-Section.png" alt="" srcset="" class="maps"> 
-                    </div>
-                    <div class="text-center text-WE">ພາກກາງ</div>
-                </div>
-            </v-col>
-            <v-col cols="3"   class="CurBT "  >
-                <div class=" d-flex align-center flex-column  ">
-                    <div class="d-flex justify-center">
-                        <img src="../../../assets/Admin/dataContent/soult-Section.png" alt="" srcset="" class="maps"> 
-                    </div>
-                    <div class="text-center text-WE ">ພາກໃຕ້</div>
-                </div>
-            </v-col>
-        </v-row> -->
+           
             
             <!-- ------------------------------------------------------------------- -->
             <v-tabs class="mb-5 " height="200" color="red">
             <v-tabs-slider></v-tabs-slider>
-            <v-col cols="3"   class=" pt-2" @click="topclick = 1"  >
+            <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 1"  >
                 <v-tab href="#tab-1"  class="Tab-col">
                     
                     <div class="" >
@@ -86,8 +44,8 @@
                     </div>
                 </v-tab>
             </v-col>
-            <v-col cols="3"   class=" pt-2"  @click="topclick = 2" >
-                <v-tab href="#tab-2" class="d-flex flex-column">
+            <v-col cols="3"   class=" pt-2 mapImg-container"  @click="topclick = 2" >
+                <v-tab href="#tab-2" class="d-flex flex-column Tab-col">
                     <div class="d-flex ">
                         <img src="../../../assets/Admin/dataContent/north-Section.png" alt="" srcset="" class="maps"> 
                     </div>
@@ -95,8 +53,8 @@
                 </v-tab>
             </v-col>
 
-            <v-col cols="3"   class="pt-2"   @click="topclick = 3">
-                <v-tab href="#tab-3">
+            <v-col cols="3"   class="pt-2 mapImg-container"   @click="topclick = 3">
+                <v-tab href="#tab-3 Tab-col">
                     <div class=" d-flex  flex-column  ">
                         <div class="d-flex ">
                             <img src="../../../assets/Admin/dataContent/central-Section.png" alt="" srcset="" class="maps"> 
@@ -105,16 +63,17 @@
                 </div>
                 </v-tab>
             </v-col>
-            <v-col cols="3"   class=" pt-2" @click="topclick = 4"  >
+            <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 4"  >
                 <v-tab href="#tab-4">
-                    <div class=" d-flex align-center flex-column  ">
-                    <div class="d-flex ">
-                        <img src="../../../assets/Admin/dataContent/soult-Section.png" alt="" srcset="" class="maps"> 
-                    </div>
+                    <div class=" d-flex align-center flex-column Tab-col  ">
+                        <div class="d-flex ">
+                            <img src="../../../assets/Admin/dataContent/soult-Section.png" alt="" srcset="" class="maps"> 
+                        </div>
                     <div class="text-center text-WE ">ພາກໃຕ້</div>
                 </div>
                 </v-tab>
             </v-col>
+            
         </v-tabs>
 
 
@@ -133,7 +92,7 @@
             <v-col cols="1">
             </v-col>
         </div>
-        
+    
         <v-row  class="px-5" no-gutters >
             <v-col  cols="12" md="4" lg="4" v-for="LocatV in maps" :key="LocatV.id"  class="px-2 py-2" v-show="topclick == 1">
                 <v-btn class="d-flex align-center locate_BTN backW sha">
@@ -168,6 +127,12 @@
             
         </v-row>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <footerC class="mt-5 "></footerC>
     </div>
 </template>
@@ -245,7 +210,7 @@ export default {
     // ,
     computed:{
         maps(){
-            console.log(this.$store.state.mapState)
+            // console.log(this.$store.state.mapState)
             return this.$store.state.mapState
             
         }
@@ -260,15 +225,6 @@ export default {
             else{
                 return console.log(this.topclick)
             }
-        },
-    
-        demo(id){
-            this.$router.push({
-                name:"dataCC.edit",
-                params:{
-                    id:id,
-                }
-            }).catch(()=>{})
         },
         
         
@@ -292,6 +248,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.mapImg-container{
+    width: 100%;
+    height: 100%;
+}
 .Body{
     min-height: 100%;
 }

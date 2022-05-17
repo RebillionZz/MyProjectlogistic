@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class=" dashboard-container-wrap">
             <!-- Important this component background red name not are the same other component -->
-            <v-row no-gutters>
+            <v-row no-gutters class="hide-overflow ">
                 <v-flex class="d-flex align-center">
                     <hamburgur ></hamburgur>
-                    <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                    <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0">
                         <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                         <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                     </v-col>
@@ -19,10 +19,10 @@
                         </v-col>
                     </v-flex>
                 <!-- </v-container> -->
-                <v-stepper flat v-model="e1" class="v_step_header">
+                <v-stepper flat v-model="e1" class="v_step_header" >
                 
                 <v-stepper-header class="v_step_header bg-grey">
-                    <v-stepper-step :complete="e1 >1" step="1" color="red"><span class="step111" >ສ້າງບິນດ້ວຍຕົນເອງ</span></v-stepper-step>
+                    <v-stepper-step :complete="e1 >1" step="1" color="red" @click="e1 = 1"><span class="step111" >ສ້າງບິນດ້ວຍຕົນເອງ</span></v-stepper-step>
                     <v-divider color="red"></v-divider>
                     <v-stepper-step :complete="e1 >2" step="2" color="red"><span :class="{step111:dew}" :dew="false">ລາຍລະອຽດອໍເດີ້</span></v-stepper-step>
                     <v-divider :class="{backL:dew}" :dew="false"></v-divider>
@@ -33,31 +33,25 @@
                 <v-stepper-items rounded>
                     <!-- step 1 -->
                     <v-stepper-content step="1">
-                        <div class="px-0 px-md-2" >
                             <!-- form 1 -->
-                            <form>
-                                <h4 class="text-center pt-2">ຂໍ້ມູນຜູ້ຮັບ</h4>
-                                
-                                <v-col cols="12" class="mb-5">
-                                    <input type="text" name="" id="" placeholder="ຊື່ຜູ້ຮັບ" class="input-max box-border">
-                                </v-col>
-                                
-                                <div class="d-flex ">
-                                    <v-col cols="2" class=""><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill  " solo  ></v-select></v-col>
-                                    <v-col cols="10" class="pl-2"><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col>
-                                    <!-- <v-col cols="4" lg="2" md="2" class="px-0"><v-select :label="slecteritem" :items="slecteritems" dense flat outlined class="rounded-pill  " solo  ></v-select></v-col>
-                                    <v-col cols="8" lg="10" md="10" class="pt-3"><input type="number" name="" id="" placeholder="ເບີໂທຜູ້ຕິດຕໍ່" class="input-max box-border"></v-col> -->
-                                
-                                </div>
-                                <v-col cols="12"  class="mb-6">
-                                    <input type="text" name="" id="" placeholder="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" class="input-max box-border">
-                                </v-col>
-                                
+                            
+                            <v-form>
+                                <h4 class="text-center mb-3">ຂໍ້ມູນຜູ້ຮັບ</h4>
+                                <v-text-field class="mt-4" label="ຊື່ຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
+                                <v-row class="   " no-gutters>
+                                    <v-col cols="3" lg="2" md="2" sm="2" xs="4" >
+                                        <v-select class=" pt-4" label="ເບີໂທ" outlined dense   rounded hide-details append-icon :items="numberPhone" ></v-select>
 
-                                <!-- form 2 -->
-                                <h4 class="text-center mb-3">ຂໍ້ມູນພັດສະດຸ</h4>
-                                <!-- checkbox 1 if comback take it out -->
-                                <div class="d-flex itemSelect mb-3 align-center">
+                                    </v-col>
+                                    <v-col cols="9" lg="10" md="10" sm="10" xs="8" class="">
+                                        <v-text-field class="mt-4 pl-1" label="ເບີໂທຜູ້ຕິດຕໍ່" outlined dense  rounded hide-details></v-text-field>
+
+                                    </v-col>
+                                </v-row>
+                                <v-text-field class="mt-4" label="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
+                                <h4 class="text-center my-3">ຂໍ້ມູນພັດສະດຸ</h4>
+
+                                <div class="d-flex itemSelect mb-4 align-center">
                                     <!--  -->
                                     <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
                                         <div class=" ">ປະເພດພັດສະດຸ</div>
@@ -79,20 +73,20 @@
                                         </v-col>
                                     </v-col>
                                 </div>
-                                <div class="d-flex itemSelect mb-3 align-center">
-                                    <!--  -->
+
+
+
+                                <div class="d-flex itemSelect mb-4 align-center">
                                     <v-col cols="4" class="d-flex align-center justify-center pa-0 ">
                                         <div class=" ">ບໍລິການເສີມ</div>
                                     </v-col>
                                     <v-col cols="8" class="d-flex">
-                                        <!-- 4 md lg// 6 xs -->
                                         <v-col cols="4" md="4" lg="4" xs="4" class="line-leftR pa-0">
                                             <div class="d-flex align-center line-left pl-3">
                                                 <input type="checkbox" id="CDC" name="itemSelect" value="1">
                                                 <label for="CDC" class="pl-1">CDC</label>
                                             </div>
                                         </v-col>
-                                        <!-- 8 md lg 6 xs -->
                                         <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
                                             <div class="d-flex align-center">
                                                 <input type="checkbox" id="COD" name="itemSelect" value="2">
@@ -101,31 +95,47 @@
                                         </v-col>
                                         <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
                                             <div class="d-flex align-center">
-                                                <input type="checkbox" id="itemDocumentID" name="itemSelect" value="3">
-                                                <label for="itemDocumentID" class="pl-1">ປະກັນໄພ</label>
+                                                <input type="checkbox" id="Pagunphai" name="itemSelect" value="3">
+                                                <label for="Pagunphai" class="pl-1">ປະກັນໄພ</label>
                                             </div>
                                         </v-col>
                                     </v-col>
                                 </div>
-                                <div>
+
+
+
+                                <div class="d-flex align-center mb-4">
+                                    <v-col cols="6">
+                                        <v-select class="  pr-2" label=" ເລືອກຕົ້ນທາງ " outlined dense   rounded hide-details  :items="startWays" ></v-select>
+                                    </v-col>
+                                    <v-col cols="6" class="d-flex align-center">
+                                        <div class=""><v-img src="../../../assets/Admin/sendContent/Arrow.svg" max-height="37" max-width="37"></v-img></div>
+                                        <v-select class="  pl-2" label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon="d-none" :items="startWays" ></v-select>
+                                    </v-col>
+                                </div>
+
+
+                                <v-col cols="12" class="mb-4">
+                                    <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
+                                    <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                </v-col>
+                                
+
+
+                                <div class="mb-4 d-flex">
+                                    <v-col cols="6" >
+                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    </v-col>
+                                    <v-col cols="6" >
+                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    </v-col>
                                 </div>
 
 
 
-                                <div>
-                                    <v-col cols="12"><v-select label="ເລືອກປາຍທາງ" flat outlined dense solo :items="endWays" class="rounded-pill"></v-select></v-col>
-                                    <div class="d-flex mb-3">
-                                        <v-col cols="6" class="d-block pr-sm-1 pr-md-0 pr-lg-0"><input type="text" name="" id="" placeholder="ກວ້າງ + ສູງ +ຍາວ" class="input-max box-border "></v-col>
-                                        <v-col cols="6" class="d-block pl-1"><input type="text" name="" id="" placeholder="ນ້ຳໜັກຂອງພັດສະດຸ" class="input-max box-border"></v-col>
-                                    </div>
-                                    <v-col cols="12"><v-select label="ເລືອກປາຍທາງ" flat outlined dense solo :items="endWays" class="rounded-pill"></v-select></v-col>
-                                    <h4 class="text-center color-red">ໝາຍເຫດ</h4>
-                                    <p class="text-center ">ຄ່າບໍລິການ ແມ່ນຕ້ອງອ້າງອີງຕາມການຄິດໄລ່ຕົວຈິງຂອງພະນັກງານຮຸ່ງອາລຸນ</p>
-                                </div>
-                                <v-btn width="100%" color="bg-red white--text" @click="e1=2;dew=true">ບັນທຶກ</v-btn>
-                            </form>
+                                <v-btn width="100%" color="bg-red white--text" @click="e1=2;dew=true">ຢືັນຢັນການບັນທຶກ</v-btn>
+                            </v-form>
                             <!-- ------------------------------END Step1------------------------------ -->
-                        </div>
                     </v-stepper-content>
 
 
@@ -134,7 +144,6 @@
                     <!-- step 2 -->
                     <v-stepper-content step="2">
                         <form>
-                            <!-- S1 -->
                             <div>
                                 <h4 class="text-center pb-2">ຂໍ້ມູນຜູ້ຮັບ</h4>
                                 <v-divider class="bg-red"></v-divider>
@@ -214,14 +223,19 @@
                         <h5 class="text-center pt-5">ອໍເດີ້ຂອງທ່ານໄດ້ຖືກຢືນຢັນ</h5>
                         <div class="d-flex justify-center pt-3">
                             
-                            <v-btn color="bg-red white--text" @click="e1=4">ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-btn>
+                            <v-btn color="bg-red white--text" @click="e1=1">ພັດສະດຸທີ່ຂ້ອຍສົ່ງອອກ</v-btn>
                         </div>
                     </v-stepper-content>
                     <!-- <v-stepper-content v-model="e7" :e7="false"><v-col><v-btn >Succes</v-btn></v-col></v-stepper-content> -->
                 </v-stepper-items>
                 
             </v-stepper>
-            <footerC class="mt-5"></footerC>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <footerC class="mt-5"></footerC>    
         
     </div>
     
@@ -241,8 +255,9 @@ export default {
             e2:false,
             slecteritem:'020',
             slecteritems:['020','030'],
+            numberPhone:['020','030'],
             startWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
-            endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+            // endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
         }
     },
     components:{
@@ -254,6 +269,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// footer
+
+
 // head bar
 
 .home_head{
@@ -280,6 +298,7 @@ export default {
     }
     .step111{
         color: $red;
+        cursor:pointer;
     }
     .color-red{
         color: $red;
@@ -335,25 +354,25 @@ export default {
 // Form2
 .itemSelect{
     position: relative;
-    box-shadow: 0px 0px 3px 0.2px #ABABAB;
+    box-shadow: 0px 0px 3px 0.5px #ABABAB;
     border-radius: 28px;
     height: 40px;
 }
 .line-leftR{
-    position:relative;
-    .line-left::before{
-        content: '';
-            width: 2px;
-            height: 36px;
-            // display: block;
-            top: -6px;
-            // bottom: 2%;
-            left: 0;
-            position: absolute;
-            background: #ABABAB;
-            // padding: 0.5px;
-            border-radius: 2px;
-    }
+    // position:relative;
+    // .line-left::before{
+    //     content: '';
+    //         width: 2px;
+    //         height: 36px;
+    //         // display: block;
+    //         top: -6px;
+    //         // bottom: 2%;
+    //         left: 0;
+    //         position: absolute;
+    //         background: #ABABAB;
+    //         // padding: 0.5px;
+    //         border-radius: 2px;
+    // }
 }
 
 // end
@@ -439,5 +458,13 @@ export default {
     }
     }
     
+
+
+
+
+    // lable and text-field select change css
+    .v-text-field--rounded > .v-input__control > .v-input__slot{
+        padding: 0px 14px;
+    }
 }
 </style>

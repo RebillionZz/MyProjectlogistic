@@ -1,8 +1,22 @@
 <template>
-    <v-container class="body-form">
+    <div class="body-form">
+        <v-row no-gutters class=" my-5 hide-overflow ">
+            <v-flex class="d-flex align-center ">
+                <hamburgur ></hamburgur>
+                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0 ">
+                    <div class="box-userInfo d-none d-lg-block d-md-block">
+                        <div class="d-flex align-center info-head">
+                            <div class="bg-head"><img src="../../../../assets/Admin/UserInfo/userInfoIcon.svg" alt="UserInfo" class="InfoIcon"></div>
+                            <div>ຂໍ້ມູນສ່ວນຕົວ</div>
+                        </div>
+                    </div>
+                </v-col>
+                <userAcoin></userAcoin>
+            </v-flex>
+        </v-row>
         <!-- Avata + heading User Info mobile hide-lg-md -->
-        <div class="box-userInfo">
-            <div class="d-flex align-center info-head">
+        <div class="box-userInfo d-block my-5 d-lg-none d-md-none" >
+            <div class="d-flex align-center info-head ">
                 <div class="bg-head"><img src="../../../../assets/Admin/UserInfo/userInfoIcon.svg" alt="UserInfo" class="InfoIcon"></div>
                 <div>ຂໍ້ມູນສ່ວນຕົວ</div>
             </div>
@@ -12,7 +26,7 @@
                 <!-- CHange IMG tag and test user IMG -->
                 <div class="img"></div>
                 <div class="camera"><img src="../../../../assets/Admin/UserInfo/Camera.svg" alt="Camera" srcset="" class="cameraIcon"></div>
-</div>
+            </div>
 
             <div class="userInfo">
                 <v-col cols="12" class="mb-2">
@@ -45,12 +59,18 @@
                 </v-col>
             </div>
         </form>
-    </v-container>
+    </div>
 </template>
 
 <script>
+import hamburgur from '../../../../components/DashTopview/hamburgur.vue'
+import userAcoin from '../../../../components/DashTopview/userAcoin.vue'
 export default {
-    name:'userinfoc'
+    name:'userinfoc',
+    components:{
+        hamburgur,
+        userAcoin,
+    }
 }
 </script>
 
@@ -125,6 +145,7 @@ export default {
         }
     }
 }
+
 @media only screen and (max-width: 786px) {
     *{
         font-size: 16px;
@@ -143,13 +164,76 @@ export default {
         }
     }
 }
+.home_head{
+    width: 40px;
+    height: 40px;
+    padding:4px;
+    border-radius: 50%;
+    background: $dashhead;
+    .imgH{
+        width: 100%;
+        height: 100%;
+    }
+}
+.search-form{
+    position: relative;
+    width: 100%;
+    .input-max{
+        width: 100%;
+        height: 40px;
+        padding-left: 45px;
+        background:$bg-footer;
+        border-radius: 34px;
+        outline: none;
+    }
+    .for-search{
+        position: absolute;
+        left: 8px;
+        top:0px;
+    }
+     
+}
+@media only screen and (max-width: 768px) {
+    *{
+        font-size: 16px;
+        }
+    .search-form{
+        position: relative;
+        padding-right: 8px;
+        
+        .input-max{
+            width: 100%;
+            height: 35px;
+            padding-left: 40px;
+            
+            border-radius: 34px;
+        }
+        .for-search{
+            position: absolute;
+            left: 8px;
+            top:2px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    input::placeholder{
+    font-size: 14px;
+}
+    .form{
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+        padding: 8px 30px;
+        border-radius: 4px;
+    }
+}
 @media screen and (max-width: 600px) {
     *{
         font-size: 14px;
     }
     // form checkbox mobile
     .body-form{
-    padding: 40px 50px;
+    // padding: 40px 50px;
     .form{
         background-color: #ffffff;
         width: 100%;
@@ -180,5 +264,18 @@ export default {
         }
     }
 }
+    .search-form{
+        padding:0 5px !important;
+            .input-max{
+            height: 35px;
+        }
+        .for-search{
+            position: absolute;
+            left: 12px;
+            top: 2px;
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 </style>

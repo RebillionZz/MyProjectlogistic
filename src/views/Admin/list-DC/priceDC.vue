@@ -1,9 +1,9 @@
 <template>
-    <v-container>
-        <v-row no-gutters>
+    <div class="dashboard-container-wrap">
+        <v-row no-gutters class="hide-overflow ">
             <v-flex class="d-flex align-center">
                 <hamburgur ></hamburgur>
-                <v-col cols="8" sm="9" lg="9" md="9" xs="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
@@ -21,16 +21,16 @@
             <div class="d-md-flex justify-space-around">
                 <v-col cols="5" xs="12">
                     <label class="pl-3">ຕົ້ນທາງ</label>
-                    <v-select label="ເລືອກຕົ້ນທາງ" flat outlined dense solo :items="endWays" class="rounded-pill"></v-select>
+                    <v-select label="ເລືອກຕົ້ນທາງ" flat outlined dense solo :items="endWays" hide-details class="rounded-pill"></v-select>
                 </v-col>
-                <v-col cols="2" xs="12" class="d-flex justify-center align-center "><v-img src="../../../assets/Admin/priceContent/ArrowPC.svg" max-height="36" max-width="36" class="changeIcon "></v-img></v-col>
+                <v-col cols="2" xs="12" class="d-flex justify-center align-center pt-5 "><v-img src="../../../assets/Admin/priceContent/ArrowPC.svg" max-height="36" max-width="36" class="changeIcon "></v-img></v-col>
                 <v-col cols="5" xs="12">
                     <label class="pl-3">ປາຍທາງ</label>
-                    <v-select label="ເລືອກປາຍທາງ" flat outlined dense solo :items="endWays" class="rounded-pill"></v-select>
+                    <v-select label="ເລືອກປາຍທາງ" flat outlined dense solo :items="endWays" hide-details class="rounded-pill"></v-select>
                 </v-col>
             </div>
             <!--  -->
-            <div class="d-md-flex">
+            <div class="d-md-flex mt-3">
                 <v-col cols="5">
                     <label class="pl-3">ນໍ້າໜັກລວມ</label>
                     <input type="text" name="" id="" placeholder="ນ້ຳໜັກຂອງພັດສະດຸ" class="input-max box-border">
@@ -65,7 +65,7 @@
             </div>
         </form>
         <footerC class="mt-5"></footerC>
-    </v-container>
+    </div>
     
 </template>
 
@@ -180,6 +180,9 @@ input::-webkit-inner-spin-button {
     *{
         font-size: 16px;
         }
+        .changeIcon{
+    transform: rotate(90deg);
+}
     .search-form{
         position: relative;
         padding-right: 8px;
@@ -202,11 +205,13 @@ input::-webkit-inner-spin-button {
     input::placeholder{
     font-size: 14px;
 }
+
 }
 @media screen and (max-width: 600px) {
     // form checkbox mobile
     .changeIcon{
     transform: rotate(90deg);
+}
     .total-w-h-l{
         padding-top: 4px;
     }
@@ -223,6 +228,5 @@ input::-webkit-inner-spin-button {
             height: 30px;
         }
     }
-}
 }
 </style>

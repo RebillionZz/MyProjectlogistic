@@ -1,8 +1,23 @@
 <template>
-    <v-container class="body-form">
+    <div class="body-form">
+        <v-row no-gutters class=" my-5 hide-overflow ">
+            <v-flex class="d-flex align-center ">
+                <hamburgur ></hamburgur>
+                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0 ">
+                    <div class="box-userBunzy">
+                        <div class="d-none align-center Bunzy-head d-lg-flex d-md-flex d-xl-flex">
+                            <v-avatar class="bg-head d-flex align-center pl-1 pb-1"><img src="../../../../assets/Admin/UserInfo/Bunzy/bunzyIcon.svg" alt="UserInfo" class="InfoIcon"></v-avatar>
+                            <!-- <div class="bg-head"><img src="../../../../assets/Admin/UserInfo/bunzyIcon.svg" alt="UserInfo" class="InfoIcon"></div> -->
+                            <div>ຂໍ້ມູນບັນຊີ</div>
+                        </div>
+                    </div>
+                </v-col>
+                <userAcoin></userAcoin>
+            </v-flex>
+        </v-row>
         <!-- Avata + heading User Info mobile hide-lg-md -->
         <div class="box-userBunzy">
-            <div class="d-flex align-center Bunzy-head">
+            <div class="d-flex align-center Bunzy-head d-lg-none d-md-none d-xl-none">
                 <v-avatar class="bg-head d-flex align-center pl-1 pb-1"><img src="../../../../assets/Admin/UserInfo/Bunzy/bunzyIcon.svg" alt="UserInfo" class="InfoIcon"></v-avatar>
                 <!-- <div class="bg-head"><img src="../../../../assets/Admin/UserInfo/bunzyIcon.svg" alt="UserInfo" class="InfoIcon"></div> -->
                 <div>ຂໍ້ມູນບັນຊີ</div>
@@ -111,11 +126,14 @@
             </div>
             <div class="my-6"><button class="btnCPass">ບັນທຶກ</button></div>
         </form>
-    </v-container>
+    </div>
 </template>
 
 <script>
+import hamburgur from '../../../../components/DashTopview/hamburgur.vue'
+import userAcoin from '../../../../components/DashTopview/userAcoin.vue'
 export default {
+    
     name:'userbunzyc',
     data() {
         return {
@@ -131,6 +149,10 @@ export default {
         goStepEdit : function(AE){
             this.activeEdit = AE;
         }
+    },
+    components:{
+        hamburgur,
+        userAcoin,
     }
 }
 </script>

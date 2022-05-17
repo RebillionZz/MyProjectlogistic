@@ -4,7 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // overflow:unset;
 }
+// body{
+  // overflow-y: hidden;
+
+// }
 
 h1, h2, h3, h4, h5, h6, p {
 //   font-family: $font-family;
@@ -30,3 +35,12 @@ h1, h2, h3, h4, h5, h6, p {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.hide-overflow{
+  overflow: hidden;
+}
+
+
+.dashboard-container-wrap{
+  position: relative;
+  min-height: 100vh;
+}
