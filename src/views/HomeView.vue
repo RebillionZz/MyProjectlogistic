@@ -27,6 +27,11 @@
       </div>
     </form>
     <!-- <router-link to="/sidebarc/" class="d-flex justify-center">Go DashBoard</router-link> -->
+    <div>
+      <v-btn outlined color="red darken-1" dark>
+        <router-link to="/homepage" class="d-flex justify-center">Geust Login</router-link>
+      </v-btn>
+    </div>
   </v-app>
   
 </template>

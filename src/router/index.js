@@ -3,9 +3,94 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
 import sidebarC from '@/components/sidebarC.vue'
+import homeuser from '../views/User/homepage.vue'
+import branch from '../views/User/branch.vue'
+import login from '../views/User/login.vue'
+import servicearea from '../views/User/service.vue'
+import pricecal from '../views/User/pricecal.vue'
+import register from '../views/User/register.vue'
+import follow from '../views/User/follow.vue'
+import codregister from '../views/User/codregister.vue'
+import infohal from '../views/User/info.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/infohal',
+    component: infohal,
+    name: infohal,
+    children:[
+      {
+        path:'/infohal1',
+        component:() => import('../views/Admin/ReasonChild/r1C.vue')
+      },
+      {
+        path:'/infohal2',
+        component:() => import('../views/Admin/ReasonChild/r2C.vue')
+      },
+      {
+        path:'/infohal3',
+        component:() => import('../views/Admin/ReasonChild/r3C.vue')
+      },
+      {
+        path:'/infohal4',
+        component:() => import('../views/Admin/ReasonChild/r4C.vue')
+      },
+      {
+        path:'/infohal5',
+        component: () => import('../views/Admin/ReasonChild/r5C.vue')
+      },
+      {
+        path:'/infohal6',
+        component:() => import('../views/Admin/ReasonChild/r6C.vue')
+      },
+    ]
+  },
+  {
+    path: '/codregister',
+    name: 'codregister',
+    component: codregister
+  },
+  {
+    path: '/follow',
+    name: 'follow',
+    component: follow
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: register
+  },
+  {
+    path: '/pricecal',
+    name: 'pricecal',
+    component: pricecal
+  },
+  {
+    path: '/servicearea',
+    name: 'servicearea',
+    component: servicearea
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/branchservice',
+    name: 'branch',
+    component: branch
+  },
+  {
+    path: '/homepage',
+    name: 'homeuser',
+    component: homeuser
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },
   {
     path: '/',
     name: 'home',
@@ -120,6 +205,7 @@ const routes = [
       }
     ]
   },
+  
   
   
 ]
