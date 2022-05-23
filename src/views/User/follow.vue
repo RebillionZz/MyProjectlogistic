@@ -17,6 +17,15 @@
         </v-row>
     </div>
     <div class="followpart">
+        <div class="searchitem">
+            <v-text-field
+          v-model="search"
+          label="ໃສ່ລະຫັດ tracking ID"
+          color="red darken-1"
+          rounded
+          outlined
+        ></v-text-field>
+        </div>
         <h2 class="hh2">ຕິດຕາມພັດສະດຸຂອງທ່ານ</h2>
     </div>
     <Footer/>
@@ -59,5 +68,10 @@ export default {
 }
 .flpic{
     padding: 5%;
+}
+.searchitem{
+    margin-top: -7%;
+    background: #FFFFFF;
+    border-radius: 27px;
 }
 </style>

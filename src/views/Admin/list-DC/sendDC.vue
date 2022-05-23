@@ -358,24 +358,7 @@ export default {
     border-radius: 28px;
     height: 40px;
 }
-.line-leftR{
-    // position:relative;
-    // .line-left::before{
-    //     content: '';
-    //         width: 2px;
-    //         height: 36px;
-    //         // display: block;
-    //         top: -6px;
-    //         // bottom: 2%;
-    //         left: 0;
-    //         position: absolute;
-    //         background: #ABABAB;
-    //         // padding: 0.5px;
-    //         border-radius: 2px;
-    // }
-}
 
-// end
 .search-form{
     position: relative;
     width: 100%;

@@ -8,44 +8,48 @@ import branch from '../views/User/branch.vue'
 import login from '../views/User/login.vue'
 import servicearea from '../views/User/service.vue'
 import pricecal from '../views/User/pricecal.vue'
-import register from '../views/User/register.vue'
 import follow from '../views/User/follow.vue'
 import codregister from '../views/User/codregister.vue'
-import infohal from '../views/User/info.vue'
 import Sidebar from '@/components/Sidebar.vue'
+import registerhal from '../views/User/register.vue'
+import infohal1 from '../views/User/info1.vue'
+import infohal2 from '../views/User/info2.vue'
+import infohal3 from '../views/User/info3.vue'
+import infohal4 from '../views/User/info4.vue'
+import infohal5 from '../views/User/info5.vue'
+import infohal6 from '../views/User/info6.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/infohal',
-    component: infohal,
-    name: infohal,
-    children:[
-      {
-        path:'/infohal1',
-        component:() => import('../views/Admin/ReasonChild/r1C.vue')
-      },
-      {
-        path:'/infohal2',
-        component:() => import('../views/Admin/ReasonChild/r2C.vue')
-      },
-      {
-        path:'/infohal3',
-        component:() => import('../views/Admin/ReasonChild/r3C.vue')
-      },
-      {
-        path:'/infohal4',
-        component:() => import('../views/Admin/ReasonChild/r4C.vue')
-      },
-      {
-        path:'/infohal5',
-        component: () => import('../views/Admin/ReasonChild/r5C.vue')
-      },
-      {
-        path:'/infohal6',
-        component:() => import('../views/Admin/ReasonChild/r6C.vue')
-      },
-    ]
+    path: '/infohal1',
+    name: 'infohal1',
+    component: infohal1
+  },
+  {
+    path: '/infohal2',
+    name: 'infohal2',
+    component: infohal2
+  },
+  {
+    path: '/infohal3',
+    name: 'infohal3',
+    component: infohal3
+  },
+  {
+    path: '/infohal4',
+    name: 'infohal4',
+    component: infohal4
+  },
+  {
+    path: '/infohal5',
+    name: 'infohal5',
+    component: infohal5
+  },
+  {
+    path: '/infohal6',
+    name: 'infohal6',
+    component: infohal6
   },
   {
     path: '/codregister',
@@ -58,9 +62,9 @@ const routes = [
     component: follow
   },
   {
-    path: '/register',
-    name: 'register',
-    component: register
+    path: '/registerhal',
+    name: 'registerhal',
+    component: registerhal
   },
   {
     path: '/pricecal',

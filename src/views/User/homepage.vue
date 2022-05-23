@@ -26,9 +26,9 @@
       </div>
       <div class="doublebutton">
         <v-btn color="red darken-1" rounded dark outlined> ຝາກເຄື່ອງ </v-btn>
-        <v-btn color="red darken-1" rounded dark outlined>
+        <router-link to="/pricecal">        <v-btn color="red darken-1" rounded dark outlined>
           ຄິດໄລ່ຄ່າຂົນສົ່ງ
-        </v-btn>
+        </v-btn></router-link>
       </div>
     </div>
     <div class="service1">
@@ -45,25 +45,25 @@
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
+          <router-link to="/follow"><v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/trace 1 (1).png" alt="">
             <p>ພັດສະດຸຂອງຂ້ອຍ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="">
-          </v-card>
+          </v-card></router-link>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
+         <router-link to="/pricecal"> <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/calculator 1.png" alt="">
             <p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="">
-          </v-card>
+          </v-card></router-link>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
+          <router-link to="/servicearea">          <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
             <img src="../../assets/Frontend/fluent_branch-fork-16-regular.png" alt="">
             <p>ຂໍ້ມູນສາຂາ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="">
-          </v-card>
+          </v-card></router-link>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3" max-width="220" min-width="174" height="200">
@@ -85,13 +85,13 @@
         <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">
           <img src="../../assets/Frontend/210709791_835246240756534_2076683395362452089_n-removebg-preview 1.svg" alt="">
           <p>ຈັດສົ່ງປອດໄພ ວາງໃຈທຸກການຂົນສົ່ງກັບ<br>ຮຸ່ງອາລຸນ ຂົນສົ່ງດ່ວນ<br>ສົ່ງພັດສະດຸພາຍໃນແຂວງ ແລະ ຕ່າງແຂວງ</p>
-          <v-btn color="red darken-1" rounded dark>ລົງທະບຽນຕອນນີ້</v-btn>
+          <router-link to="/registerhal"><v-btn color="red darken-1" rounded dark>ລົງທະບຽນຕອນນີ້</v-btn></router-link>
         </v-col>
         <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">
           <div class="codif">
           <img src="../../assets/Frontend/cod2 1.png" alt="">
           <p>ເພີ່ມຊ່ອງທາງການຊໍາລະເງິນໃຫ້ແກ່ລູກຄ້າ<br>ແລະ ເພີ່ມຍອດຂາຍໃຫ້ທຸກທ່ານດ້ວຍບໍລິການ<br>COD ໂອນເງິນໄວໃນ 01 ມື້</p>
-          <v-btn color="red darken-1" rounded dark>ສະໝັກ COD</v-btn>
+          <router-link to="/codregister"><v-btn color="red darken-1" rounded dark>ສະໝັກ COD</v-btn></router-link>
           </div>
         </v-col>
       </v-row>
@@ -125,7 +125,7 @@
           </h3>
           <p>ທ່ານສາມາດຕິດຕາມພັດສະດຸ ຝາກເຄື່ອງເອງ ເອີ້ນຮັບເຄື່ອງ</p>
           <img src="../../assets/Frontend/hal app 1 (1).png" alt="" />
-          <h2>
+          <h2> 
             HAL EXPRESS <br />
             ສາມາດດາວໂຫລດໄດ້ທີ່
           </h2>

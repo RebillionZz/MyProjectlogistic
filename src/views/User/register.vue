@@ -17,7 +17,7 @@
           <div class="formlogin">
             <form action="">
               <div class="textlogin">
-                <h2>ລົງທະບຽນ</h2>
+                <h2 class="hline">ລົງທະບຽນ</h2>
                 <h4>ເພື່ອເປັນສະມາຊິກຂອງ HAL LOGISTIC </h4>
               </div>
               <div class="formlogin">
@@ -50,14 +50,15 @@
                   <h4>ເບີໂທລະສັບ</h4>
                   <v-row>
                 <v-col class="d-flex" cols="3" sm="3">
-                  <v-select
-                    :items="items"
-                    label="020"
-                    dense
-                    outlined
-                    color="red darken-1"
-                    rounded
-                  ></v-select>
+                                      <v-select
+                      :label="slecteritem"
+                      :items="slecteritems"
+                      dense
+                      flat
+                      outlined
+                      color="red darken-1"
+                      rounded
+                    ></v-select>
                 </v-col>
                 <v-col class="d-flex" cols="9" sm="9">
                     <v-text-field
@@ -93,7 +94,7 @@
             </v-checkbox>
                   <div class="centertext">
                       <v-col cols="12" sm="12">
-                          <v-btn color="red darken-1" rounded dark class="col-12 sm-12">                  ເຂົ້າສູ່ລະບົບ         </v-btn>
+                          <v-btn color="red darken-1" rounded dark class="col-12 sm-12">                  ລົງທະບຽນ         </v-btn>
                       </v-col>
                   </div>
               </div>
@@ -138,6 +139,13 @@ import Toolbar from "../../components/Toolbar.vue";
 import Footer from "../../components/Footer.vue";
 import HomeView from "../HomeView.vue";
 export default {
+  name: "registerhal",
+    data() {
+    return {
+      slecteritem: "020",
+      slecteritems: ["020", "030"],
+    };
+  },
   components: {
     Toolbar,
     Footer,
@@ -192,5 +200,30 @@ export default {
 .halp{
   margin-top: 5%;
 }
+.hline {
+  color:#000;
+  text-align: center;
+  position: relative;
+}
+.hline:before {
+  content: "";
+  display: block;
+  width: 30 0px;
+  height: 2px;
+  background: #e21312;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
 
+.hline:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 2px;
+  background: #e21312;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
 </style>

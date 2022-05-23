@@ -17,7 +17,7 @@
           <div class="formlogin">
             <form action="">
               <div class="textlogin">
-                <h2>ເຂົ້າສູ່ລະບົບ</h2>
+                <h2 class="hline">ເຂົ້າສູ່ລະບົບ</h2>
                 <h4>ເພື່ອໃຊ້ບໍລິການຂອງ HAL LOGISTIC</h4>
               </div>
               <div class="formlogin">
@@ -184,5 +184,31 @@ export default {
 }
 .halp {
   margin-top: 5%;
+}
+.hline {
+  color:#000;
+  text-align: center;
+  position: relative;
+}
+.hline:before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 2px;
+  background: #e21312;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.hline:after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 2px;
+  background: #e21312;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 </style>
