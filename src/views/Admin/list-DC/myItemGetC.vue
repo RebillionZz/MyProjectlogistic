@@ -3,22 +3,18 @@
         <!-- <UserInfoC></UserInfoC> -->
         <!-- <UserBunzyC></UserBunzyC> -->
         <!-- <ReasonC></ReasonC> -->
-        <v-row no-gutters class="hide-overflow ">
-            <v-flex class="d-flex align-center">
+        <v-row no-gutters class="hide-overflow  d-flex align-center">
+            <!-- <v-flex class="d-flex align-center"> -->
                 <hamburgur ></hamburgur>
-                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="9" md="9" sm="9" xs="8"   class="search-form  pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
                 <userAcoin></userAcoin>
-            </v-flex>
+            <!-- </v-flex> -->
         </v-row>
-        <!-- <div v-for="map in maps" :key="map.id" class="d-flex">
-            <v-col cols="3">{{map.id}}</v-col>
-            <v-col cols="6">{{map.name}}</v-col>
-            <v-col cols="3">{{map.prefix}}</v-col>
-            
-        </div> -->
+        <!-- <v-img max-width="300px" max-height="300px" :src="('https://media.istockphoto.com/photos/between-worlds-fantasy-concept-picture-id1165403702?k=20&m=1165403702&s=612x612&w=0&h=uhZS2QKm6Vu3IxwWsCiP27mxZg7_AQT_p0UapjTIBvc=')"></v-img> -->
+        <!-- <v-img max-width="300px" max-height="300px" :src="(img)"></v-img> -->
     </div>
 </template>
 
@@ -37,19 +33,21 @@ export default {
     name:'myitemgetc',
     data() {
         return {
-            lists:[]
+            lists:[],
+            img:'../../../assets/Admin/sidebar/toolbar/search.svg'
         }
     },
+    
     methods: {
+    
     },
     computed:{
-        maps(){
-            return this.$store.state.mapState
-        }
+        
+        
     }
     ,
     mounted(){
-        this.$store.dispatch("mapAction");
+        
     },
     components:{
         // UserInfoC

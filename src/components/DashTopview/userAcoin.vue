@@ -1,25 +1,36 @@
 <template>
-    <v-col cols="5" xl="5" lg="4" md="4" xs="4" sm="3"   class="d-flex  align-center    justify-control">
+    <v-col cols="3" xl="3" lg="3" md="3" xs="4" sm="2"   class="d-flex  align-center    justify-control">
                 <!-- box user-Dropdown and slide -->
                 <div class="d-flex align-center pr-1  border-user">
-                    <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
+                    <div class="avataUser d-none d-lg-block d-md-block"><img class="userIMG " :src="userGet.userPhoto"></div>
                     <div @click="$store.state.userAVT = !$store.state.userAVT" class="avataUser d-block d-lg-none- d-md-none">
                         
-                        <img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png">
+                        <!-- <img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png"> -->
+                        <img class="userIMG" :src="userGet.userPhoto">
 
                     </div>
                     <!--  -->
                     <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
 
-                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">{{userGet.name}} <v-flex class="px-1"><img class="d-none d-md-flex  d-lg-flex" src="@/assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" ></v-flex></div>
+                            <div class=" align-center d-none d-md-flex d-lg-flex pl-3" v-bind="attrs" v-on="on">
+                                <div class="name">
+                                    <!-- {{userGet.name}}  -->
+                                    sadfhsadjkhsadfalshfsadf
+                                </div>
+                                <div class="px-1">
+                                    <img class="d-none d-md-flex  d-lg-flex" src="@/assets/Admin/sidebar/toolbar/downARR.svg" width="15px" height="15px" alt="" >
+                                </div>
+                            </div>
 
                         </template>
                         <!--  -->
                         <div class="User_Dropdown_Conntent pa-5">
                             <div class="d-flex mb-4">
-                                <div class="avataUser"><img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div>
-                                <div class="pl-5">
+                                <!-- <div class="avataUser"><img class="userIMG" src="@/assets/Admin/sidebar/toolbar/userAVATA.png"></div> -->
+                                <div class="avataUser"><img class="userIMG" :src="userGet.userPhoto"></div>
+                                <div class="pl-5 overflow-y-auto">
+                                    <!-- <div>{{userGet.name}} <span>{{userGet.lastname}}</span></div> -->
                                     <div>{{userGet.name}} <span>{{userGet.lastname}}</span></div>
                                     <router-link to="/userinfoc"  style="text-decoration: none;   color: #888888;">ເບິ່ງຂໍ້ມູນສ່ວນຕົວ</router-link>
                                 </div>
@@ -98,6 +109,7 @@ export default {
         logout(){
             this.$store.dispatch("clearStore");
             this.$router.push("/");
+            location.reload()
         }
     },
     mounted(){
@@ -107,6 +119,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.name{
+    overflow: hidden;
+    width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .fade_mobile-enter-active, .fade_mobile-leave-active{
     transition:  .3s ease-in-out;
     right: 0%;
@@ -183,10 +201,20 @@ export default {
 @media only screen and (max-width: 768px) {
     *{
         font-size: 16px;
+}
     .avataUser{
         height: 40px;
         width: 40px;
     }
+    .justify-control{
+    // display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 2rem;
+}
+    .box-coin{
+    height: 33px;
+    width: 33px;
 }
 }
 @media screen and (max-width: 420px) {
@@ -197,7 +225,8 @@ export default {
     .justify-control{
     // display: flex;
     // align-items: center;
-    justify-content: start;
-}
+    justify-content: end;
+    padding-left: 0;
+}     
 }
 </style>

@@ -250,7 +250,7 @@ export default {
     data() {
         return {
             id:this.$route.params.id,
-            Store:this.$store.state.itemHome,
+            // Store:this.$store.state.itemHome,
             // bin:this.$route.params.bin,
             // item:'',
             History:this.$store.state.users.history,

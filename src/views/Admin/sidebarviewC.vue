@@ -47,7 +47,7 @@ export default {
         return {
 
             listG1:[
-                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/Sidebar',},
+                {id:1,text:'ໜ້າຫຼັກ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/home.svg'),route:'/sidebar',},
                 {id:2,text:'ຝາກເຄື່ອງເອງ',icon:'ICON',imgS:require('../../assets/Admin/sidebar/give.svg'),route:'/senddc',},
             ],
             listG2:[

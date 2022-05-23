@@ -1,14 +1,14 @@
 <template>
     <div class="dashboard-container-wrap">
-        <v-row no-gutters class="hide-overflow ">
-            <v-flex class="d-flex align-center">
+        <v-row no-gutters class="hide-overflow d-flex align-center ">
+            <!-- <v-flex class="d-flex align-center"> -->
                 <hamburgur ></hamburgur>
-                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="9" md="9" sm="9" xs="8"   class="search-form  pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
                 <userAcoin></userAcoin>
-            </v-flex>
+            <!-- </v-flex> -->
         </v-row>
         <v-flex class="d-flex align-center bg-grey mb-4">
             <v-col cols="9" class="d-flex align-center">

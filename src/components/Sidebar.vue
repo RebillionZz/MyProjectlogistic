@@ -86,7 +86,7 @@ import SearchBar from './SearchBar.vue'
 import sidebarviewC from '../views/Admin/sidebarviewC.vue'
 
 export default {
-    name:'Sidebar',
+    name:'sidebar',
     data() {
         return {
             User:this.$store.state.users,
@@ -104,9 +104,16 @@ export default {
     }
     ,
     mounted(){
-      let user = localStorage.getItem('user-info');
+      let user = localStorage.getItem('token');
       if(!user){
-        this.$router.push("/Sidebar");
+        // window.location.href = "/sidebar/"
+        // this.$router.push("/sidebar/");
+          this.$router.push("/")
+      }
+      else{
+        // this.$router.push("/sidebar/");
+        console.log('no')
+        //   this.$router.push("/")
       }
     },
     methods:{
@@ -123,11 +130,7 @@ export default {
             return this.$store.getters.getUser;
         }
     }
-    // created(){
-            
-    //             console.log(this.$store.state.users)
-            
-    // }
+    
 }
 </script>
 

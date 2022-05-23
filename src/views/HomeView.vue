@@ -3,7 +3,7 @@
     <router-link to="/register">
         <button >Swrap</button>
       </router-link>
-    <form  class="login " >
+    <form  class="login " method="POST" >
       <div>
         <v-col class="pa-0"
             cols="12"
@@ -47,7 +47,9 @@ import axios from 'axios'
     data() {
       return {
         email:'Johnny@test.com',
-        password:'',
+        // email:'77820066',
+        // password:'111111',
+        password:'123',
         rename:'user10',
         remail:'user@test.com',
         relastname:'lastuser10',
@@ -58,30 +60,57 @@ import axios from 'axios'
     methods:{
       
       async userPage(){
+        
+
         const result =await axios.get(
             `http://localhost:3000/user?email=${this.email}&password=${this.password}`
         )
-        // console.log(result)
+        // const result =await axios.get(
+        //     `user?email=${this.email}&password=${this.password}`
+        // )
+        console.log(result)
         if(result.status==200 && result.data.length>0){ 
-
           console.log(result)
-          localStorage.setItem("user-info",JSON.stringify(result.data[0]))
-          this.$router.push("/Sidebar");
+          localStorage.setItem("token",JSON.stringify(result.data[0]))
+          this.$router.push("/sidebar");
           
+          location.reload
           console.log('ok')
         }
         else{
           console.log('no no no')
         }
+        //   const result =await axios.post(
+        //      `https://hal.hal-logistics.la/api/sign-in?tel=${this.email}&password=${this.password}`
+        //  )
+        //  console.log(result.data.authUser)
+       
+        // if(result.status==200 && result.data.authUser){ 
+
+        //   console.log(result)
+        //   localStorage.setItem("user-info",JSON.stringify(result.data.authUser))
+        //   this.$router.push("/Sidebar");
+          
+        //   console.log('ok')
+        // }
+        // else{
+        //   console.log('no no no')
+        // }
+
+
+
+
+
       },
       
       
     },
     mounted(){
-      let user = localStorage.getItem('user-info');
-      console.log(user)
+      let user = localStorage.getItem('token');
+      // console.log(user)
       if(user){
-        this.$router.push("/Sidebar");
+        this.$router.push("/sidebar");
+        
       }
     },
     components: {
