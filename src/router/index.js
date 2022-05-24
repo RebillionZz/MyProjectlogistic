@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import register from '../views/register.vue'
+import Maps from '../views/Maps.vue'
 import DashbordView from '../views/Admin/DashbordView.vue'
 import homeuser from '../views/User/homepage.vue'
 import branch from '../views/User/branch.vue'
@@ -106,6 +107,7 @@ const routes = [
     name: 'register',
     component: register
   },
+  
   {
     path: '/DashbordView',
     component: DashbordView,
@@ -121,12 +123,12 @@ const routes = [
     // ]
   },
   {
-    path: '/Sidebar',
+    path: '/sidebar',
     component: Sidebar,
-    name:'Sidebar',
+    name:'sidebar',
     children:[
       {
-        path:'/Sidebar',
+        path:'/sidebar',
         name:'homedc',
         component:() => import('../views/Admin/list-DC/homeDC.vue')
       },
@@ -158,6 +160,12 @@ const routes = [
             component:() => import('../views/Admin/list-DC/ForDataDC/dataCC.vue')
           },
         ]
+        
+      },
+      {
+        path: '/maps/:id',
+        name: 'maps',
+        component: Maps
       },
       
       {

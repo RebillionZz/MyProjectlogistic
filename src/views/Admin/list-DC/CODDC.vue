@@ -1,18 +1,18 @@
 <template>
     <div>
-        <v-container>
-            <v-row no-gutters class="hide-overflow ">
-            <v-flex class="d-flex align-center">
+        <div>
+            <v-row no-gutters class="hide-overflow d-flex align-center">
+            <!-- <v-flex class="d-flex align-center"> -->
                 <hamburgur ></hamburgur>
-                <v-col cols="8"  lg="8" md="8"   class="search-form mr-lg-2 mr-md-3 pa-0">
+                <v-col cols="8"  lg="9" md="9" sm="9" xs="8"   class="search-form pa-0">
                     <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                     <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                 </v-col>
                 <userAcoin></userAcoin>
-            </v-flex>
+            <!-- </v-flex> -->
         </v-row>
-        </v-container>
-        <v-container class="d-flex">
+        </div>
+        <div class="d-flex">
             <v-flex class="d-flex align-center bg-grey">
                 <v-col class="d-flex align-center" >
                     <div class="home_head"><img class="imgH" src="../../../assets/Admin/CODContent/CODIcon.svg" max-height="50" max-width="50"></div>
@@ -40,9 +40,9 @@
                 </div>
                 
                 </v-dialog>
-        </v-container>
+        </div>
         <!--  -->
-        <v-container>
+        <div>
             <!-- not have box shadow -->
             <div class="d-md-flex justify-space-between" >
                 <v-col cols="12" sm="12" md="2" class="d-flex justify-space-between align-center  dateLeft">
@@ -110,7 +110,7 @@
                         
                     </v-card>
                     </v-dialog>
-        </v-container>
+        </div>
     </div>
 </template>
 

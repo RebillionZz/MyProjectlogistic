@@ -1,15 +1,15 @@
 <template>
     <div class=" dashboard-container-wrap">
             <!-- Important this component background red name not are the same other component -->
-            <v-row no-gutters class="hide-overflow ">
-                <v-flex class="d-flex align-center">
+            <v-row no-gutters class="hide-overflow d-flex align-center ">
+                <!-- <v-flex class="d-flex align-center"> -->
                     <hamburgur ></hamburgur>
-                    <v-col cols="8"  lg="8" md="8"    class="search-form mr-lg-2 mr-md-3 pa-0">
+                    <v-col cols="8"  lg="9" md="9" sm="9" xs="8"    class="search-form   pa-0">
                         <label class="for-search" for="searchBar" ><v-img src="../../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
                         <input class="input-max" type="text" name="" id="searchBar" placeholder="ໃສ່ລະຫັດ tracking ID" >
                     </v-col>
                     <userAcoin></userAcoin>
-                </v-flex>
+                <!-- </v-flex> -->
             </v-row>
                 <!-- <v-container> -->
                     <v-flex class="d-flex align-center bg-grey">
@@ -18,6 +18,7 @@
                             <div class="d-flex align-center ml-2">ຝາກເຄື່ອງເອງ</div>
                         </v-col>
                     </v-flex>
+                    
                 <!-- </v-container> -->
                 <v-stepper flat v-model="e1" class="v_step_header" >
                 
@@ -26,7 +27,7 @@
                     <v-divider color="red"></v-divider>
                     <v-stepper-step :complete="e1 >2" step="2" color="red"><span :class="{step111:dew}" :dew="false">ລາຍລະອຽດອໍເດີ້</span></v-stepper-step>
                     <v-divider :class="{backL:dew}" :dew="false"></v-divider>
-                    <v-stepper-step :complete="e1 > 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
+                    <v-stepper-step :complete="e1 >= 3" step="3 " color="red" ><span :class="{step111:dew2}" :dew2="false">ສຳເລັດ  </span></v-stepper-step>
                     
                 </v-stepper-header> 
                 
@@ -37,18 +38,18 @@
                             
                             <v-form>
                                 <h4 class="text-center mb-3">ຂໍ້ມູນຜູ້ຮັບ</h4>
-                                <v-text-field class="mt-4" label="ຊື່ຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
+                                <v-text-field class="mt-4" label="ຊື່ຜູ້ຮັບ" v-model="destinationName" outlined dense  rounded hide-details></v-text-field>
                                 <v-row class="   " no-gutters>
                                     <v-col cols="3" lg="2" md="2" sm="2" xs="4" >
-                                        <v-select class=" pt-4" label="ເບີໂທ" outlined dense   rounded hide-details append-icon :items="numberPhone" ></v-select>
+                                        <v-select class=" pt-4" label="ເບີໂທ" outlined dense v-model="forPhone"   rounded hide-details append-icon :items="numberPhone" ></v-select>
 
                                     </v-col>
                                     <v-col cols="9" lg="10" md="10" sm="10" xs="8" class="">
-                                        <v-text-field class="mt-4 pl-1" label="ເບີໂທຜູ້ຕິດຕໍ່" outlined dense  rounded hide-details></v-text-field>
+                                        <v-text-field class="mt-4 pl-1" v-model="destinationPhone" label="ເບີໂທຜູ້ຕິດຕໍ່" outlined dense  rounded hide-details></v-text-field>
 
                                     </v-col>
                                 </v-row>
-                                <v-text-field class="mt-4" label="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" outlined dense  rounded hide-details></v-text-field>
+                                <v-text-field class="mt-4" label="ທີ່ຢູ່ປັດຈຸບັນຂອງຜູ້ຮັບ" v-model="Current_address" outlined dense  rounded hide-details></v-text-field>
                                 <h4 class="text-center my-3">ຂໍ້ມູນພັດສະດຸ</h4>
 
                                 <div class="d-flex itemSelect mb-4 align-center">
@@ -60,14 +61,14 @@
                                         <!-- 4 md lg// 6 xs -->
                                         <v-col cols="6" md="4" lg="4" xs="6" class="line-leftR pa-0">
                                             <div class="d-flex align-center line-left pl-3">
-                                                <input type="radio" id="itemGeneralID" name="itemSelect" value="1">
+                                                <input type="radio" v-model="TypeItem" id="itemGeneralID" name="itemSelect" selected  value="ພັດສະດຸທົ່ວໄປ">
                                                 <label for="itemGeneralID" class="pl-1">ພັດສະດຸທົ່ວໄປ</label>
                                             </div>
                                         </v-col>
                                         <!-- 8 md lg 6 xs -->
                                         <v-col cols="8" xs="6" md="8" lg="8" class=" pa-0">
                                             <div class="d-flex align-center">
-                                                <input type="radio" id="itemDocumentID" name="itemSelect" value="2">
+                                                <input type="radio" v-model="TypeItem" id="itemDocumentID" name="itemSelect" value="ເອກະສານ">
                                                 <label for="itemDocumentID" class="pl-1">ເອກະສານ</label>
                                             </div>
                                         </v-col>
@@ -83,19 +84,19 @@
                                     <v-col cols="8" class="d-flex">
                                         <v-col cols="4" md="4" lg="4" xs="4" class="line-leftR pa-0">
                                             <div class="d-flex align-center line-left pl-3">
-                                                <input type="checkbox" id="CDC" name="itemSelect" value="1">
+                                                <input type="checkbox" id="CDC" name="serviceSelect" value="1">
                                                 <label for="CDC" class="pl-1">CDC</label>
                                             </div>
                                         </v-col>
                                         <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
                                             <div class="d-flex align-center">
-                                                <input type="checkbox" id="COD" name="itemSelect" value="2">
+                                                <input type="checkbox" id="COD" name="serviceSelect" checked value="2">
                                                 <label for="COD" class="pl-1">COD</label>
                                             </div>
                                         </v-col>
                                         <v-col cols="4" xs="4" md="4" lg="4" class=" pa-0">
                                             <div class="d-flex align-center">
-                                                <input type="checkbox" id="Pagunphai" name="itemSelect" value="3">
+                                                <input type="checkbox" id="Pagunphai" name="serviceSelect" value="3">
                                                 <label for="Pagunphai" class="pl-1">ປະກັນໄພ</label>
                                             </div>
                                         </v-col>
@@ -104,36 +105,47 @@
 
 
 
-                                <div class="d-flex align-center mb-4">
-                                    <v-col cols="6">
-                                        <v-select class="  pr-2" label=" ເລືອກຕົ້ນທາງ " outlined dense   rounded hide-details  :items="startWays" ></v-select>
+                                <div class="d-flex align-center  mb-4">
+                                    <v-col cols="6" xs="12">
+                                        <v-select class="  pr-2" v-model="origin" label=" ເລືອກຕົ້ນທາງ " outlined dense   rounded hide-details append-icon="d-xs-none"  :items="startWays" ></v-select>
                                     </v-col>
-                                    <v-col cols="6" class="d-flex align-center">
+                                    <v-col cols="6" xs="12" class="d-flex align-center">
                                         <div class=""><v-img src="../../../assets/Admin/sendContent/Arrow.svg" max-height="37" max-width="37"></v-img></div>
-                                        <v-select class="  pl-2" label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon="d-none" :items="startWays" ></v-select>
+                                        <v-select class="  pl-2" v-model="destination" label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon="d-xs-none" :items="startWays" ></v-select>
                                     </v-col>
                                 </div>
 
 
+
                                 <v-col cols="12" class="mb-4">
                                     <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
-                                    <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                    <v-text-field class="" v-model="nameItem" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
                                 </v-col>
                                 
 
 
                                 <div class="mb-4 d-flex">
                                     <v-col cols="6" >
-                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                        <v-text-field class="pr-1" v-model="Size" @input="calc()" label="ກວ້າງ + ສູງ + ຍາວ " outlined dense  rounded hide-details></v-text-field>
                                     </v-col>
                                     <v-col cols="6" >
-                                        <v-text-field class="mt-4" label="ເລືອກໝວດໝູ່" outlined dense  rounded hide-details></v-text-field>
+                                        <v-text-field class="pl-1" v-model="wieghtItem" @input="calc()" label="ນ້ຳໜັກຂອງພັດສະດຸ" outlined dense  rounded hide-details></v-text-field>
                                     </v-col>
                                 </div>
 
 
 
-                                <v-btn width="100%" color="bg-red white--text" @click="e1=2;dew=true">ຢືັນຢັນການບັນທຶກ</v-btn>
+
+
+
+                                <v-col cols="12" class="mb-4">
+                                    <!-- <v-select class="  " label="ເລືອກປາຍທາງ" outlined dense   rounded hide-details append-icon :items="startWays" ></v-select> -->
+                                    <v-text-field class="" v-model="ResultItem" label="ລາຄາພັດສະດຸ" disabled outlined dense  rounded hide-details></v-text-field>
+                                </v-col>
+
+
+
+                                <v-btn width="100%" color="bg-red white--text" @click="Submit()">ຢືັນຢັນການບັນທຶກ</v-btn>
                             </v-form>
                             <!-- ------------------------------END Step1------------------------------ -->
                     </v-stepper-content>
@@ -253,13 +265,91 @@ export default {
             dew:null,
             e1:1,
             e2:false,
-            slecteritem:'020',
-            slecteritems:['020','030'],
+            // slecteritem:'020',
+            // slecteritems:['020','030'],
             numberPhone:['020','030'],
             startWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
-            // endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+            
+
+            // form
+            destinationName:'biew',
+            forPhone:'020',
+            destinationPhone:'229758345',
+            TypeItem:null,
+            origin:null,
+            destination:null,
+            Current_address:'',
+            nameItem:'',
+            
+            Size:null,
+            wieghtItem:null,
+            ResultItem:null,
+            
+
+
         }
     },
+    
+    
+    methods: {
+        calc(){
+            
+            var Size= this.Size
+            // console.log('HI')
+            var wieght= this.wieghtItem
+
+            if(Size >0 && wieght > 0){
+                this.ResultItem = Size * wieght
+                this.ResultItem = 0 
+                
+            }
+        },
+
+        Submit(){
+            // this.e1=2
+            // this.dew=true
+            let Name = this.destinationName
+            let forNumber = this.forPhone
+            let phoneNumber = this.destinationPhone
+            let TypeItem = this.TypeItem
+            let destination = this.destination
+            let origin = this.origin
+            let address = this.Current_address
+            let nameItem = this.nameItem
+            let wieght = this.wieghtItem
+            let Size = this.Size
+            let ResultItem = this.ResultItem
+            if(destination == null || Name =='' || forNumber =='' || phoneNumber == '' || TypeItem == null || origin == null || address =='' || nameItem ==''||wieght == '' || Size == '' || ResultItem == ''){
+                console.error('No 1')
+            }
+
+            else if(wieght ===String || Size ===String){
+                return console.log(wieght , Size)
+            }
+            // else if(wieght !==  Number || Size !== Number){
+            //     console.log("please try again")
+            // }
+            else{
+                console.log("YES")
+                this.e1=2
+                this.dew=true
+            }
+
+            
+            // console.log(Name,forNumber,phoneNumber,TypeItem,origin,destination)
+        },
+        
+        
+    },
+    //     computed:{
+    //         calculation(){
+    //             let wieght = this.wieghtItem
+    //             let Size = this.Size
+    //             console.log("hi")
+    //         }
+    // },
+        
+    
     components:{
         footerC,
         hamburgur,
@@ -358,6 +448,22 @@ export default {
     border-radius: 28px;
     height: 40px;
 }
+// .line-leftR{
+//     position:relative;
+//     .line-left::before{
+//         content: '';
+//             width: 2px;
+//             height: 36px;
+//             // display: block;
+//             top: -6px;
+//             // bottom: 2%;
+//             left: 0;
+//             position: absolute;
+//             background: #ABABAB;
+//             // padding: 0.5px;
+//             border-radius: 2px;
+//     }
+// }
 
 .search-form{
     position: relative;
