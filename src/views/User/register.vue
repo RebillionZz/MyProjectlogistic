@@ -49,7 +49,7 @@
                   </v-row>
                   <h4>ເບີໂທລະສັບ</h4>
                   <v-row>
-                <v-col class="d-flex" cols="3" sm="3">
+                <v-col class="d-flex" cols="6" sm="3">
                                       <v-select
                       :label="slecteritem"
                       :items="slecteritems"
@@ -60,7 +60,7 @@
                       rounded
                     ></v-select>
                 </v-col>
-                <v-col class="d-flex" cols="9" sm="9">
+                <v-col class="d-flex" cols="6" sm="9">
                     <v-text-field
                     :item="items"
                     label="ເບີໂທລະສັບ"
@@ -208,7 +208,7 @@ export default {
 .hline:before {
   content: "";
   display: block;
-  width: 30 0px;
+  width: 35%;
   height: 2px;
   background: #e21312;
   left: 0;
@@ -219,7 +219,7 @@ export default {
 .hline:after {
   content: "";
   display: block;
-  width: 300px;
+  width: 35%;
   height: 2px;
   background: #e21312;
   right: 0;

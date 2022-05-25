@@ -239,7 +239,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scope>
 .servicearea{
     background-color: #E21312;
     color: white;
@@ -262,6 +262,10 @@ export default {
 .gtext{
     color: gray;
 }
+.mapImg-container{
+    width: 100%;
+    height: 100%;
+}
 .Body{
     min-height: 100%;
 }
@@ -272,29 +276,33 @@ export default {
 
     justify-content: start;
 }
+
+// 
 .locate_BTN{
     border-radius: 28px;
     height: 45px;
     width: 100%;
     justify-content: start !important;
+    // padding-right: -30px;
     box-shadow: 0px 0px 5px 0px #ababab;
 }
+// 
 
 .color-red{
-    color: #E21312;
+    color: $red;
 }
 .backL{
-    background: #E21312 !important;
+    background: $red !important;
 }
 .backW{
     background: #FFFFFF !important;
 }
 .bg-grey{
-    background: #ababab !important;
+    background: $d-grey !important;
 }
-
+// 
 .BT{
-    border-bottom: 3px solid #E21312;
+    border-bottom: 3px solid $red;
 }
 .textHead{
     letter-spacing: 0.5px;
@@ -312,8 +320,14 @@ export default {
     font-size: 20px;
     padding-top: 5px;
 }
+// search position
 .box-search{
     position: relative;
+    .icon-search{
+        position: absolute;
+        left: 10px;
+        top: 3px;
+    }
 }
 ::placeholder {
     font-size: 18px;
@@ -333,6 +347,19 @@ export default {
 .search-form{
     position: relative;
     width: 100%;
+    .input-max{
+        width: 100%;
+        height: 40px;
+        padding-left: 45px;
+        background:$bg-footer;
+        border-radius: 34px;
+        outline: none;
+    }
+    .for-search{
+        position: absolute;
+        left: 8px;
+        top:0px;
+    }
 }
 @media only screen and (max-width: 768px) {
     *{
@@ -343,10 +370,28 @@ export default {
     font-size: 16px;
 }
     
+    .text-WE{
+        // font-weight: bold;
+    font-size: 16px ;
+    }
     .search-form{
         position: relative;
         padding-right: 8px;
         
+        .input-max{
+            width: 100%;
+            height: 35px;
+            padding-left: 40px;
+            
+            border-radius: 34px;
+        }
+        .for-search{
+            position: absolute;
+            left: 8px;
+            top:2px;
+            width: 30px;
+            height: 30px;
+        }
     }
     input::placeholder{
     font-size: 14px;
@@ -356,15 +401,19 @@ export default {
     *{
         font-size: 14px;
     }
-    form checkbox mobile
+    // form checkbox mobile
     .textHead{
         letter-spacing: 0.3px;
         font-size: 16px;
     }
-    line-height 
+    // line-height: ;
     .maps{
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
+    }
+    .text-WE{
+        // font-weight: bold;
+    font-size: 14px ;
     }
     .input-max{
         width: 100%;
@@ -379,6 +428,7 @@ export default {
         }
     .search-form{
         padding:0 5px !important;
+            .input-max{
             height: 35px;
         }
         .for-search{
@@ -389,5 +439,5 @@ export default {
             height: 30px;
         }
     }
-
+}
 </style>

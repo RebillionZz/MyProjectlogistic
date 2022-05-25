@@ -6,7 +6,7 @@
   >
   
   <v-row >
-    <v-col cols="4">
+    <v-col cols="12" sm="4">
       <img src="../assets/Frontend/hal logo2 1.svg" width="100" height="100" >
       <p>ບໍລິສັດ ຮຸ່ງອາລຸນ ຂົນສົ່ງດ່ວນ <br>ບ້ານ ຈອມມະນີ<br>ເມືອງ ໄຊເສດຖາ<br>ນະຄອນຫຼວງວຽງຈັນ</p>
 <p>
@@ -14,11 +14,11 @@
 </p>
 <img src="../assets/Frontend/facebook-email icon.svg" alt="">
     </v-col>
-    <v-col cols="4" class="margintop">
+    <v-col cols="12" sm="4" class="margintop">
       <h3>ບໍລິການຂອງເຮົາ</h3>
       <p>ຝາກເຄື່ອງເອງ<br>ພັດສະດຸຂອງຂ້ອຍ<br>ຄິດໄລ່ຄ່າຂົນສົ່ງ<br>ຂໍ້ມູນສາຂາ<br>COD<br>ເອີ້ນຮັບເຄື່ອງ</p>
     </v-col>
-    <v-col cols="4" class="margintop">
+    <v-col cols="12" sm="4" class="margintop">
       <h3>
         ບໍລິການຮັບ-ຝາກເຄື່ອງ
 

@@ -23,7 +23,7 @@
               <div class="formlogin">
                 <h4>ເບີໂທລະສັບ</h4>
                 <v-row>
-                  <v-col class="d-flex" cols="3" sm="3">
+                  <v-col class="d-flex" cols="6" sm="3">
                     <v-select
                       :label="slecteritem"
                       :items="slecteritems"
@@ -34,7 +34,7 @@
                       rounded
                     ></v-select>
                   </v-col>
-                  <v-col class="d-flex" cols="9" sm="9">
+                  <v-col class="d-flex" cols="6" sm="9">
                     <v-text-field
                       :item="items"
                       label="ເບີໂທລະສັບ"
@@ -96,7 +96,7 @@
       <h2 class="hh2">ສິດປະໂຫຍດເມື່ອທ່ານເປັນສະມາຊິກ</h2>
       <v-row>
         <v-col cols="12" lg="6" md="6" sm="12">
-          <img src="../../assets/Frontend/ລະບົບຈັດການຂົນສົ່ງ.png" alt="" />
+          <img src="../../assets/Frontend/ລະບົບຈັດການຂົນສົ່ງ.png" alt=""  class="imgsize"/>
           <h4>ລະບົບຈັດການຂົນສົ່ງ</h4>
           <p>
             ທ່ານສາມາດໃຊ້ບໍລິການຕ່າງໆ<br />ບໍວ່າຈະເປັນຝາກເຄື່ອງເອງ, COD,<br />ເອີ້ນລົດຮັບເຄື່ອງ
@@ -105,7 +105,7 @@
         </v-col>
         <v-col cols="12" lg="6" md="6" sm="12">
           <div class="halpoint">
-            <img src="../../assets/Frontend/Group 46.png" alt="" />
+            <img src="../../assets/Frontend/Group 46.png" alt="" class="imgsize" />
           </div>
           <div class="halp">
             <h4>ສະສົມຄະແນນ</h4>
@@ -193,7 +193,7 @@ export default {
 .hline:before {
   content: "";
   display: block;
-  width: 300px;
+  width: 35%;
   height: 2px;
   background: #e21312;
   left: 0;
@@ -204,11 +204,15 @@ export default {
 .hline:after {
   content: "";
   display: block;
-  width: 300px;
+  width: 35%;
   height: 2px;
   background: #e21312;
   right: 0;
   top: 50%;
   position: absolute;
+}
+.imgsize{
+  height: auto;
+  width: auto;
 }
 </style>

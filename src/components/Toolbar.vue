@@ -14,20 +14,44 @@
          ></v-img></router-link>
       </div>
       <v-spacer></v-spacer>
+      <div class="nav">
       <v-row>
         <v-col cols="12" sm class="py-2 hiddenSmAndDown">
-         <div class="dropdown">
-  <button class="dropbtn">ບໍລິການຂອງເຮົາ</button>
-  <div class="dropdown-content">
-  <a href="#">ຝາກເຄື່ອງເອງ</a>
-  <router-link to="/follow">ພັດສະດຸຂອງຂ້ອຍ</router-link>
-  <router-link to="/pricecal">ຄິດໄລ່ຄ່າຂົນສົ່ງ</router-link>
-  <router-link to="/servicearea">ຂໍ້ມູນສາຂາ</router-link>
-  <a href="#">COD</a>
-  <a href="#">ຄ່າບໍລິການ</a>
-    <a href="#">ຜູ້ຮັບປາຍທາງ</a>
-  </div>
-</div>
+            <!-- <div class="dropdown"> -->
+                <!-- <button class="dropbtn">ບໍລິການຂອງເຮົາ</button>
+                  <div class="dropdown-content">
+                  <router-link to="/senddc">ຝາກເຄື່ອງເອງ</router-link>
+                  <router-link to="/follow">ພັດສະດຸຂອງຂ້ອຍ</router-link>
+                  <router-link to="/pricecal">ຄິດໄລ່ຄ່າຂົນສົ່ງ</router-link>
+                  <router-link to="/servicearea">ຂໍ້ມູນສາຂາ</router-link>
+                  <router-link to="/coddc">COD</router-link>
+                  <a href="#">ຄ່າບໍລິການ</a>
+                  <a href="#">ຜູ້ຮັບປາຍທາງ</a> -->
+                  <v-menu offset-y>
+
+
+                       
+                    <template v-slot:activator="{ on, attrs }">
+                      <button
+                        v-bind="attrs"
+                        v-on="on"
+                       class="dropbtn">ບໍລິການຂອງເຮົາ</button>
+
+                    </template>
+                    <v-list>
+                      <v-list-item 
+                        :to=" a.route"
+                        v-for="a in items" :key="a.id"
+                      >
+                        {{a.title}}
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+
+
+
+              <!-- </div>  -->
+            <!-- </div> -->
           <v-btn color="#E21312" elevation="0">
             <router-link
               to="/servicearea"
@@ -36,7 +60,7 @@
             >
           </v-btn>
           <router-link to="/infohal1"><v-btn color="#E21312" elevation="0"> ຂໍ້ກຳນົດ </v-btn></router-link>
-          <v-btn color="#E21312" elevation="0"> ກ່ຽວກັບພວກເຮົາ </v-btn>
+          <router-link to="/Aboutus"><v-btn color="#E21312" elevation="0"> ກ່ຽວກັບພວກເຮົາ </v-btn></router-link>
           <v-btn color="#E21312" elevation="0">
             <router-link to="/login" class="d-flex justify-center whitetext"
               >ເຂົ້າສູ່ລະບົບ</router-link
@@ -55,6 +79,7 @@
           </v-btn>
         </v-col>
       </v-row>
+      </div>
     </v-app-bar>
   </div>
 </template>
@@ -63,13 +88,13 @@
 export default {
   data: () => ({
     items: [
-      { title: "ຝາກເຄື່ອງເອງ" },
-      { title: "ພັດສະດຸຂອງຂ້ອຍ" },
-      { title: "ຄິດໄລ່ຄ່າຂົນສົ່ງ" },
-      { title: "ຂໍ້ມູນສາຂາ" },
-      { title: "COD" },
-      { title: "ຄ່າບໍລິການ" },
-      { title: "ຜູ້ຮັບປາຍທາງ" },
+      { title: "ຝາກເຄື່ອງເອງ" , route:'/senddc'},
+      { title: "ພັດສະດຸຂອງຂ້ອຍ" , route:'/follow'},
+      { title: "ຄິດໄລ່ຄ່າຂົນສົ່ງ" , route:'/pricecal'},
+      { title: "ຂໍ້ມູນສາຂາ" , route:'/servicearea'},
+      { title: "COD" , route:'/coddc'},
+      { title: "ຄ່າບໍລິການ" , route:''},
+      { title: "ຜູ້ຮັບປາຍທາງ", route:'' },
     ],
   }),
 };
@@ -102,6 +127,7 @@ export default {
 .dropdown {
   position: relative;
   display: inline-block;
+  /* z-index: 1000; */
 }
 
 .dropdown-content {
@@ -110,7 +136,7 @@ export default {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10000;
 }
 
 .dropdown-content a {
@@ -129,4 +155,8 @@ export default {
 .dropdown:hover .dropbtn {
   background-color: #e21312;
 }
+*{
+  text-decoration: none;
+}
+
 </style>

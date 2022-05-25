@@ -19,9 +19,15 @@ import infohal3 from '../views/User/info3.vue'
 import infohal4 from '../views/User/info4.vue'
 import infohal5 from '../views/User/info5.vue'
 import infohal6 from '../views/User/info6.vue'
+import aboutus from '../views/User/Aboutus.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/Aboutus',
+    name: 'aboutus',
+    component: aboutus
+  },
   {
     path: '/infohal1',
     name: 'infohal1',

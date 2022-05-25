@@ -4,7 +4,7 @@
     <div class="calprice">
         <h2 class="hh2">ຄິດໄລ່ຄ່າຂົນສົ່ງ ຂອງພັດສະດຸທີ່ທ່ານຈະສົ່ງ</h2>
         <div class="bdprice">
-             <form class="form pa-8">
+             <form class="form pa-8 borderf">
             <h4 class="text-center">ຄິດໄລ່ຄ່າຂົນສົ່ງ</h4>
             <div class="d-md-flex justify-space-around">
                 <v-col cols="5" xs="12">
@@ -43,12 +43,12 @@
             </div>
             <!--  -->
             <div class="d-flex mt-5">
-                <v-col cols="8 p-n1" >
+                <v-col cols="8" >
                     
                     <v-btn elevation="0" color="backL" width="100%" class="bg-red white--text btn-round1 t1">ຄຳນວນລາຄາ</v-btn>
                 </v-col>
                 <v-col cols="4">
-                    <v-btn elevation="0" width="100%" class=" white--black btn-round2">ລ້າງຂໍ້ມູນ</v-btn>
+                    <v-btn elevation="0" width="100%" class=" white--black btn-round2 del">ລ້າງຂໍ້ມູນ</v-btn>
                 </v-col>
             </div>
         </form>
@@ -71,7 +71,7 @@
             </v-tabs>
             <h5>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</h5>
             <div class="calpic">
-                <img src="../../assets/Frontend/ລາຍລະອຽດລາຄາ.svg" alt="">
+                <img src="../../assets/Frontend/ລາຍລະອຽດລາຄາ.svg" alt="" class="imgres">
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@ export default {
     padding-right: -10%;
 }
 .form{
-    background: #e5e5e5;
+    background: #ffffff;
     border-radius: 4px;
     border-color: #888888;
 }
@@ -223,5 +223,21 @@ input::-webkit-inner-spin-button {
 }
 .tabrounded{
     border-radius: 25%;
+}
+.calpic{
+    height: auto;
+    width: auto;
+}
+.imgres{
+    height: auto;
+    width: 70%;
+}
+.del{
+    margin-top: 20px;
+    margin-left: 1px;
+}
+.borderf{
+    border-block-color: #888888;
+    border-end-end-radius: 1px;
 }
 </style>
