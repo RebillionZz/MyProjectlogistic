@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="#E21312" dense dark height="105px">
+    <v-app-bar color="#E21312" dense dark height="105px" elevation="0">
       <div class="logo">
         <router-link to="/homepage">
         <v-img

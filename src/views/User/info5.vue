@@ -6,15 +6,15 @@
         <v-col cols="4">
            <div class="infosidebar">
             <div>
-              <v-list>
+              <v-list dense>
                 <router-link to="/infohal1"><v-list-item>I. ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ</v-list-item></router-link>
                 <router-link to="/infohal2"><v-list-item>II. ມາດຖານດ້ານຄວາມປອດໄພຂອງສິນຄ້າ </v-list-item></router-link>
                 <router-link to="/infohal3"><v-list-item>III. ມາດຕະຖານດ້ານຂະໜາດ ແລະ ນ້ຳໜັກຂອງພັດສະດຸ</v-list-item></router-link>
-                <router-link to="/infohal4"><v-list-item>IV. ມາດຕະຖານການຄິດໄລ່ລາຄາ ແລະ ວັດແທກບໍລິມາດຂອງສິນຄ້າ</v-list-item></router-link>
+               <router-link to="/infohal4"><v-list-item>IV. ມາດຕະຖານການຄິດໄລ່ລາຄາ ແລະ ວັດແທກບໍລິມາດຂອງສິນຄ້າ</v-list-item></router-link>
                 <router-link to="/infohal5"><v-list-item>V. ມາດຕະຖານການດຳເນີນງານຂອງພະນັກງານສາຂາທີ່ທຳການຄັດແຍກພັດສະດຸ</v-list-item></router-link>
                 <router-link to="/infohal6"><v-list-item>VI. ເງື່ອນໄຂມາດຕະຖານການໃຫ້ບໍລິການ ແລະ ການຊົດເຊີຍຄ່າາເສຍຫາຍໃຫ້ແກ່ລູກຄ້າ</v-list-item></router-link>
               </v-list>
-            </div>
+            </div> 
           </div>
         </v-col>
         <v-col cols="8" class="gbg">

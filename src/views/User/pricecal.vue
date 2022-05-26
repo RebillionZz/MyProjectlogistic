@@ -3,7 +3,9 @@
     <Toolbar/>
     <div class="calprice">
         <h2 class="hh2">ຄິດໄລ່ຄ່າຂົນສົ່ງ ຂອງພັດສະດຸທີ່ທ່ານຈະສົ່ງ</h2>
-        <div class="bdprice">
+        <div 
+        :class="`elevation-${hover ? 20 : 4}`"
+        class="bdprice">
              <form class="form pa-8 borderf">
             <h4 class="text-center">ຄິດໄລ່ຄ່າຂົນສົ່ງ</h4>
             <div class="d-md-flex justify-space-around">
@@ -70,9 +72,11 @@
                 <v-tab>ລາຄາ LOGISTIC</v-tab>
             </v-tabs>
             <h5>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</h5>
-            <div class="calpic">
+            <v-container fluid>
+                            <div class="calpic">
                 <img src="../../assets/Frontend/ລາຍລະອຽດລາຄາ.svg" alt="" class="imgres">
             </div>
+            </v-container>
         </div>
     </div>
     <Footer/>
