@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ovf">
     <Toolbar />
     <div class="loginpage">
       <v-row>
@@ -90,6 +90,7 @@
               color="red"
               value="red"
               hide-details
+            
             >
             </v-checkbox>
                   <div class="centertext">
@@ -194,6 +195,16 @@ export default {
 .welcum{
   padding: 15%;
 }
+@media screen and (max-width: 778px) {
+  div.welcum {
+    padding: 1%;
+    text-align: center;
+  }
+  p.linktoregis{
+    margin-top: 10px;
+    text-align: center;
+  }
+}
 .halpoint{
   margin-top: 6%;
 }
@@ -225,5 +236,8 @@ export default {
   right: 0;
   top: 50%;
   position: absolute;
+}
+.ovf{
+  overflow: hidden;
 }
 </style>

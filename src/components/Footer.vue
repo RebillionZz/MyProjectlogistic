@@ -33,7 +33,14 @@
 <v-divider></v-divider>
 
       <v-card-text class="dark--text">
-       copyright © {{ new Date().getFullYear() }} — <strong>BY HAL TECH</strong>
+        <v-row>
+          <v-col cols="12" md="6">
+            ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂໃນການສົ່ງ
+          </v-col>
+          <v-col cols="12" md="6">
+            copyright © {{ new Date().getFullYear() }} — <strong>BY HAL TECH</strong>
+          </v-col>
+          </v-row> 
       </v-card-text>
   </v-row>
   </v-footer> 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ovf">
     <Toolbar />
     <div class="loginpage">
       <v-row>
@@ -233,5 +233,8 @@ export default {
 }
 .redtext {
   color: #e21312;
+}
+.ovf{
+  overflow: hidden;
 }
 </style>

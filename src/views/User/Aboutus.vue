@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ovf">
       <Toolbar/>
       <div class="main">
           <v-row>
@@ -47,5 +47,8 @@ export default {
 .abimg1{
     width: 80%;
     height: auto;
+}
+.ovf{
+    overflow: hidden;
 }
 </style>

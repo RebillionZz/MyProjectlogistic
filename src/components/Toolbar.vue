@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ovf">
     <v-app-bar color="#E21312" dense dark height="105px" elevation="0">
       <div class="logo">
         <router-link to="/homepage">
@@ -80,10 +80,13 @@
         </v-col>
       </v-row>
       </div>
+      <div class="hamburgerlogo">
+       <!-- <img src="../assets/Frontend/Group 368.svg" @click="Getleft12"> -->
+       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      </div>
     </v-app-bar>
   </div>
 </template>
-
 <script>
 export default {
   data: () => ({
@@ -96,10 +99,21 @@ export default {
       { title: "ຄ່າບໍລິການ" , route:''},
       { title: "ຜູ້ຮັບປາຍທາງ", route:'' },
     ],
+    drawer: false,
+    group: null,
   }),
+  watch: {
+      group () {
+        this.drawer = false
+      },
+    },
+  methods: {
+        Getleft12(){
+            this.$store.state.drawer = !this.$store.state.drawer
+        }
+    },
 };
 </script>
-
 <style>
 .logo {
   margin-left: 2%;
@@ -158,5 +172,17 @@ export default {
 *{
   text-decoration: none;
 }
-
+@media screen and (max-width: 778px) {
+  div.nav {
+    display: none;
+  }
+   }
+   @media screen and (min-width: 778px) {
+  div.hamburgerlogo {
+    display: none;
+  }
+   }
+   .ofv{
+     overflow: hidden;
+   }
 </style>

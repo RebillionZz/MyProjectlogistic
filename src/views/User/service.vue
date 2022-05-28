@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="ovf">
     <Toolbar/>
     <div class="servicearea">
         <v-row>
@@ -12,7 +12,7 @@
             </v-col>
             <v-col cols="5">
                 <div class="map">
-                      <img src="../../assets/Frontend/Untitled-1 1.png" alt="">
+                      <img src="../../assets/Frontend/Untitled-1 1.png" class="mappic">
                 </div>
             </v-col>
         </v-row>
@@ -259,6 +259,19 @@ export default {
 .map{
     padding: 5%;
 }
+.mappic{
+    width: 40%;
+}
+@media screen and (max-width: 480px) {
+  img.mappic {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 880px) {
+  img.mappic {
+    width: 60%;
+  }
+}
 .gtext{
     color: gray;
 }
@@ -439,5 +452,8 @@ export default {
             height: 30px;
         }
     }
+}
+.ovf{
+    overflow: hidden;
 }
 </style>

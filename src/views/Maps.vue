@@ -30,7 +30,7 @@
                     />
                     </GmapMap>
             </v-col>
-            <!-- <v-col cols="12" class="Map-img"><v-img :src="detailMap.profile_url"></v-img></v-col> -->
+            <v-col cols="12" class="Map-img"><v-img :src="detailMap.profile_url"></v-img></v-col>
             
         </div>
         

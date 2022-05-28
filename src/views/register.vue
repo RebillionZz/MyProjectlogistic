@@ -43,7 +43,7 @@
               <v-btn @click="register()">Register</v-btn>
               
           </div>
-      </div>
+              </div>
     </form>
     
     <!-- <router-link to="/sidebarc/" class="d-flex justify-center">Go DashBoard</router-link> -->

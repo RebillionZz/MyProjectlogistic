@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="ovf">
         <Toolbar/>
         <div class="service">
             <h2>ສາຂາ ສາຍນ້ຳເງິນ</h2>
@@ -47,5 +47,8 @@ export default {
 .picresponsive{
     width: 80%;
     height: auto;
+}
+.ovf{
+    overflow: hidden;
 }
 </style>

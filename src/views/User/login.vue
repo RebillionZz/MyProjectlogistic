@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ovf">
     <Toolbar />
     <div class="loginpage">
       <v-row>
@@ -179,6 +179,16 @@ export default {
 .welcum {
   padding: 15%;
 }
+@media screen and (max-width: 778px) {
+  div.welcum {
+    padding: 5%;
+    text-align: center;
+  }
+  p.linktoregis{
+    margin-top: 10px;
+    text-align: center;
+  }
+}
 .halpoint {
   margin-top: 6%;
 }
@@ -214,5 +224,8 @@ export default {
 .imgsize{
   height: auto;
   width: auto;
+}
+.ovf{
+  overflow: hidden;
 }
 </style>

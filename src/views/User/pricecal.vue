@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="ovf">
     <Toolbar/>
     <div class="calprice">
         <h2 class="hh2">ຄິດໄລ່ຄ່າຂົນສົ່ງ ຂອງພັດສະດຸທີ່ທ່ານຈະສົ່ງ</h2>
@@ -66,7 +66,7 @@
             </v-tabs>
         </div>
         <div class="tab2">
-            <v-tabs v-model="tab" centered color="red darkern-2" class="tabrounded">
+            <v-tabs v-model="tab" centered color="red darkern-2" class="tabrounded rounded-pill">
                 <v-tab>ລາຄາ EXPRESS</v-tab>
                 <v-tab>ຊອງເອກະສານ</v-tab>
                 <v-tab>ລາຄາ LOGISTIC</v-tab>
@@ -89,6 +89,13 @@ import Footer from "../../components/Footer.vue";
 import HomeView from "../HomeView.vue";
 export default {
   name: "pricecal",
+  data() {
+        return {
+            totalPrice:0,
+            startWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+            endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+        }
+    },
   components: {
     Toolbar,
     Footer,
@@ -105,6 +112,7 @@ export default {
 }
 .calprice{
     border: 20px;
+    padding: 5%;
 }
 .home_head{
     width: 45px;
@@ -243,5 +251,8 @@ input::-webkit-inner-spin-button {
 .borderf{
     border-block-color: #888888;
     border-end-end-radius: 1px;
+}
+.ovf{
+    overflow: hidden;
 }
 </style>

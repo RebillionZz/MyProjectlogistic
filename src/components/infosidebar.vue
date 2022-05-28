@@ -1,25 +1,28 @@
 <template>
-  <v-navigation-drawer left>
-    <v-card class="mx-auto" max-width="300" tile>
-      <v-list dense>
-        <v-list-item-group v-model="selectedItem" color="red darken-2">
-          <v-list-item v-for="(item, i) in items" :key="i">
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title v-text="item.text"></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-card>
-  </v-navigation-drawer>
+<div class="infosidebar">
+            <div>
+              <v-list-item-group
+        v-model="selectedItem"
+        color="red darken-2
+        "
+        active-class="red--text"
+      >
+              <v-list>
+                <router-link to="/infohal1"><v-list-item>I. ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ</v-list-item></router-link>
+                <router-link to="/infohal2"><v-list-item>II. ມາດຖານດ້ານຄວາມປອດໄພຂອງສິນຄ້າ </v-list-item></router-link>
+                <router-link to="/infohal3"><v-list-item>III. ມາດຕະຖານດ້ານຂະໜາດ ແລະ ນ້ຳໜັກຂອງພັດສະດຸ</v-list-item></router-link>
+                <router-link to="/infohal4"><v-list-item>IV. ມາດຕະຖານການຄິດໄລ່ລາຄາ ແລະ ວັດແທກບໍລິມາດຂອງສິນຄ້າ</v-list-item></router-link>
+                <router-link to="/infohal5"><v-list-item>V. ມາດຕະຖານການດຳເນີນງານຂອງພະນັກງານສາຂາທີ່ທຳການຄັດແຍກພັດສະດຸ</v-list-item></router-link>
+                <router-link to="/infohal6"><v-list-item>VI. ເງື່ອນໄຂມາດຕະຖານການໃຫ້ບໍລິການ ແລະ ການຊົດເຊີຍຄ່າາເສຍຫາຍໃຫ້ແກ່ລູກຄ້າ</v-list-item></router-link>
+              </v-list>
+              </v-list-item-group>
+            </div>
+          </div>
 </template>
 <script>
 export default {
   data: () => ({
-    selectedItem: 1,
+    selectedItem: -1,
     items: [
       { text: "I. ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ " },
       { text: "II. ມາດຖານດ້ານຄວາມປອດໄພຂອງສິນຄ້າ" },
@@ -32,4 +35,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.infosidebar{
+  color: #e21321;
+  background-color: #e21321;
+  overflow: hidden;
+  margin-top: 12px;
+}
+</style>
