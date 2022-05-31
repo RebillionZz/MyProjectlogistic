@@ -66,11 +66,42 @@
             </v-tabs>
         </div>
         <div class="tab2">
-            <v-tabs v-model="tab" centered color="red darkern-2" class="tabrounded rounded-pill">
+           <!-- <v-tabs v-model="tab" centered color="red darkern-2" class="tabrounded rounded-pill">
                 <v-tab>ລາຄາ EXPRESS</v-tab>
                 <v-tab>ຊອງເອກະສານ</v-tab>
                 <v-tab>ລາຄາ LOGISTIC</v-tab>
-            </v-tabs>
+            </v-tabs> -->
+             <v-tabs v-model="tab"  background-color="" class="border-tab" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
+            <v-tabs-slider class="rounded-pill" ></v-tabs-slider>
+            <v-col cols="4" >
+                <v-tab href="#tab-1" class="test">
+                    ບິນສ້າງເອງ
+                </v-tab>
+            </v-col>
+            <v-col cols="4" >
+                <v-tab href="#tab-2" class="test">
+                    ກຳລັງດຳເນີນການ
+                </v-tab>
+            </v-col>
+            <v-col cols="4" >
+                <v-tab href="#tab-3" class="test">
+                    ຈັດສົ່ງສຳເລັດ
+                </v-tab>
+            </v-col>
+
+            <v-tabs-items v-model="tab">
+                <v-tab-item value="tab-1" reverse-transition>
+                    <push1C></push1C>
+                </v-tab-item>
+                <v-tab-item value="tab-2" reverse-transition>
+                    <push2C></push2C>
+                </v-tab-item>
+                <v-tab-item value="tab-3" reverse-transition>
+                    <push3C></push3C>
+                </v-tab-item>
+            </v-tabs-items>
+      
+    </v-tabs>
             <h5>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</h5>
             <v-container fluid>
                             <div class="calpic">
@@ -104,7 +135,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .hh21{
     text-align: center;
     color: #E21312;
@@ -157,6 +188,22 @@ export default {
     padding-left: 12px;
     outline: none;
 }
+.border-tab{
+    border-radius: 28px;
+    background: #EEEEEE !important;
+    color: #222222;
+}
+.tab-active{
+    color: #FFFFFF !important;
+
+}
+.slide{
+    border-radius: 28px;
+    background: $red !important;
+    color: #FFFFFF;
+    transition: .3s ease-in-out;
+    
+}
 .number-input{
     width: 100%;
     height: 38px;
@@ -181,6 +228,11 @@ input::-webkit-inner-spin-button {
 .search-form{
     position: relative;
     width: 100%;
+}
+.test{
+    width:100%;
+    height: 100%;
+    z-index: 10;
 }
 @media only screen and (max-width: 768px) {
     *{

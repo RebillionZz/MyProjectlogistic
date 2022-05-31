@@ -12,8 +12,9 @@
       <div class="text">
         <h2 class="hh2">ກວດສອບພັດສະດຸຂອງທ່ານ</h2>
       </div>
+      <div class="divs">
       <div class="searching">
-        <v-text-field
+        <!--<v-text-field
           v-model="search"
           label="ໃສ່ລະຫັດ tracking ID"
           color="red darken-1"
@@ -21,15 +22,26 @@
           outlined
         >
           <v-btn color="red darken-1" rounded dark outlined>ຕິດຕາມ</v-btn>
-        </v-text-field>
+        </v-text-field>-->
+        <!--<i class="fa fa-cc-visa" aria-hidden="true"></i> <form >
+                    <label for="Location_search" class="icon-search"><v-img src="../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" class="isearch" max-width="37"></v-img></label>
+                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max box-border sha input-search ">
+          <p class="phd">ໃສ່ລະຫັດ tracking ID</p> 
+          <label for="Location_search" class="btnsearch"><v-btn color="red darken-1" rounded dark class="rbtn">ຕິດຕາມ</v-btn>
+        </label><button type="button" class="btns">ຕິດຕາມ</button>
+                </form> -->
+                <img src="../../assets/Admin/sidebar/toolbar/search.svg" alt="">
+        <input type="text" placeholder="ໃສ່ລະຫັດ tracking ID" class="text75" />
+        <button class="button button5">ຕິດຕາມ</button>
+      </div>
       </div>
       <div class="doublebutton">
-        <v-btn color="red darken-1" rounded dark outlined> ຝາກເຄື່ອງ </v-btn>
-        <router-link to="/pricecal">
-          <v-btn color="red darken-1" rounded dark outlined>
+       <span class="bpd"> <v-btn color="red darken-1" rounded dark outlined> ຝາກເຄື່ອງ </v-btn> </span>
+       <span> <router-link to="/pricecal">
+          <v-btn class="bpd" color="red darken-1" rounded dark outlined>
             ຄິດໄລ່ຄ່າຂົນສົ່ງ
           </v-btn></router-link
-        >
+        > </span>
       </div>
     </div>
     <div class="service1">
@@ -225,6 +237,11 @@ export default {
 .doublebutton {
   align-items: center;
   text-align: center;
+  padding: 5px;
+  
+}
+.bpd{
+  padding: 5px;
 }
 .service1 {
   align-items: center;
@@ -234,6 +251,18 @@ export default {
 .cardservice {
   align-items: center;
   text-align: center;
+}
+.button {
+  background-color: #e21312;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  
+  width: 15%;
+  border-radius: 50px
 }
 .singlebutton {
   align-items: center;
@@ -248,11 +277,25 @@ export default {
 .text {
   padding: 5px;
 }
-.searching {
-  padding: 5px;
-  padding-left: 20%;
-  padding-right: 20%;
+.divs{
+  align-items: center;
+  padding-right: 15%;
+  padding-left: 15%;
 }
+.searching {
+  padding: 10px;
+  border-style: solid;
+  border-color: #ababab;
+        border-radius: 50px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        
+    }
+    .text75{
+      flex: auto;
+
+    }
 .card3 {
   align-items: center;
   text-align: center;
@@ -277,9 +320,15 @@ export default {
 .ovf {
   overflow: hidden;
 }
+
 .apphal {
   padding: 5%;
   text-align: start;
+}
+.btns {
+  border: #e21312;
+  position: absolute;
+  margin-right: 50px;
 }
 .side {
   margin-left: -50%;
@@ -291,8 +340,9 @@ export default {
 }
 @media screen and (max-width: 490px) {
   v-card.card3 {
-    width: 160px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 130px !important;
+    padding: 50px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -308,6 +358,48 @@ export default {
     text-align: start !important;
     align-content: flex-end !important;
   }
+  .button{
+    width: 20%;
+  }
+  .searching{
+    height: 60px;
+  }
+  .divs{
+    height: 60px;
+  }
+  .text75{
+    height: 40px;
+  }
 }
-
+@media screen and (max-width: 390px) {
+  .button{
+    width: 30%;
+    height: 20px;
+  }
+  .searching{
+    height: 40px;
+  }
+  .divs{
+    height: 40px;
+  }
+  .text75{
+    height: 20px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .button{
+    width: 30%;
+    height: 20px;
+  }
+  .searching{
+    height: 40px;
+  }
+  .divs{
+    height: 40px;
+  }
+  .text75{
+    height: 20px;
+    width: 50%;
+  }
+}
 </style>

@@ -78,7 +78,8 @@
             <v-col cols="10" class="box-search">
                 <form >
                     <label for="Location_search" class="icon-search"><v-img src="../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" max-width="37"></v-img></label>
-                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ຄົ້ນຫາດ້ວຍຊື່ສາຂາ, ເມືອງ ຫຼື ແຂວງ" class="input-max box-border sha input-search ">
+                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ຄົ້ນຫາດ້ວຍສາຂາ" class="input-max box-border sha input-search ">
+        <!--  <p class="phd">ຄົ້ນຫາດ້ວຍສາຂາ</p></p>-->
                 </form>
             </v-col>
             <v-col cols="1">
@@ -337,9 +338,9 @@ export default {
 .box-search{
     position: relative;
     .icon-search{
-        position: absolute;
-        left: 10px;
-        top: 3px;
+        position: absolute !important;
+        left: 10px !important;
+        top: 3px !important;
     }
 }
 ::placeholder {
@@ -455,5 +456,10 @@ export default {
 }
 .ovf{
     overflow: hidden;
+}
+.phd{
+    margin-top: -30px;
+    position: absolute;
+    margin-left: 50px;
 }
 </style>
