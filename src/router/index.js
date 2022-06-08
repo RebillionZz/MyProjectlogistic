@@ -89,7 +89,7 @@ const routes = [
     component: login
   },
   {
-    path: '/branchservice',
+    path: '/branchservice/:id',
     name: 'branch',
     component: branch
   },
@@ -103,11 +103,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
+  // {
+  //   path: '/',
+  //   name: 'home',
+  //   component: HomeView
+  // },
   {
     path: '/register',
     name: 'register',

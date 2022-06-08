@@ -48,36 +48,56 @@
       <h2 class="hh2">ບໍລິການຂອງພວກເຮົາ</h2>
       <h2 class="greytext">ພວກເຮົາໃຫ້ຫຼາຍກວ່າຂົນສົ່ງ</h2>
     </div>
-    <div class="card6">
-      <v-row>
-        <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3">
-            <img src="../../assets/Frontend/box 1.png" alt="" />
+
+
+
+    <div class="px-3 card6">
+      <v-row no-gutters>
+         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
+          <v-card class="mx-auto my-12 card3" min-width="150" min-height="180">
+            <img src="../../assets/card/ຝາກເຄື່ອງເອງ.png" alt="" />
             <p>ຝາກເຄື່ອງເອງ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
           </v-card>
         </v-col>
+      <!--  <v-col cols="6" lg="4" md="4" sm="6" xs="6" class="card-box ">
+          <div class="box  d-flex justify-center flex-column pa-5">
+            <div class="d-flex justify-center py-1"><div class="box-img"><img src="../../assets/Frontend/box 1.png" alt="" /></div></div>
+            <div class="text-center py-1"><p>ຝາກເຄື່ອງເອງ</p></div>
+            <div class="d-flex justify-center py-1"><div class="arr-img"><img src="../../assets/Frontend/Arrow 5.svg" alt="" /></div></div>
+          </div>
+        </v-col> -->
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <router-link to="/follow"
-            ><v-card class="mx-auto my-12 card3">
-              <img src="../../assets/Frontend/trace 1 (1).png" alt="" />
+          <v-card class="mx-auto my-12 card3">
+            <router-link to="/follow"
+            >
+            <div>
+              <img src="../../assets/card/ພັດສະດຸຂອງຂ້ອຍ.png" alt="" />
               <p>ພັດສະດຸຂອງຂ້ອຍ</p>
-              <img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </v-card
-          ></router-link>
+              <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+              </div> 
+            </router-link>
+              </v-card
+          >
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <router-link to="/pricecal">
-            <v-card class="mx-auto my-12 card3">
-              <img src="../../assets/Frontend/calculator 1.png" alt="" />
-              <p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p>
-              <img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </v-card
-          ></router-link>
+            <v-card class="mx-auto my-12 card3" >
+              <div class="box-item-align">
+              <img src="../../assets/card/ຄິດໄລ່ຄ່າຂົນສົ່ງ.png" alt="" />
+              </div>
+              <div class="box-text"><p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p></div>
+              <div ><img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </div>
+              
+              </v-card
+          >
+          </router-link>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <router-link to="/servicearea">
             <v-card class="mx-auto my-12 card3">
               <img
-                src="../../assets/Frontend/fluent_branch-fork-16-regular.png"
+                src="../../assets/card/ຂໍ້ມູນສາຂາ.png"
                 alt=""
               />
               <p>ຂໍ້ມູນສາຂາ</p>
@@ -86,24 +106,31 @@
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
-            <img src="../../assets/Frontend/cod 1 (1).png" alt="" />
+            <img src="../../assets/card/COD.png" alt="" />
             <p>COD</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
-            <img src="../../assets/Frontend/dashicons_money-alt.png" alt="" />
+            <img src="../../assets/card/ຄ່າບໍລິການ.png" alt="" />
             <p>ຄ່າບໍລິການ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
           </v-card>
         </v-col>
       </v-row>
+
+
+
       <div class="moresv">
         <v-btn color="red darken-1" rounded dark>ບໍລິການເພີ່ມເຕີມ</v-btn>
       </div>
+
+
+
+
       <v-row>
-        <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">
+        <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">  
           <img
             src="../../assets/Frontend/210709791_835246240756534_2076683395362452089_n-removebg-preview 1.svg"
             alt=""
@@ -215,16 +242,55 @@
 import Toolbar from "../../components/Toolbar.vue";
 import Footer from "../../components/Footer.vue";
 import HomeView from "../HomeView.vue";
+import Userbar from "../../components/usermobilebar.vue"
 export default {
   name: "homeuser",
   components: {
     Toolbar,
     Footer,
     HomeView,
+    Userbar,
   },
 };
 </script>
 <style scoped>
+.box{
+  background: red;
+}
+.box-img{
+  width: 60px;
+  height: 60px;
+  
+}
+.box-img img{
+  width: 100%;
+  height: 100%;
+}
+.arr-img{
+  width: 25px;
+  height: 25px;
+}
+
+.card-box{
+  width: 125px;
+  height: 150px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .telbtn {
   margin-left: 10%;
   margin-top: -18%;
@@ -286,6 +352,7 @@ export default {
   padding: 10px;
   border-style: solid;
   border-color: #ababab;
+  
         border-radius: 50px;
         width: 100%;
         height: auto;
@@ -339,10 +406,9 @@ export default {
   }
 }
 @media screen and (max-width: 490px) {
-  v-card.card3 {
+  .card3 {
     width: 150px !important;
-    height: 130px !important;
-    padding: 50px;
+    height: 186px !important;
   }
 }
 @media screen and (max-width: 960px) {

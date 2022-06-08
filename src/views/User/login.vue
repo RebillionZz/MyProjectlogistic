@@ -150,6 +150,7 @@ export default {
 .claim {
   text-align: center;
   align-items: center;
+  padding: 10px;
 }
 .hh2 {
   text-align: center;

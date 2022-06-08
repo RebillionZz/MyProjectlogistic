@@ -42,8 +42,9 @@
       </div>
       </div>
         </div>
+        <div class="fl-text">
         <h2 class="hh2">ຕິດຕາມພັດສະດຸຂອງທ່ານ</h2>
-            
+            </div>
     </div>
     <div class="pd">
     <v-card :elevation="hover ? 24 : 6"
@@ -351,6 +352,9 @@ export default {
     text-align: center;
     color: #E21312
 }
+.fl-text{
+    padding: 10px;
+}
 .fll{
     height: auto;
     width: 40%;
@@ -365,6 +369,9 @@ export default {
     text-align: center;
     align-items: center;
     padding: 5%;
+}
+textarea:focus, input:focus{
+    outline: none;
 }
 .fltext{
     padding: 10%;

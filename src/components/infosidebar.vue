@@ -2,10 +2,11 @@
 <div class="infosidebar">
             <div>
               <v-list-item-group
-        v-model="selectedItem"
-        color="red darken-2
+        v-model="$store.state.drawer"
+        color="red darken-1
         "
         active-class="red--text"
+        
       >
               <v-list>
                 <router-link to="/infohal1"><v-list-item>I. ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ</v-list-item></router-link>

@@ -219,7 +219,15 @@ export default {
                 return console.log(this.topclick)
             }
         },
-        
+    mapDetail(id){
+            this.$router.push({
+                name:'branch',
+                params:{
+                    id:id,
+                    mapsData:this.mapsData
+                }
+            })
+        }
         
 
     },
@@ -249,6 +257,7 @@ export default {
 .svbranch{
     align-items: center;
     text-align: center;
+    padding: 10px;
 }
 .textsv{
     padding: 10%;

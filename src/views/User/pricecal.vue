@@ -71,21 +71,21 @@
                 <v-tab>ຊອງເອກະສານ</v-tab>
                 <v-tab>ລາຄາ LOGISTIC</v-tab>
             </v-tabs> -->
-             <v-tabs v-model="tab"  background-color="" class="border-tab" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
+             <v-tabs v-model="tab"  background-color="" class="border-tab tabred" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
             <v-tabs-slider class="rounded-pill" ></v-tabs-slider>
             <v-col cols="4" >
                 <v-tab href="#tab-1" class="test">
-                    ບິນສ້າງເອງ
+                    ລາຄາ EXPRESS
                 </v-tab>
             </v-col>
             <v-col cols="4" >
                 <v-tab href="#tab-2" class="test">
-                    ກຳລັງດຳເນີນການ
+                    ຊອງເອກະສານ
                 </v-tab>
             </v-col>
             <v-col cols="4" >
                 <v-tab href="#tab-3" class="test">
-                    ຈັດສົ່ງສຳເລັດ
+                    ລາຄາ LOGISTIC
                 </v-tab>
             </v-col>
 
@@ -180,7 +180,7 @@ export default {
 .btn-round2{
     border-radius: 28px;
     border :1px solid #E21312;
-    background: none !important;
+    background: #eeeeee !important;
 }
 .input-max{
     width: 100%;
@@ -190,8 +190,10 @@ export default {
 }
 .border-tab{
     border-radius: 28px;
-    background: #EEEEEE !important;
+    background: none !important;
     color: #222222;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .tab-active{
     color: #FFFFFF !important;
@@ -203,6 +205,11 @@ export default {
     color: #FFFFFF;
     transition: .3s ease-in-out;
     
+}
+.tabred{
+    background-color: #888888;
+    align-content: center;
+    align-items: center;
 }
 .number-input{
     width: 100%;
@@ -279,6 +286,7 @@ input::-webkit-inner-spin-button {
     align-items: center;
     align-content: center;
     text-align: center;
+
 }
 .tab2{
     align-items: center;
