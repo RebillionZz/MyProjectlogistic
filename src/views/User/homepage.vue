@@ -8,12 +8,20 @@
           width="100%"
           height="100%"
         />
+  <!--  <v-btn
+      rounded
+      color="primary"
+      dark
+      class="call-btn-1"
+    >
+      Rounded Button
+    </v-btn> -->
       </div>
       <div class="text">
         <h2 class="hh2">ກວດສອບພັດສະດຸຂອງທ່ານ</h2>
       </div>
       <div class="divs">
-      <div class="searching">
+      <div class="searching transition-swing" :class="`elevation-${hover ? 24 : 3}`">
         <!--<v-text-field
           v-model="search"
           label="ໃສ່ລະຫັດ tracking ID"
@@ -31,7 +39,7 @@
         </label><button type="button" class="btns">ຕິດຕາມ</button>
                 </form> -->
                 <img src="../../assets/Admin/sidebar/toolbar/search.svg" alt="">
-        <input type="text" placeholder="ໃສ່ລະຫັດ tracking ID" class="text75" />
+        <input type="text" placeholder="ໃສ່ລະຫັດ tracking ID" class="text75"  />
         <button class="button button5">ຕິດຕາມ</button>
       </div>
       </div>
@@ -50,14 +58,17 @@
     </div>
 
 
-
-    <div class="px-3 card6">
+<div class="al-card">
+    <div class="px-3 ">
+      <v-container >
       <v-row no-gutters>
          <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <v-card class="mx-auto my-12 card3" min-width="150" min-height="180">
+          <v-card class="mx-auto my-12 card3">
+            <router-link to="/senddc">
             <img src="../../assets/card/ຝາກເຄື່ອງເອງ.png" alt="" />
             <p>ຝາກເຄື່ອງເອງ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            </router-link>
           </v-card>
         </v-col>
       <!--  <v-col cols="6" lg="4" md="4" sm="6" xs="6" class="card-box ">
@@ -81,54 +92,61 @@
           >
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <router-link to="/pricecal">
+          
             <v-card class="mx-auto my-12 card3" >
+              <router-link to="/pricecal">
               <div class="box-item-align">
               <img src="../../assets/card/ຄິດໄລ່ຄ່າຂົນສົ່ງ.png" alt="" />
               </div>
               <div class="box-text"><p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p></div>
               <div ><img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </div>
-              
+              </router-link>
               </v-card
           >
-          </router-link>
+          
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
-          <router-link to="/servicearea">
+          
             <v-card class="mx-auto my-12 card3">
+              <router-link to="/servicearea">
               <img
                 src="../../assets/card/ຂໍ້ມູນສາຂາ.png"
                 alt=""
               />
               <p>ຂໍ້ມູນສາຂາ</p>
-              <img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </v-card
-          ></router-link>
+              <img src="../../assets/Frontend/Arrow 5.svg" alt="" /> 
+              </router-link></v-card
+          >
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
+            <router-link to="/coddc">
             <img src="../../assets/card/COD.png" alt="" />
             <p>COD</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            </router-link>
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
+            <a href="#">
             <img src="../../assets/card/ຄ່າບໍລິການ.png" alt="" />
             <p>ຄ່າບໍລິການ</p>
             <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            </a>
           </v-card>
         </v-col>
       </v-row>
-
-
-
+      </v-container>
+    </div>
+</div>
       <div class="moresv">
         <v-btn color="red darken-1" rounded dark>ບໍລິການເພີ່ມເຕີມ</v-btn>
       </div>
 
 
 
-
+<v-container>
       <v-row>
         <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">  
           <img
@@ -141,7 +159,7 @@
               >ຮຸ່ງອາລຸນ ຂົນສົ່ງດ່ວນ</span
             ><br />ສົ່ງພັດສະດຸພາຍໃນແຂວງ ແລະ ຕ່າງແຂວງ
           </p>
-          <router-link to="/registerhal"
+          <router-link to="/registerhal"  
             ><v-btn color="red darken-1" rounded dark
               >ລົງທະບຽນຕອນນີ້</v-btn
             ></router-link
@@ -182,8 +200,9 @@
           <v-col cols="12" lg="6" md="6" sm="12" xs="12"> </v-col>
         </v-row>
       </div>
-    </div>
+    </v-container>
     <div class="downloadhal">
+      <v-container>
       <v-row>
         <v-col cols="12" lg="5" md="5" sm="12" xs="12"
           ><img
@@ -217,6 +236,7 @@
                 </v-col>
               </v-row>
             </div>
+            <div>
             <a
               href="https://play.google.com/store/apps/details?id=me.com.phoud.hal_logistics&hl=th&gl=US"
             >
@@ -225,15 +245,18 @@
                 alt=""
                 class="imgsize2"
             /></a>
+          
             <a
               href="https://apps.apple.com/bg/app/hal-express-laos/id1483001714"
               ><img
                 src="../../assets/Frontend/5a902db97f96951c82922874 1 (1).png"
-                class="imgsize2"
+                class="imgsize3"
             /></a>
+            </div>
           </div>
         </v-col>
       </v-row>
+      </v-container>
     </div>
     <Footer />
   </div>
@@ -270,10 +293,20 @@ export default {
   width: 25px;
   height: 25px;
 }
-
+.card6{
+  width: 1024px;
+}
 .card-box{
   width: 125px;
   height: 150px;
+}
+.tel{
+  margin-bottom: 100px;
+  position: absolute;
+}
+.al-card{
+  align-content: center;
+  align-items: center;
 }
 textarea:focus, input:focus{
     outline: none;
@@ -286,7 +319,10 @@ textarea:focus, input:focus{
 
 
 
-
+.appstore{
+  float: left;
+  position: absolute;
+}
 
 
 
@@ -304,6 +340,7 @@ textarea:focus, input:focus{
   align-items: center;
   text-align: center;
   padding: 5px;
+  margin-top: 20px;
   
 }
 .bpd{
@@ -351,7 +388,7 @@ textarea:focus, input:focus{
 .searching {
   padding: 10px;
   border-style: solid;
-  border-color: #ababab;
+  border-color: #fff;
   
         border-radius: 50px;
         width: 100%;
@@ -368,6 +405,7 @@ textarea:focus, input:focus{
   text-align: center;
   width: 220px;
   height: 200px;
+  color: #ababab;
 }
 .moresv {
   text-align: center;
@@ -392,6 +430,12 @@ textarea:focus, input:focus{
   padding: 5%;
   text-align: start;
 }
+.imgsize3{
+  margin-left: 20px;
+}
+a{
+  color: #000000 !important;
+}
 .btns {
   border: #e21312;
   position: absolute;
@@ -404,11 +448,17 @@ textarea:focus, input:focus{
   h2.side {
     margin-left: 1px;
   }
+  .downloadhal{
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+  }
 }
 @media screen and (max-width: 490px) {
   .card3 {
     width: 150px !important;
-    height: 186px !important;
+    height: 178px !important;
+    color: #ababab;
   }
 }
 @media screen and (max-width: 960px) {
@@ -418,6 +468,9 @@ textarea:focus, input:focus{
     text-align: center;
   }
   img.imgsize2 {
+    width: 40%;
+  }
+    img.imgsize3 {
     width: 40%;
   }
   .apphal {
@@ -468,4 +521,9 @@ textarea:focus, input:focus{
     width: 50%;
   }
 }
+.homecontent{
+  width: auto;
+  margin-top: 80px;
+}
+
 </style>

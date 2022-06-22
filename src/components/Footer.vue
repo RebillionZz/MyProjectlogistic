@@ -4,9 +4,9 @@
     white
     padless
   >
-  
+  <v-container>
   <v-row >
-    <v-col cols="12" sm="4">
+    <v-col cols="12" sm="4" class="footer-row">
       <div class="logo-box"><img src="../assets/Frontend/hal logo2 1.svg" width="100%" height="100%" ></div>
       <p>ບໍລິສັດ ຮຸ່ງອາລຸນ ຂົນສົ່ງດ່ວນ <br>ບ້ານ ຈອມມະນີ<br>ເມືອງ ໄຊເສດຖາ<br>ນະຄອນຫຼວງວຽງຈັນ</p>
 <p>
@@ -14,6 +14,7 @@
 </p>
 <img src="../assets/Frontend/facebook-email icon.svg" alt="">
     </v-col>
+    
     <v-col cols="12" sm="4" class="margintop">
       <h3>ບໍລິການຂອງເຮົາ</h3>
       <p>ຝາກເຄື່ອງເອງ<br>ພັດສະດຸຂອງຂ້ອຍ<br>ຄິດໄລ່ຄ່າຂົນສົ່ງ<br>ຂໍ້ມູນສາຂາ<br>COD<br>ເອີ້ນຮັບເຄື່ອງ</p>
@@ -30,11 +31,8 @@
       </p>
     </v-col>
       <v-card-text class="dark--text">
-           <v-divider inset></v-divider>
+           <hr class="solid s-responsive">
         <v-row>
-        <v-divider>
-
-        </v-divider>
           <v-col cols="12" md="6" class="textstart">
             ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂໃນການສົ່ງ
           </v-col>
@@ -44,6 +42,7 @@
           </v-row> 
       </v-card-text>
   </v-row>
+  </v-container>
   </v-footer> 
   </div>
 </template>
@@ -69,7 +68,6 @@
 .footerpage{
   align-items: center;
   text-align: center;
-  padding: 20px;
   background-color: #eeeeee;
 }
 .margintop{
@@ -86,9 +84,16 @@
     text-align: center
   };
   .textend{
-    text-align: center
+    text-align: center;
+    align-self: center;
+
   
   };
+  hr.s-responsive{
+    display: none;
+  }
+    }
+.footer-row{
+  margin-top: 30px;
 }
-
 </style>

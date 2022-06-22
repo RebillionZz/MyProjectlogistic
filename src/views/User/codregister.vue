@@ -237,4 +237,7 @@ export default {
 .ovf{
   overflow: hidden;
 }
+.loginpage{
+  margin-top: 80px;
+}
 </style>

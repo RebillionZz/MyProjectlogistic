@@ -38,7 +38,7 @@
         </router-link
             >
         <v-list-item link>
-            
+            ສະໝັກ COD
         </v-list-item>
          <router-link to="/login" class="d-flex justify-center whitetext"
                 >
@@ -59,7 +59,7 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar color="#E21312" dense dark height="105px" elevation="0">
+    <v-app-bar color="#E21312" dense dark fixed height="80px" elevation="0" class="nav-bar">
       <div class="logo">
         <router-link to="/homepage">
           <v-img
@@ -68,8 +68,8 @@
             contain
             src="../assets/Frontend/hal logo 2.svg"
             transition="scale-transition"
-            width="100"
-            height="100"
+            width="75"
+            height="75"
           ></v-img
         ></router-link>
       </div>
@@ -89,7 +89,8 @@
                   <a href="#">ຜູ້ຮັບປາຍທາງ</a> -->
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
-                <button v-bind="attrs" v-on="on" class="dropbtn">ບໍລິການຂອງເຮົາ</button>
+                <button v-bind="attrs" v-on="on" class="dropbtn">ບໍລິການຂອງເຮົາ <img src="../assets/Frontend/Vector.svg" alt="">
+</button>
               </template>
               <v-list>
                 <v-list-item :to="a.route" v-for="a in items" :key="a.id">
@@ -192,7 +193,7 @@ export default {
 .whitetext {
   color: #ffffff !important;
 }
-.cal-btn{
+.call-btn{
   color: #fff !important; 
 }
 a{
@@ -217,7 +218,9 @@ a{
   display: inline-block;
   /* z-index: 1000; */
 }
-
+.a{
+  color: #ffffff !important;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -260,5 +263,11 @@ a{
 }
 .ofv {
   overflow: hidden;
+}
+.nav-bar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
 }
 </style>

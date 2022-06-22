@@ -3,10 +3,10 @@
     <Toolbar/>
     <div class="lgscreen">
       <v-row>
-        <v-col cols="4">
+        <v-col cols="3">
           <Infosidebar></Infosidebar>
         </v-col>
-        <v-col cols="8" class="gbg">
+        <v-col cols="9" class="gbg">
           <div class="rule">
            <h2>III. ມາດຕະຖານດ້ານຂະໜາດ ແລະ ນ້ຳໜັກຂອງພັດສະດຸ.</h2>
            <p>ດ້ານຂະໜາດສິນຄ້າທີ່ສາມາດຮັບໄດ້: ໜຶ່ງພັດສະດຸຕ້ອງມີນ້ຳໜັ້ກບໍ່
@@ -20,13 +20,13 @@
       </v-row>
       </div>
       <div class="mbscreen">
-        <v-container>
+                <v-container>
         <h3>ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂການຂົນສົ່ງ </h3>
         <!-- Box1 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box1 = !box1; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box1}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ </div>
+               
+                <div class="ar-text pl-2">I. ໝວດທີ 1: ວ່າດ້ວຍຂໍ້ມູນສ່ວນຕົວ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box1">
@@ -37,8 +37,8 @@
         <!-- Box2 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box2 = !box2; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box2}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ມາດຖານດ້ານຄວາມປອດໄພຂອງສິນຄ້າ </div>
+
+                <div class="ar-text pl-2">II. ມາດຖານດ້ານຄວາມປອດໄພຂອງສິນຄ້າ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box2">
@@ -49,8 +49,8 @@
         <!-- Box3 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box3 = !box3; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box3}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ມາດຕະຖານດ້ານຂະໜາດ ແລະ ນ້ຳໜັກຂອງພັດສະດຸ </div>
+                
+                <div class="ar-text pl-2">III. ມາດຕະຖານດ້ານຂະໜາດ ແລະ ນ້ຳໜັກຂອງພັດສະດຸ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box3">
@@ -61,8 +61,8 @@
         <!-- Box4 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box4 = !box4; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box4}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ມາດຕະຖານການຄິດໄລ່ລາຄາ ແລະ ວັດແທກບໍລິມາດຂອງສິນຄ້າ </div>
+               
+                <div class="ar-text pl-2">IV. ມາດຕະຖານການຄິດໄລ່ລາຄາ ແລະ ວັດແທກບໍລິມາດຂອງສິນຄ້າ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box4">
@@ -73,8 +73,8 @@
         <!-- Box5 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box5 = !box5; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box5}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ມາດຕະຖານການດຳເນີນງານຂອງພະນັກງານສາຂາທີ່ທຳ ການຄັດແຍກພັດສະດຸ </div>
+
+                <div class="ar-text pl-2">V. ມາດຕະຖານການດຳເນີນງານຂອງພະນັກງານສາຂາທີ່ທຳ ການຄັດແຍກພັດສະດຸ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box5">
@@ -85,8 +85,8 @@
         <!-- Box6 -->
         <div class="mt-3">
             <v-col cols="12" class="d-flex ar-ar" @click="box6 = !box6; ">
-                <div class="ar-box "><img class="ar-item" :class="{'ar-rotate': box6}" src="../../assets/Admin/ReasonC/ARR-right.svg" alt="" srcset=""></div>
-                <div class="ar-text pl-2">ເງື່ອນໄຂມາດຕະຖານການໃຫ້ບໍລິການ ແລະ ການຊົດເຊີຍຄ່າາເສຍຫາຍໃຫ້ແກ່ລູກຄ້າ </div>
+                
+                <div class="ar-text pl-2">VI. ເງື່ອນໄຂມາດຕະຖານການໃຫ້ບໍລິການ ແລະ ການຊົດເຊີຍຄ່າາເສຍຫາຍໃຫ້ແກ່ລູກຄ້າ </div>
             </v-col>
             <transition name="fade">
                 <div class="pl-8 " v-if="box6">
@@ -177,6 +177,9 @@ components: {
 .ar-text{
     color: $red;
 }
+.lgscreen{
+    margin-top: 80px;
+}
 .ar-rotate{
     transform: rotate(90deg);
 }
@@ -193,5 +196,8 @@ components: {
   div.mbscreen {
     display: none;
   }
+}
+.mbscreen{
+    margin-top: 80px;
 }
 </style>

@@ -23,7 +23,7 @@
            
             
             <!-- ------------------------------------------------------------------- -->
-            <v-tabs class="mb-5 " height="200" color="red">
+            <v-tabs class="mb-5 tab-responsive" height="200" color="red">
             <v-tabs-slider></v-tabs-slider>
             <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 1"  >
                 <v-tab href="#tab-1"  class="Tab-col">
@@ -85,7 +85,7 @@
             <v-col cols="1">
             </v-col>
         </div>
-    
+    <v-container>
         <v-row  class="px-5" no-gutters >
             <v-col  cols="12" md="4" lg="4" v-for="LocatV in maps" :key="LocatV.id"  class="px-2 py-2" v-show="topclick == 1">
                 <v-btn class="d-flex align-center locate_BTN backW sha">
@@ -119,6 +119,7 @@
             </v-col>
             
         </v-row>
+        </v-container>
         </div>
         <br>
         <br>
@@ -253,6 +254,7 @@ export default {
     background-color: #E21312;
     color: white;
     padding: 20px;
+    margin-top: 80px;
 }
 .svbranch{
     align-items: center;
@@ -391,6 +393,10 @@ export default {
     .textHead{
         letter-spacing: 0.5px;
     font-size: 16px;
+    .maps{
+        height: 50px !important;
+        width: 50px !important;
+    }
 }
     
     .text-WE{
@@ -419,6 +425,12 @@ export default {
     input::placeholder{
     font-size: 14px;
 }
+}
+@media screen and (max-width: 960px){
+    tab-responsive{
+        width: 100%;
+        height: 100px;
+    }
 }
 @media screen and (max-width: 600px) {
     *{
@@ -470,5 +482,8 @@ export default {
     margin-top: -30px;
     position: absolute;
     margin-left: 50px;
+}
+.tab-responsive{
+    height: 200px;
 }
 </style>

@@ -86,6 +86,7 @@ export default {
 <style scoped>
 .service{
     text-align: center;
+    margin-top: 80px;
 }
 .bsv{
     padding: 3%;

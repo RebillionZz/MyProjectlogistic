@@ -19,23 +19,7 @@
     <div class="followpart">
         <div class="searchitem">
                   <div class="divs">
-      <div class="searching">
-        <!--<v-text-field
-          v-model="search"
-          label="ໃສ່ລະຫັດ tracking ID"
-          color="red darken-1"
-          rounded
-          outlined
-        >
-          <v-btn color="red darken-1" rounded dark outlined>ຕິດຕາມ</v-btn>
-        </v-text-field>-->
-        <!--<i class="fa fa-cc-visa" aria-hidden="true"></i> <form >
-                    <label for="Location_search" class="icon-search"><v-img src="../../assets/Admin/sidebar/toolbar/search.svg" max-height="37" class="isearch" max-width="37"></v-img></label>
-                    <input   v-model="search" @click="SearchLocation" type="text" name="" id="Location_search" placeholder="ໃສ່ລະຫັດ tracking ID" class="input-max box-border sha input-search ">
-          <p class="phd">ໃສ່ລະຫັດ tracking ID</p> 
-          <label for="Location_search" class="btnsearch"><v-btn color="red darken-1" rounded dark class="rbtn">ຕິດຕາມ</v-btn>
-        </label><button type="button" class="btns">ຕິດຕາມ</button>
-                </form> -->
+      <div class="searching transition-swing" :class="`elevation-${hover ? 24 : 3}`">
                 <img src="../../assets/Admin/sidebar/toolbar/search.svg" alt="">
         <input type="text" placeholder="ໃສ່ລະຫັດ tracking ID" class="text75" />
         <button class="button button5">ຕິດຕາມ</button>
@@ -312,9 +296,9 @@ export default {
         
     },
     computed:{
-        maps(){
-            // return this.$store.state.mapState
-        },
+        // maps(){
+        //     // return this.$store.state.mapState
+        // },
         // user(){
         //     return this.$store.getters.homeItem(parseInt((this.$route.params.id)))
         // },
@@ -347,6 +331,7 @@ export default {
     color: #FFFFFF;
     text-align: center;
     align-items: center;
+    margin-top: 80px;
 }
 .hh2{
     text-align: center;
@@ -584,7 +569,7 @@ textarea:focus, input:focus{
 .searching {
   padding: 10px;
   border-style: solid;
-  border-color: #ababab;
+  border-color: #fff;
         border-radius: 50px;
         width: 100%;
         height: auto;

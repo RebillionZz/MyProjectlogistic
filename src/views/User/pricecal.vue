@@ -60,18 +60,38 @@
     <div class="pcal">
         <h2 class="hh21">ຄ່າບໍລິການ</h2>
         <div class="tab1">
-            <v-tabs v-model="tab" centered color="red darken-2">
-                <v-tab>ສາຂາຫາສາຂາ (ພາຍໃນແຂວງ)</v-tab>
-                <v-tab>ລະຫວ່າງແຂວງ (ທົ່ວປະເທດ)</v-tab>
-            </v-tabs>
-        </div>
-        <div class="tab2">
-           <!-- <v-tabs v-model="tab" centered color="red darkern-2" class="tabrounded rounded-pill">
-                <v-tab>ລາຄາ EXPRESS</v-tab>
-                <v-tab>ຊອງເອກະສານ</v-tab>
-                <v-tab>ລາຄາ LOGISTIC</v-tab>
-            </v-tabs> -->
-             <v-tabs v-model="tab"  background-color="" class="border-tab tabred" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
+            
+           <!-- <v-tabs centered color="red darken-2" v-model="tabs">
+    <v-tab>ສາຂາຫາສາຂາ (ພາຍໃນແຂວງ)</v-tab>
+    <v-tab>ລະຫວ່າງແຂວງ (ທົ່ວປະເທດ)</v-tab>
+  </v-tabs>            -->
+  <v-card elevation="0">
+    <v-toolbar
+      color="white"
+      white
+    >
+
+      <template v-slot:extension>
+        <v-tabs
+          v-model="tabs"
+          centered
+          color="red darken-2"
+          
+        >
+          <v-tab>
+            ສາຂາຫາສາຂາ (ພາຍໃນແຂວງ)
+          </v-tab>
+          <v-tab>
+            ລະຫວ່າງແຂວງ (ທົ່ວປະເທດ)
+          </v-tab>
+        </v-tabs>
+      </template>
+    </v-toolbar>
+
+    <v-tabs-items v-model="tabs">
+      <v-tab-item>
+        <v-card flat class="tab-card">
+          <v-tabs v-model="tab" background-color="#eee" class="border-tab"  active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
             <v-tabs-slider class="rounded-pill" ></v-tabs-slider>
             <v-col cols="4" >
                 <v-tab href="#tab-1" class="test">
@@ -91,24 +111,210 @@
 
             <v-tabs-items v-model="tab">
                 <v-tab-item value="tab-1" reverse-transition>
-                    <push1C></push1C>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                    
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ນ້ຳໜັກ
+          </th>
+          <th class="text-center">
+            ຍາວ+ກວ້າງ+ສູງ
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in price"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.price}}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
                 </v-tab-item>
                 <v-tab-item value="tab-2" reverse-transition>
-                    <push2C></push2C>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ຊອງເອກະສານ
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in docs"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.calories }}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
                 </v-tab-item>
                 <v-tab-item value="tab-3" reverse-transition>
-                    <push3C></push3C>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                    
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ນຳ້ໜັກ KG
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in desserts"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.calories }}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
                 </v-tab-item>
             </v-tabs-items>
       
     </v-tabs>
-            <h5>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</h5>
-            <v-container fluid>
-                            <div class="calpic">
-                <img src="../../assets/Frontend/ລາຍລະອຽດລາຄາ.svg" alt="" class="imgres">
-            </div>
-            </v-container>
-        </div>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat class="tab-card">
+           <v-tabs v-model="tab" background-color="#eee" class="border-tab" active-class="tab-active"  color="red" height="38" centered fixed-tabs   slider-color="red " slider-size="38">
+            <v-tabs-slider class="rounded-pill" ></v-tabs-slider>
+            <v-col cols="4" >
+                <v-tab href="#tab-1" class="test">
+                    ລາຄາ EXPRESS
+                </v-tab>
+            </v-col>
+            <v-col cols="4" >
+                <v-tab href="#tab-2" class="test">
+                    ຊອງເອກະສານ
+                </v-tab>
+            </v-col>
+            <v-col cols="4" >
+                <v-tab href="#tab-3" class="test">
+                    ລາຄາ LOGISTIC
+                </v-tab>
+            </v-col>
+
+            <v-tabs-items v-model="tab">
+                 <v-tab-item value="tab-1" reverse-transition>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                    
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ນ້ຳໜັກ
+          </th>
+          <th class="text-center">
+            ຍາວ+ກວ້າງ+ສູງ
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in price"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.price}}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
+                </v-tab-item>
+                <v-tab-item value="tab-2" reverse-transition>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ຊອງເອກະສານ
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in docs"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.calories }}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
+                </v-tab-item>
+                <v-tab-item value="tab-3" reverse-transition>
+                    <p>ລູກຄ້າຝາກເຄື່ອງແລ້ວສາມາດຮັບເຄື່ອງໃນມື້ຖັດໄປ</p>
+                    
+  <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr class="red">
+          <th class="text-center">
+            ນຳ້ໜັກ KG
+          </th>
+          <th class="text-center">
+            ຄ່າບໍລິການ
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in desserts"
+          :key="item.name"
+        >
+          <td>{{ item.name }}</td>
+          <td>{{ item.calories }}</td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
+                </v-tab-item>
+            </v-tabs-items>
+      
+    </v-tabs>
+        </v-card>
+      </v-tab-item>
+    </v-tabs-items>
+  </v-card>
+  
+      </div>
     </div>
     <Footer/>
 </div>
@@ -125,12 +331,186 @@ export default {
             totalPrice:0,
             startWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
             endWays:['ສາຍນ້ຳເງິນ','ຫົວຂົວ (ນາຊາຍທອງ)','ດົງສ້າງຫີນ(ຫຼັກ 15)','ສາຍນ້ຳເງິນ','ຫົວຂົວ(ນາຊາຍທອງ1)','ດົງສ້າງຫີນ(ຫຼັກ 16)'],
+            tabs: null,
+            tabs2: null,
+            tab: null,
+            price: [
+          {
+            name: '1',
+            size: 45,
+            price: 5000,
+          },
+          {
+            name: '2',
+            size: 50,
+            price: 5000,
+          },
+          {
+            name: '3',
+            size: 55,
+            price: 6000,
+          },
+          {
+            name: '1',
+            size: 45,
+            price: 6000,
+          },
+          {
+            name: '2',
+            size: 50,
+            price: 6000,
+          },
+          {
+            name: '4',
+            size: 60,
+            price: 7000,
+          },
+          {
+            name: '3',
+            size: 55,
+            price: 7000,
+          },
+          {
+            name: '5',
+            size: 65,
+            price: 8000,
+          },
+          {
+            name: '4',
+            size: 60,
+            price: 8000,
+          },
+          {
+            name: '5',
+            size: 65,
+            price: 9000,
+          },
+          {
+            name: '6',
+            size: 70,
+            price: 10000,
+          },
+          {
+            name: '7',
+            size: 75,
+            price: 12000,
+          },
+          {
+            name: '6',
+            size: 70,
+            price: 120000,
+          },
+          {
+            name: '8',
+            size: 80,
+            price: 14000,
+          },
+          {
+            name: '7',
+            size: 75,
+            price: 14000,
+          },
+          {
+            name: '1',
+            size: 45,
+            price: 15000,
+          },
+          {
+            name: '3',
+            size: 55,
+            price: 7000,
+          },
+          {
+            name: '5',
+            size: 65,
+            price: 8000,
+          },
+          {
+            name: '4',
+            size: 60,
+            price: 8000,
+          },
+          {
+            name: '5',
+            size: 65,
+            price: 9000,
+          },
+        ],
+        docs: [
+          {
+            name: 'A5 ບໍ່ເກີນ 3 Kg',
+            calories: 15000,
+          },
+          {
+            name: 'A5 ບໍ່ເກີນ 3 Kg',
+            calories: 15000,
+          },
+          {
+            name: 'A4 ບໍ່ເກີນ 3 Kg',
+            calories: 20000,
+          },
+          {
+            name: 'A4 ບໍ່ເກີນ 3 Kg',
+            calories: 20000,
+          },
+          {
+            name: 'A3 ບໍ່ເກີນ 3 Kg',
+            calories: 25000,
+          },
+          {
+            name: 'A3 ບໍ່ເກີນ 3 Kg',
+            calories: 25000,
+          },
+          {
+            name: 'A5 ບໍ່ເກີນ 3 Kg',
+            calories: 25000,
+          },
+          {
+            name: 'A4 ບໍ່ເກີນ 3 Kg',
+            calories: 30000,
+          },
+          {
+            name: 'A3 ບໍ່ເກີນ 3 Kg',
+            calories: 35000,
+          },
+        ],
+        desserts: [
+          {
+            name: 'Logistics - 201KG - 10000KG',
+            calories: '1,100 /Kg'
+          },
+          {
+            name: 'Logistics - 201KG - 10000KG',
+            calories: '1,100 /Kg',
+          },
+          {
+            name: 'Logistics - 101KG - 200KG',
+            calories: '1,300 /Kg',
+          },
+          {
+            name: 'Logistics - 101KG - 200KG',
+            calories: '1,300 /Kg',
+          },
+          {
+            name: 'Logistics - 50.1KG - 100KG',
+            calories: '1,500 /Kg',
+          },
+          {
+            name: 'Logistics - 50.1KG - 100KG',
+            calories: '1,500 /Kg',
+          },
+        ],  
+            items: [
+        'ລາຄາ EXPRESS', 'ຊອງເອກະສານ', 'ລາຄາ LOGISTIC',
+      ],
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         }
     },
   components: {
     Toolbar,
     Footer,
     HomeView,
+    
   },
 };
 </script>
@@ -144,6 +524,10 @@ export default {
 .calprice{
     border: 20px;
     padding: 5%;
+    margin-top: 80px;
+}
+.img-price{
+  width: 80%;
 }
 .home_head{
     width: 45px;
@@ -173,14 +557,28 @@ export default {
     border :1px solid #888888;
     border-radius: 28px;
 }
+.tab-card{
+  padding: 10px;
+}
+.border-tab{
+    border-radius: 25px !important   ;
+    background: grey !important;
+    color: #222222 !important;
+}
+.tab-active{
+    color: #FFFFFF !important;
 
+}
+.whitetext{
+    color: #fff !important;
+}
 .btn-round1{
     border-radius: 28px;
 }
 .btn-round2{
     border-radius: 28px;
     border :1px solid #E21312;
-    background: #eeeeee !important;
+    background: #FFFFFF !important;
 }
 .input-max{
     width: 100%;
@@ -239,7 +637,7 @@ input::-webkit-inner-spin-button {
 .test{
     width:100%;
     height: 100%;
-    z-index: 10;
+    z-index: 100;
 }
 @media only screen and (max-width: 768px) {
     *{
@@ -261,6 +659,14 @@ input::-webkit-inner-spin-button {
             width: 30px;
             height: 30px;
         }
+        .border-tab{
+    border-radius: 28px;
+    background: none !important;
+    color: #222222;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px !important;
+}
     }
     input::placeholder{
     font-size: 14px;
@@ -307,6 +713,7 @@ input::-webkit-inner-spin-button {
 .del{
     margin-top: 20px;
     margin-left: 1px;
+    background-color: #ffffff;
 }
 .borderf{
     border-block-color: #888888;
@@ -314,5 +721,12 @@ input::-webkit-inner-spin-button {
 }
 .ovf{
     overflow: hidden;
+}
+.v-slide-group__next, .v-slide-group__prev {
+    align-items: center;
+    
+    flex: 0 1 1px !important;
+    justify-content: center;
+    min-width: 1px !important;
 }
 </style>

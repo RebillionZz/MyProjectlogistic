@@ -75,24 +75,36 @@
                   <v-row>
                       <v-col cols="12" sm="12">
                           <v-text-field
-                          :item="items"
-                          label="ລະຫັດຜ່ານ"
-                          dense
-                          color="red darken-1"
-                          outlined
-                          rounded>
+                                                :item="items"
+                      label="ລະຫັດຜ່ານ"
+                      dense
+                      color="red darken-1"
+                      outlined
+                      v-model="password"
+                      rounded
+                      name="password"
+    :value="myPass"
+
+    @click:append="() => (value = !value)"
+    :type="value ? 'password' : 'text'">
                           </v-text-field>
                       </v-col>
                   </v-row>
-                  <v-checkbox
+            <!--      <v-checkbox
               v-model="ex4"
-              label="ຍອມຮັບເງື່ອນໄຂ ແລະ ຂໍ້ກຳນົດ ອ່ານເພີ່ມເຕີມ"
+              label="ຍອມຮັບເງື່ອນໄຂ ແລະ ຂໍ້ກຳນົດ"
               color="red"
               value="red"
               hide-details
             
             >
-            </v-checkbox>
+            </v-checkbox>-->
+
+           <div>
+             <input type="checkbox">
+  <label >ຍອມຮັບເງື່ອນໄຂ ແລະ ຂໍ້ກຳນົດ <a href="/infohal1" class="more-info">ອ່ານເພີ່ມເຕີມ</a></label>
+            
+           </div>
                   <div class="centertext">
                       <v-col cols="12" sm="12">
                           <v-btn color="red darken-1" rounded dark class="col-12 sm-12">                  ລົງທະບຽນ         </v-btn>
@@ -145,6 +157,7 @@ export default {
     return {
       slecteritem: "020",
       slecteritems: ["020", "030"],
+            value: String,
     };
   },
   components: {

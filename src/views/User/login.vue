@@ -42,10 +42,10 @@
                       outlined
                       color="red darken-1"
                       rounded
-                      v-model="numberValue"
+                      
                       hide-details
                       single-line
-                      type="number"
+                      
                     >
                     </v-text-field>
                   </v-col>
@@ -61,9 +61,11 @@
                       outlined
                       v-model="password"
                       rounded
-                      autocomplete="current-password"
-                      :type="value ? 'password' : 'text'"
-                    @input="_=>userPassword=_"
+                      name="password"
+    :value="myPass"
+
+    @click:append="() => (value = !value)"
+    :type="value ? 'password' : 'text'"
                     >
                     </v-text-field>
                   </v-col>
@@ -83,7 +85,7 @@
                     </v-col>
                   </v-row>
                   <div class="linktoregis">
-                    ຍັງບໍ່ມີບັນຊີເທື່ອບໍ? <a class="redtext">ລົງທະບຽນ</a>
+                    ຍັງບໍ່ມີບັນຊີເທື່ອບໍ? <a class="redtext" href="/registerhal">ລົງທະບຽນ</a>
                   </div>
                 </div>
               </div>
@@ -125,11 +127,12 @@ import Toolbar from "../../components/Toolbar.vue";
 import Footer from "../../components/Footer.vue";
 import HomeView from "../HomeView.vue";
 export default {
-  name: "homeuser",
+  name: "home_user",
   data() {
     return {
       slecteritem: "020",
       slecteritems: ["020", "030"],
+      value: String,
     };
   },
   components: {
