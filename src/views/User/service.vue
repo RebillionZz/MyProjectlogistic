@@ -18,7 +18,7 @@
         </v-row>
     </div>
     <div class="svbranch">
-        <h2 class="gtext">ພວກເຮົາມີຫຼາຍສາຂາຄອບຄຸມທົ່ວປະເທດ ແຕ່ເໜືອເຖິງໃຕ້</h2>
+       <div class="tpd"> <h2 class="gtext">ພວກເຮົາມີຫຼາຍສາຂາຄອບຄຸມທົ່ວປະເທດ ແຕ່ເໜືອເຖິງໃຕ້</h2> </div>
 <div class="backW">
            
             
@@ -26,13 +26,13 @@
             <v-tabs class="mb-5 tab-responsive" height="200" color="red">
             <v-tabs-slider></v-tabs-slider>
             <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 1"  >
-                <v-tab href="#tab-1"  class="Tab-col">
+                <v-tab href="#tab-1"  class="d-flex flex-column Tab-col">
                     
                     <div class="" >
                         <div class="d-flex ">
                             <img src="../../assets/Admin/dataContent/VT-Section.svg" alt="" srcset="" class="maps">
                         </div>
-                        <div class="text-center text-WE">ນະຄອນຫຼວງວຽງຈັນ</div>
+                        <div class="text-center text-WE"> ນະຄອນຫຼວງວຽງຈັນ</div>
                     </div>
                 </v-tab>
             </v-col>
@@ -46,23 +46,21 @@
             </v-col>
 
             <v-col cols="3"   class="pt-2 mapImg-container"   @click="topclick = 3">
-                <v-tab href="#tab-3 Tab-col">
-                    <div class=" d-flex  flex-column  ">
+                <v-tab href="#tab-3" class="d-flex flex-column Tab-col">
+                    
                         <div class="d-flex ">
                             <img src="../../assets/Admin/dataContent/central-Section.svg" alt="" srcset="" class="maps"> 
                         </div>
                         <div class="text-center text-WE">ພາກກາງ</div>
-                </div>
+                
                 </v-tab>
             </v-col>
             <v-col cols="3"   class=" pt-2 mapImg-container" @click="topclick = 4"  >
-                <v-tab href="#tab-4">
-                    <div class=" d-flex align-center flex-column Tab-col  ">
+                <v-tab href="#tab-4" class=" d-flex align-center flex-column Tab-col">
                         <div class="d-flex ">
                             <img src="../../assets/Admin/dataContent/soult-Section.svg" alt="" srcset="" class="maps"> 
                         </div>
                     <div class="text-center text-WE ">ພາກໃຕ້</div>
-                </div>
                 </v-tab>
             </v-col>
             
@@ -278,6 +276,14 @@ export default {
   img.mappic {
     width: 100% !important;
   }
+  .svbranch{
+    align-items: center;
+    text-align: center;
+    padding: 1px;
+}
+}
+.tpd{
+    padding: 10px;
 }
 @media screen and (max-width: 880px) {
   img.mappic {
@@ -312,7 +318,25 @@ export default {
     box-shadow: 0px 0px 5px 0px #ababab;
 }
 // 
-
+@media only screen and(max-width:778px) {
+  .maps{
+    width: 75px;
+    height: 75px;
+  }
+  .v-slide-group__wrapper {
+    contain: content;
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    
+  }
+  element.style {
+    height: 80px !important;
+}
+.tab-responsive {
+  height: 100px;
+}
+}
 .color-red{
     color: $red;
 }

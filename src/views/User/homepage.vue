@@ -65,9 +65,9 @@
          <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
             <router-link to="/senddc">
-            <img src="../../assets/card/ຝາກເຄື່ອງເອງ.png" alt="" />
+            <img src="../../assets/card/ຝາກເຄື່ອງເອງ.png" alt="" class="logo-card" />
             <p>ຝາກເຄື່ອງເອງ</p>
-            <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            <img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" />
             </router-link>
           </v-card>
         </v-col>
@@ -83,9 +83,9 @@
             <router-link to="/follow"
             >
             <div>
-              <img src="../../assets/card/ພັດສະດຸຂອງຂ້ອຍ.png" alt="" />
+              <img src="../../assets/card/ພັດສະດຸຂອງຂ້ອຍ.png" alt="" class="logo-card" />
               <p>ພັດສະດຸຂອງຂ້ອຍ</p>
-              <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+              <img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" />
               </div> 
             </router-link>
               </v-card
@@ -96,10 +96,10 @@
             <v-card class="mx-auto my-12 card3" >
               <router-link to="/pricecal">
               <div class="box-item-align">
-              <img src="../../assets/card/ຄິດໄລ່ຄ່າຂົນສົ່ງ.png" alt="" />
+              <img src="../../assets/card/ຄິດໄລ່ຄ່າຂົນສົ່ງ.png" alt="" class="logo-card" />
               </div>
               <div class="box-text"><p>ຄິດໄລ່ຄ່າຂົນສົ່ງ</p></div>
-              <div ><img src="../../assets/Frontend/Arrow 5.svg" alt="" /> </div>
+              <div ><img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" /> </div>
               </router-link>
               </v-card
           >
@@ -112,27 +112,28 @@
               <img
                 src="../../assets/card/ຂໍ້ມູນສາຂາ.png"
                 alt=""
+                class="logo-card"
               />
               <p>ຂໍ້ມູນສາຂາ</p>
-              <img src="../../assets/Frontend/Arrow 5.svg" alt="" /> 
+              <img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" /> 
               </router-link></v-card
           >
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
             <router-link to="/coddc">
-            <img src="../../assets/card/COD.png" alt="" />
+            <img src="../../assets/card/COD.png" alt="" class="logo-card" />
             <p>COD</p>
-            <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            <img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" />
             </router-link>
           </v-card>
         </v-col>
         <v-col cols="6" lg="4" md="4" sm="6" xs="6">
           <v-card class="mx-auto my-12 card3">
             <a href="#">
-            <img src="../../assets/card/ຄ່າບໍລິການ.png" alt="" />
+            <img src="../../assets/card/ຄ່າບໍລິການ.png" alt="" class="logo-card" />
             <p>ຄ່າບໍລິການ</p>
-            <img src="../../assets/Frontend/Arrow 5.svg" alt="" />
+            <img src="../../assets/Frontend/Arrow 5.svg" alt="" class="arrow-card" />
             </a>
           </v-card>
         </v-col>
@@ -165,6 +166,9 @@
             ></router-link
           >
         </v-col>
+        <v-divider
+  vertical
+></v-divider>
         <v-col cols="12" lg="6" md="6" sm="12" xs="12" class="svcenter">
           <div class="codif">
             <img
@@ -415,6 +419,7 @@ textarea:focus, input:focus{
 .svcenter {
   text-align: center;
   align-items: center;
+  margin-top: 20px;
 }
 .codif {
   margin-top: 15%;
@@ -457,8 +462,9 @@ a{
 @media screen and (max-width: 490px) {
   .card3 {
     width: 150px !important;
-    height: 178px !important;
+    height: 140px !important;
     color: #ababab;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 960px) {

@@ -44,3 +44,44 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   min-height: 100vh;
 }
+
+@media only screen and(max-width:490px) {
+  .logo-card{
+    width: 60px;
+    height: auto;
+  }
+  .arrow-card{
+    width: 20px;
+    height: auto;
+
+  }
+  .v-slide-group__content {
+    .v-tab{
+     font-size: 12px;
+    }
+}
+.maps{
+  width: 50px !important;
+  height: 50px !important;
+}
+.text-WE{
+  font-size: 8px !important;
+}
+}
+
+.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right) > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .textstart{
+    text-align: center
+  };
+  .textend{
+    text-align: center;
+    align-self: center;
+
+  
+  };
+} 

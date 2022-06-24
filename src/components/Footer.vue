@@ -7,14 +7,14 @@
   <v-container>
   <v-row >
     <v-col cols="12" sm="4" class="footer-row">
-      <div class="logo-box"><img src="../assets/Frontend/hal logo2 1.svg" width="100%" height="100%" ></div>
+      <div class="logo-box"><img src="../assets/Frontend/hal logo2 1.svg" width="125px" height="98px" class="logo2" ></div>
       <p>ບໍລິສັດ ຮຸ່ງອາລຸນ ຂົນສົ່ງດ່ວນ <br>ບ້ານ ຈອມມະນີ<br>ເມືອງ ໄຊເສດຖາ<br>ນະຄອນຫຼວງວຽງຈັນ</p>
 <p>
   ສາຍດ່ວນ 1419
 </p>
 <img src="../assets/Frontend/facebook-email icon.svg" alt="">
     </v-col>
-    
+     <hr class="solid s-responsive divid">
     <v-col cols="12" sm="4" class="margintop">
       <h3>ບໍລິການຂອງເຮົາ</h3>
       <p>ຝາກເຄື່ອງເອງ<br>ພັດສະດຸຂອງຂ້ອຍ<br>ຄິດໄລ່ຄ່າຂົນສົ່ງ<br>ຂໍ້ມູນສາຂາ<br>COD<br>ເອີ້ນຮັບເຄື່ອງ</p>
@@ -37,7 +37,9 @@
             ຂໍ້ກຳນົດ ແລະ ເງື່ອນໄຂໃນການສົ່ງ
           </v-col>
           <v-col cols="12" md="6" class="textend">
-            copyright © {{ new Date().getFullYear() }} — <strong>BY HAL TECH</strong>
+            <div class="BHY">
+            copyright © {{ new Date().getFullYear() }} <strong>BY HAL TECH</strong>
+            </div>
           </v-col>
           </v-row> 
       </v-card-text>
@@ -66,8 +68,8 @@
   height: 100px;
 }
 .footerpage{
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: start;
   background-color: #eeeeee;
 }
 .margintop{
@@ -76,24 +78,36 @@
 .textstart{
   text-align: start;
 }
-.textend{
+@media screen and (min-width: 960px){
+  .textend{
   text-align: end;
+}
+  
+}
+@media screen and (min-width: 600px){
+  .divid{
+    display: none;  }
+    .logo-box{
+      align-self: start;
+    }
+}
+@media screen and (max-width: 600px){
+  .footerpage{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
 }
 @media screen and (max-width: 960px) {
   .textstart{
     text-align: center
   };
-  .textend{
-    text-align: center;
-    align-self: center;
 
-  
-  };
-  hr.s-responsive{
-    display: none;
-  }
     }
 .footer-row{
   margin-top: 30px;
+}
+.logo{
+  align-self: flex-start !important;
 }
 </style>
